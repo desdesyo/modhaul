@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - 'tools/CSSBC-Recovery.ps1'
+      - 'tools/BUILD_TRIGGER.txt'
       - '.github/workflows/build-recovery.yml'
 permissions:
   contents: read
