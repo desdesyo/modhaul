@@ -22,10 +22,26 @@ jobs:
       - name: Build EXE
         shell: pwsh
         run: |
+          $ErrorActionPreference = 'Stop'
           New-Item -ItemType Directory -Force dist | Out-Null
           Invoke-PS2EXE -InputFile tools/CSSBC-Recovery.ps1 -OutputFile dist/CSSBC_Recovery.exe -NoConsole -STA -Title 'CSS v34 Game Recovery' -Description 'Backup-first CSS v34 recovery utility' -Version '1.0.0.0'
-          if (!(Test-Path dist/CSSBC_Recovery.exe) -or (Get-Item dist/CSSBC_Recovery.exe).Length -lt 100000) { throw 'EXE build failed or output is too small' }
-      - uses: actions/upload-artifact@v4
+          $exe = Join-Path $PWD 'dist/CSSBC_Recovery.exe'
+          if (!(Test-Path -LiteralPath $exe -PathType Leaf)) { throw 'EXE output was not created' }
+          $item = Get-Item -LiteralPath $exe
+          if ($item.Length -lt 1024) { throw "EXE output is unexpectedly small: $($item.Length) bytes" }
+          $stream = [IO.File]::OpenRead($exe)
+          try {
+            $reader = [IO.BinaryReader]::new($stream)
+            if ($reader.ReadUInt16() -ne 0x5A4D) { throw 'EXE is missing the MZ signature' }
+            $stream.Position = 0x3C
+            $peOffset = $reader.ReadInt32()
+            if ($peOffset -lt 64 -or $peOffset -gt ($stream.Length - 6)) { throw 'EXE has an invalid PE header offset' }
+            $stream.Position = $peOffset
+            if ($reader.ReadUInt32() -ne 0x4550) { throw 'EXE is missing the PE signature' }
+          } finally { $stream.Dispose() }
+          Write-Host "Validated EXE: $($item.Length) bytes"
+      - name: Upload EXE
+        uses: actions/upload-artifact@v4
         with:
           name: CSSBC_Recovery
           path: dist/CSSBC_Recovery.exe
