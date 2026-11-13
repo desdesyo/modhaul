@@ -1,1 +1,2 @@
 Trigger Windows build for CSSBC Recovery utility.
+Validation fixed: verify PE signature, not arbitrary 100 KB size threshold.
