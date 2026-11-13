@@ -1,0 +1,32 @@
+name: Build CSSBC Recovery Utility
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'tools/CSSBC-Recovery.ps1'
+      - '.github/workflows/build-recovery.yml'
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: windows-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install PS2EXE
+        shell: pwsh
+        run: |
+          Set-PSRepository -Name PSGallery -InstallationPolicy Trusted
+          Install-Module ps2exe -Scope CurrentUser -Force
+      - name: Build EXE
+        shell: pwsh
+        run: |
+          New-Item -ItemType Directory -Force dist | Out-Null
+          Invoke-PS2EXE -InputFile tools/CSSBC-Recovery.ps1 -OutputFile dist/CSSBC_Recovery.exe -NoConsole -STA -Title 'CSS v34 Game Recovery' -Description 'Backup-first CSS v34 recovery utility' -Version '1.0.0.0'
+          if (!(Test-Path dist/CSSBC_Recovery.exe) -or (Get-Item dist/CSSBC_Recovery.exe).Length -lt 100000) { throw 'EXE build failed or output is too small' }
+      - uses: actions/upload-artifact@v4
+        with:
+          name: CSSBC_Recovery
+          path: dist/CSSBC_Recovery.exe
+          if-no-files-found: error
+          retention-days: 30
