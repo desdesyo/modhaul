@@ -9,8 +9,9 @@ function AddLabel($t,$x,$y,$w){$c=New-Object Windows.Forms.Label;$c.Text=$t;$c.L
 AddLabel 'Папка игры (корень с hl2.exe и bin):' 15 12 700
 $game=New-Object Windows.Forms.TextBox;$game.SetBounds(15,36,610,25);$game.Text='C:\Games\Counter-Strike Source v34';$form.Controls.Add($game)
 $bg=New-Object Windows.Forms.Button;$bg.Text='Обзор';$bg.SetBounds(635,34,110,28);$form.Controls.Add($bg)
-AddLabel 'Чистая копия той же сборки (нужна для ремонта):' 15 72 700
-$src=New-Object Windows.Forms.TextBox;$src.SetBounds(15,96,610,25);$form.Controls.Add($src)
+AddLabel 'Чистая копия CSS v34 (скачайте установщик, затем выберите папку игры):' 15 72 730
+$src=New-Object Windows.Forms.TextBox;$src.SetBounds(15,96,450,25);$form.Controls.Add($src)
+$dl=New-Object Windows.Forms.Button;$dl.Text='Скачать CSS v34';$dl.SetBounds(475,94,150,28);$form.Controls.Add($dl)
 $bs=New-Object Windows.Forms.Button;$bs.Text='Обзор';$bs.SetBounds(635,94,110,28);$form.Controls.Add($bs)
 $scan=New-Object Windows.Forms.Button;$scan.Text='Проверить файлы';$scan.SetBounds(15,135,170,36);$form.Controls.Add($scan)
 $fix=New-Object Windows.Forms.Button;$fix.Text='Восстановить из копии';$fix.SetBounds(195,135,190,36);$form.Controls.Add($fix)
@@ -22,6 +23,7 @@ function Log($s){$log.AppendText(('['+(Get-Date -Format HH:mm:ss)+'] '+$s+[Envir
 $fd=New-Object Windows.Forms.FolderBrowserDialog
 $bg.Add_Click({if($fd.ShowDialog() -eq 'OK'){$game.Text=$fd.SelectedPath}})
 $bs.Add_Click({if($fd.ShowDialog() -eq 'OK'){$src.Text=$fd.SelectedPath}})
+$dl.Add_Click({try{Start-Process 'https://dl.cs-love.info/CSS_v34.exe';Log 'Открыта загрузка чистой CSS v34 с CS-Love. Установите её в отдельную папку и укажите эту папку как источник.'}catch{Log ('Не удалось открыть ссылку: '+$_.Exception.Message)}})
 function State($p){
  if(!(Test-Path -LiteralPath $p -PathType Leaf)){return @{Exists=$false;Valid=$false;Hash=''}}
  $f=[IO.File]::Open($p,'Open','Read','ReadWrite');$valid=$false
@@ -66,5 +68,5 @@ $scan.Add_Click({StartWork 'Scan'})
 $fix.Add_Click({if([Windows.Forms.MessageBox]::Show('Заменять только три DLL из выбранной чистой копии? Перед заменой будет создана и проверена резервная копия.','Подтверждение','YesNo','Warning') -eq 'Yes'){StartWork 'Repair'}})
 $stop.Add_Click({if($script:busy){$worker.CancelAsync();$status.Text='Запрошена остановка...'}})
 $form.Add_FormClosing({param($s,$e);if($script:busy){$e.Cancel=$true;$worker.CancelAsync()}})
-Log 'DLL из интернета не загружаются. Нужна чистая копия той же сборки.'
+Log 'Источник: CS-Love — чистая CSS v34. Нажмите «Скачать CSS v34», установите отдельно и выберите папку как источник.'
 [void]$form.ShowDialog()
