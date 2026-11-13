@@ -1,0 +1,3047 @@
+// This file is created by Game Protector due to unrecoverable error. It
+// contains data necessary to locate and remove this error. Please describe
+// circumstances that preceded exception and send this report to product developer.
+//
+// Feel free to remove any private data. Thank you for your help!
+
+{
+  "Game":
+  {
+    "System":
+    {
+      "Name":"Windows 10",
+      "Arch":"Intel x64",
+      "Build":"19041",
+      "Version":"10.0"
+    }
+,
+    "Protector":
+    {
+      "Build":"575"
+    }
+  }
+,
+  "Exception":
+  {
+    "Code":"C0000005",
+    "Flags":"00000000",
+    "Absolute Address":"201C2636",
+    "Relative Address":"001C2636",
+    "Memory Dump":
+    {
+      "201C2616":"  C4 08 C3 CC CC CC CC CC CC CC 8A 44 24 04 A2 74",
+      "201C2626":"  0C 54 20 C3 CC CC CC CC CC CC 8B 0D 10 42 57 20",
+      "201C2636":"> 8B 01 FF 50 34 E8 C0 16 F9 FF 6A 01 68 FC 03 00",
+      "201C2646":"  00 E8 14 9C 00 00 83 C4 08 C3 8B 0D D0 E8 36 20",
+      "201C2656":"  8B 01 FF 50 10 D9 1D F4 DC 53 20 8B 4C 24 04 8B"
+    }
+,
+    "Module Base":"20000000",
+    "Module Name":"C:\Games\Counter-Strike Source v34\bin\engine.dll",
+    "Thread Id":"1872",
+    "Thread Start":"hl2.0000153C",
+    "Registers":
+    {
+      "EAX":"00000000",
+      "EDX":"203AA4EE",
+      "ECX":"00000000",
+      "EDI":"000D050C",
+      "ESI":"00000112",
+      "EBX":"0000F060",
+      "EBP":"00000000",
+      "ESP":"0019C2A4",
+      "EIP":"201C2636",
+      "EFlags":"00210246"
+    }
+,
+    "Executable Stack":
+    {
+      "Address":"engine.0018DF79",
+      "Address":"engine.0018E150",
+      "Address":"CoreMessaging.00013E21",
+      "Address":"ntdll.0004CA8C",
+      "Address":"ntdll.0004DFA4",
+      "Address":"CoreMessaging.00052448",
+      "Address":"CoreMessaging.000524D0",
+      "Address":"USER32.00041C0B",
+      "Address":"engine.0018E150",
+      "Address":"USER32.000382CA",
+      "Address":"engine.0018E150",
+      "Address":"engine.0018E150",
+      "Address":"CoreMessaging.0003D8A9",
+      "Address":"CoreMessaging.0003D810",
+      "Address":"USER32.000380DE",
+      "Address":"engine.0018E150",
+      "Address":"USER32.00043BB0",
+      "Address":"USER32.000379F6",
+      "Address":"engine.0018E150",
+      "Address":"USER32.00024BCB",
+      "Address":"inputsystem.00001A10",
+      "Address":"inputsystem.00001D50",
+      "Address":"USER32.00041C0B",
+      "Address":"inputsystem.00001D50",
+      "Address":"USER32.000382CA",
+      "Address":"inputsystem.00001D50",
+      "Address":"inputsystem.00001D50",
+      "Address":"CoreMessaging.0000F47E",
+      "Address":"USER32.00037067",
+      "Address":"USER32.00037067",
+      "Address":"USER32.000380DE",
+      "Address":"inputsystem.00001D50",
+      "Address":"USER32.00036F67"
+    }
+,
+    "Stack":
+    {
+      "0019C2A4":
+      {
+        "Value":"2018DF79",
+        "Belongs":
+        {
+          "Name":"engine.dll",
+          "Relative":"0018DF79",
+          "Memory Dump":
+          {
+            "2018DF59":"  00 00 0F 84 D9 00 00 00 A1 88 05 2E 20 8B 08 FF",
+            "2018DF69":"  51 0C 85 C0 75 0A E8 EC 3B 05 00 E8 B7 46 03 00",
+            "2018DF79":"> 8B C5 8B D3 BE 12 01 00 00 E8 69 EB FF FF 8B 15",
+            "2018DF89":"  88 05 2E 20 89 44 24 10 8B 02 FF 50 0C 85 C0 0F",
+            "2018DF99":"  85 FE 00 00 00 E8 CD 3B 05 00 8B 44 24 10 5F 5E"
+          }
+        }
+      }
+,
+      "0019C2A8":
+      {
+        "Value":"00000112"
+      }
+,
+      "0019C2AC":
+      {
+        "Value":"000D050C"
+      }
+,
+      "0019C2B0":
+      {
+        "Value":"0019C338"
+      }
+,
+      "0019C2B4":
+      {
+        "Value":"2018E150",
+        "Belongs":
+        {
+          "Name":"engine.dll",
+          "Relative":"0018E150",
+          "Memory Dump":
+          {
+            "2018E130":"  3A E0 18 20 1C E0 18 20 2B E0 18 20 46 E0 18 20",
+            "2018E140":"  00 03 01 03 03 00 03 03 03 03 03 02 CC CC CC CC",
+            "2018E150":"> B9 D8 67 53 20 E9 D6 FB FF FF CC CC CC CC CC CC",
+            "2018E160":"  64 A1 00 00 00 00 6A FF 68 AC BC 2C 20 50 64 89",
+            "2018E170":"  25 00 00 00 00 81 EC 34 06 00 00 56 8B F1 E8 AD"
+          }
+        }
+      }
+,
+      "0019C2B8":
+      {
+        "Value":"00000000"
+      }
+,
+      "0019C2BC":
+      {
+        "Value":"205367D8",
+        "Belongs":
+        {
+          "Name":"engine.dll",
+          "Relative":"005367D8",
+          "Memory Dump":
+          {
+            "205367B8":"  48 64 53 20 01 00 00 00 24 3D 31 20 38 3D 31 20",
+            "205367C8":"  00 00 00 00 C0 CD 18 20 00 73 22 20 00 00 00 00",
+            "205367D8":"> 4C 3C 31 20 00 00 00 00 78 06 00 00 0C 05 0D 00",
+            "205367E8":"  00 00 40 00 00 00 00 00 00 00 00 00 00 00 00 00",
+            "205367F8":"  00 05 00 00 00 03 00 00 01 00 00 00 F4 C0 00 00"
+          }
+        }
+,
+        "PString":"L<1 "
+      }
+,
+      "0019C2C0":
+      {
+        "Value":"73B13E21",
+        "Belongs":
+        {
+          "Name":"CoreMessaging.dll",
+          "Relative":"00013E21",
+          "Memory Dump":
+          {
+            "73B13E01":"  56 8B F1 8A DA 57 56 E8 4E D9 04 00 8B F8 59 85",
+            "73B13E11":"  FF 74 19 84 DB 74 0C 56 6A 00 57 E8 AE E3 04 00",
+            "73B13E21":"> 83 C4 0C 8B C7 5F 5E 5B 5D C2 08 00 80 7D 0C 00",
+            "73B13E31":"  74 F1 8B CE E8 EE F9 FF FF CC 56 8B F2 56 51 FF",
+            "73B13E41":"  15 14 63 B6 73 59 59 85 C0 74 04 5E C2 04 00 8B"
+          }
+        }
+      }
+,
+      "0019C2C4":
+      {
+        "Value":"025577C8"
+      }
+,
+      "0019C2C8":
+      {
+        "Value":"00000000"
+      }
+,
+      "0019C2CC":
+      {
+        "Value":"0000000C"
+      }
+,
+      "0019C2D0":
+      {
+        "Value":"0255E948"
+      }
+,
+      "0019C2D4":
+      {
+        "Value":"114414E4"
+      }
+,
+      "0019C2D8":
+      {
+        "Value":"0000007F"
+      }
+,
+      "0019C2DC":
+      {
+        "Value":"80006010"
+      }
+,
+      "0019C2E0":
+      {
+        "Value":"776ECA8C",
+        "Belongs":
+        {
+          "Name":"ntdll.dll",
+          "Relative":"0004CA8C",
+          "Memory Dump":
+          {
+            "776ECA6C":"  10 74 57 83 4E 10 40 83 3E 24 72 06 8B 45 04 89",
+            "776ECA7C":"  46 20 8B 4C 24 6C 5F 5E 5B 33 CC E8 14 89 02 00",
+            "776ECA8C":"> 8B E5 5D C3 8B 5A 08 8B C3 24 70 3C 20 0F 85 A4",
+            "776ECA9C":"  C4 04 00 F6 C3 08 75 C6 83 7A F8 24 72 C0 8B 02",
+            "776ECAAC":"  F7 D0 39 42 0C 0F 85 8C C4 04 00 8B 42 04 F7 D0"
+          }
+        }
+      }
+,
+      "0019C2E4":
+      {
+        "Value":"000007D4"
+      }
+,
+      "0019C2E8":
+      {
+        "Value":"00000000"
+      }
+,
+      "0019C2EC":
+      {
+        "Value":"00C33AD0"
+      }
+,
+      "0019C2F0":
+      {
+        "Value":"776EDFA4",
+        "Belongs":
+        {
+          "Name":"ntdll.dll",
+          "Relative":"0004DFA4",
+          "Memory Dump":
+          {
+            "776EDF84":"  10 20 00 00 00 85 D2 75 2D 85 F6 75 17 C7 41 10",
+            "776EDF94":"  30 00 00 00 8B 4D FC 5F 33 CD 5E E8 FC 73 02 00",
+            "776EDFA4":"> 8B E5 5D C3 89 07 EB EC 8B 42 08 24 70 3C 20 74",
+            "776EDFB4":"  C4 E9 7B B6 04 00 39 72 04 74 D2 EB E7 6A 14 68",
+            "776EDFC4":"  C8 C4 7A 77 E8 B7 A5 03 00 8B F2 89 75 E0 8B F9"
+          }
+        }
+      }
+,
+      "0019C2F4":
+      {
+        "Value":"73B52448",
+        "Belongs":
+        {
+          "Name":"CoreMessaging.dll",
+          "Relative":"00052448",
+          "Memory Dump":
+          {
+            "73B52428":"  8B 45 08 8B 48 04 51 8B C4 81 C1 5C 01 00 00 6A",
+            "73B52438":"  01 68 D0 24 B5 73 6A 00 C6 00 02 E8 8E 54 FC FF",
+            "73B52448":"> 8B 87 AC 00 00 00 8B 5F 04 40 6A 04 5E 3B C6 0F",
+            "73B52458":"  47 F0 3B F3 74 2D 8B CF 85 F6 75 07 E8 6F 8D FB",
+            "73B52468":"  FF EB 20 56 E8 C7 00 00 00 3B F3 7E 16 2B F3 6B"
+          }
+        }
+      }
+,
+      "0019C2F8":
+      {
+        "Value":"00000000"
+      }
+,
+      "0019C2FC":
+      {
+        "Value":"73B524D0",
+        "Belongs":
+        {
+          "Name":"CoreMessaging.dll",
+          "Relative":"000524D0",
+          "Memory Dump":
+          {
+            "73B524B0":"  89 41 08 8A 45 18 88 41 0C 8B 45 1C 89 41 10 5D",
+            "73B524C0":"  C2 18 00 CC CC CC CC CC CC CC CC CC CC CC CC CC",
+            "73B524D0":"> 55 8B EC 83 EC 1C 53 FF 35 00 30 B8 73 FF 15 2C",
+            "73B524E0":"  61 B6 73 33 DB 89 45 F8 39 98 AC 00 00 00 76 3E",
+            "73B524F0":"  8B CB 56 89 4D FC 57 8B 30 8D 7D E4 6A 05 03 F1"
+          }
+        }
+      }
+,
+      "0019C300":
+      {
+        "Value":"00000001"
+      }
+,
+      "0019C304":
+      {
+        "Value":"00000004"
+      }
+,
+      "0019C308":
+      {
+        "Value":"000006C8"
+      }
+,
+      "0019C30C":
+      {
+        "Value":"0255E948"
+      }
+,
+      "0019C310":
+      {
+        "Value":"76431C0B",
+        "Belongs":
+        {
+          "Name":"USER32.dll",
+          "Relative":"00041C0B",
+          "Memory Dump":
+          {
+            "76431BEB":"  56 FF 75 18 FF 75 14 FF 75 10 FF 75 0C 64 80 0D",
+            "76431BFB":"  CA 0F 00 00 01 8B 4D 08 FF 15 58 B0 49 76 FF D1",
+            "76431C0B":"> 64 80 25 CA 0F 00 00 FE 81 7C 24 04 CD AB BA DC",
+            "76431C1B":"  74 11 81 3C 24 CD AB BA DC 75 05 83 EC 04 EB 03",
+            "76431C2B":"  83 C4 10 83 C4 08 5B 5F 5E 5D C2 14 00 55 8B EC"
+          }
+        }
+      }
+,
+      "0019C314":
+      {
+        "Value":"000D050C"
+      }
+,
+      "0019C318":
+      {
+        "Value":"00000112"
+      }
+,
+      "0019C31C":
+      {
+        "Value":"0000F060"
+      }
+,
+      "0019C320":
+      {
+        "Value":"00000000"
+      }
+,
+      "0019C324":
+      {
+        "Value":"000D050C"
+      }
+,
+      "0019C328":
+      {
+        "Value":"DCBAABCD"
+      }
+,
+      "0019C32C":
+      {
+        "Value":"2018E150",
+        "Belongs":
+        {
+          "Name":"engine.dll",
+          "Relative":"0018E150",
+          "Memory Dump":
+          {
+            "2018E130":"  3A E0 18 20 1C E0 18 20 2B E0 18 20 46 E0 18 20",
+            "2018E140":"  00 03 01 03 03 00 03 03 03 03 03 02 CC CC CC CC",
+            "2018E150":"> B9 D8 67 53 20 E9 D6 FB FF FF CC CC CC CC CC CC",
+            "2018E160":"  64 A1 00 00 00 00 6A FF 68 AC BC 2C 20 50 64 89",
+            "2018E170":"  25 00 00 00 00 81 EC 34 06 00 00 56 8B F1 E8 AD"
+          }
+        }
+      }
+,
+      "0019C330":
+      {
+        "Value":"00000112"
+      }
+,
+      "0019C334":
+      {
+        "Value":"000D050C"
+      }
+,
+      "0019C338":
+      {
+        "Value":"0019C420"
+      }
+,
+      "0019C33C":
+      {
+        "Value":"764282CA",
+        "Belongs":
+        {
+          "Name":"USER32.dll",
+          "Relative":"000382CA",
+          "Memory Dump":
+          {
+            "764282AA":"  85 AA 00 00 00 8B CB E8 47 9A 00 00 FF 75 18 FF",
+            "764282BA":"  75 14 8B 7D 10 57 8B 75 E0 56 53 E8 16 99 00 00",
+            "764282CA":"> 89 45 DC 83 7D CC 00 74 20 8D 45 BC 50 8D 45 DC",
+            "764282DA":"  50 FF 75 18 FF 75 14 57 56 8B 35 44 60 49 76 8B",
+            "764282EA":"  CE FF 15 58 B0 49 76 FF D6 83 7D C8 00 0F 85 60"
+          }
+        }
+      }
+,
+      "0019C340":
+      {
+        "Value":"2018E150",
+        "Belongs":
+        {
+          "Name":"engine.dll",
+          "Relative":"0018E150",
+          "Memory Dump":
+          {
+            "2018E130":"  3A E0 18 20 1C E0 18 20 2B E0 18 20 46 E0 18 20",
+            "2018E140":"  00 03 01 03 03 00 03 03 03 03 03 02 CC CC CC CC",
+            "2018E150":"> B9 D8 67 53 20 E9 D6 FB FF FF CC CC CC CC CC CC",
+            "2018E160":"  64 A1 00 00 00 00 6A FF 68 AC BC 2C 20 50 64 89",
+            "2018E170":"  25 00 00 00 00 81 EC 34 06 00 00 56 8B F1 E8 AD"
+          }
+        }
+      }
+,
+      "0019C344":
+      {
+        "Value":"000D050C"
+      }
+,
+      "0019C348":
+      {
+        "Value":"00000112"
+      }
+,
+      "0019C34C":
+      {
+        "Value":"0000F060"
+      }
+,
+      "0019C350":
+      {
+        "Value":"00000000"
+      }
+,
+      "0019C354":
+      {
+        "Value":"793D8C3D"
+      }
+,
+      "0019C358":
+      {
+        "Value":"2018E150",
+        "Belongs":
+        {
+          "Name":"engine.dll",
+          "Relative":"0018E150",
+          "Memory Dump":
+          {
+            "2018E130":"  3A E0 18 20 1C E0 18 20 2B E0 18 20 46 E0 18 20",
+            "2018E140":"  00 03 01 03 03 00 03 03 03 03 03 02 CC CC CC CC",
+            "2018E150":"> B9 D8 67 53 20 E9 D6 FB FF FF CC CC CC CC CC CC",
+            "2018E160":"  64 A1 00 00 00 00 6A FF 68 AC BC 2C 20 50 64 89",
+            "2018E170":"  25 00 00 00 00 81 EC 34 06 00 00 56 8B F1 E8 AD"
+          }
+        }
+      }
+,
+      "0019C35C":
+      {
+        "Value":"00C33AD0"
+      }
+,
+      "0019C360":
+      {
+        "Value":"000D050C"
+      }
+,
+      "0019C364":
+      {
+        "Value":"00616F00"
+      }
+,
+      "0019C368":
+      {
+        "Value":"0019C398"
+      }
+,
+      "0019C36C":
+      {
+        "Value":"73B3D8A9",
+        "Belongs":
+        {
+          "Name":"CoreMessaging.dll",
+          "Relative":"0003D8A9",
+          "Memory Dump":
+          {
+            "73B3D889":"  8B 40 10 8B 48 10 E8 9B B8 FD FF 84 C0 74 18 6A",
+            "73B3D899":"  00 FF 75 F8 8B D7 8B CE FF 75 08 E8 EC F6 FF FF",
+            "73B3D8A9":"> 5F 5E 5B C9 C2 04 00 6A 0D 59 E8 BD E9 FF FF 8B",
+            "73B3D8B9":"  C8 E8 5D 5A FC FF 8B C8 E8 6E E3 FC FF CC 6A 28",
+            "73B3D8C9":"  B8 2F 43 B6 73 E8 7B 44 02 00 8B 75 0C 8D 45 F0"
+          }
+        }
+,
+        "PString":"_^["
+      }
+,
+      "0019C370":
+      {
+        "Value":"00000005"
+      }
+,
+      "0019C374":
+      {
+        "Value":"00000000"
+      }
+,
+      "0019C378":
+      {
+        "Value":"00000000"
+      }
+,
+      "0019C37C":
+      {
+        "Value":"00616F28",
+        "String":"(oa"
+      }
+,
+      "0019C380":
+      {
+        "Value":"00648D70"
+      }
+,
+      "0019C384":
+      {
+        "Value":"00616F28",
+        "String":"(oa"
+      }
+,
+      "0019C388":
+      {
+        "Value":"0019C3F4"
+      }
+,
+      "0019C38C":
+      {
+        "Value":"00090276"
+      }
+,
+      "0019C390":
+      {
+        "Value":"00000000"
+      }
+,
+      "0019C394":
+      {
+        "Value":"00648D70"
+      }
+,
+      "0019C398":
+      {
+        "Value":"0019C3B0"
+      }
+,
+      "0019C39C":
+      {
+        "Value":"73B3D810",
+        "Belongs":
+        {
+          "Name":"CoreMessaging.dll",
+          "Relative":"0003D810",
+          "Memory Dump":
+          {
+            "73B3D7F0":"  78 14 8B CF E8 40 E0 FE FF 83 7F 48 03 74 07 C7",
+            "73B3D800":"  47 48 02 00 00 00 FF 75 08 8B CE E8 2B 00 00 00",
+            "73B3D810":"> 83 7D 08 04 5F 0F 9F C0 88 46 24 5E 59 5D C2 04",
+            "73B3D820":"  00 51 8B 41 10 6A 10 5A 8B 40 14 8B 40 20 85 C0",
+            "73B3D830":"  0F 44 C2 50 E8 02 00 00 00 59 C3 55 8B EC 83 EC"
+          }
+        }
+      }
+,
+      "0019C3A0":
+      {
+        "Value":"00000024"
+      }
+,
+      "0019C3A4":
+      {
+        "Value":"00000001"
+      }
+,
+      "0019C3A8":
+      {
+        "Value":"00000000"
+      }
+,
+      "0019C3AC":
+      {
+        "Value":"00000000"
+      }
+,
+      "0019C3B0":
+      {
+        "Value":"00000030"
+      }
+,
+      "0019C3B4":
+      {
+        "Value":"FFFFFFFF"
+      }
+,
+      "0019C3B8":
+      {
+        "Value":"FFFFFFFF"
+      }
+,
+      "0019C3BC":
+      {
+        "Value":"764280DE",
+        "Belongs":
+        {
+          "Name":"USER32.dll",
+          "Relative":"000380DE",
+          "Memory Dump":
+          {
+            "764280BE":"  85 F1 03 00 00 85 C9 75 09 81 CE 00 00 00 80 89",
+            "764280CE":"  75 E4 89 75 B4 8B D3 8D 4D 80 FF 15 28 A7 49 76",
+            "764280DE":"> F0 FF 05 A0 7E 49 76 83 3D 80 6C 49 76 00 0F 84",
+            "764280EE":"  5F E0 01 00 83 3D 7C 6C 49 76 00 0F 84 52 E0 01",
+            "764280FE":"  00 BB 01 00 00 00 89 5D D8 68 EC 7D 49 76 FF 15"
+          }
+        }
+      }
+,
+      "0019C3C0":
+      {
+        "Value":"00000000"
+      }
+,
+      "0019C3C4":
+      {
+        "Value":"00000000"
+      }
+,
+      "0019C3C8":
+      {
+        "Value":"00000000"
+      }
+,
+      "0019C3CC":
+      {
+        "Value":"001E11C8"
+      }
+,
+      "0019C3D0":
+      {
+        "Value":"00000000"
+      }
+,
+      "0019C3D4":
+      {
+        "Value":"80006010"
+      }
+,
+      "0019C3D8":
+      {
+        "Value":"00000000"
+      }
+,
+      "0019C3DC":
+      {
+        "Value":"00000000"
+      }
+,
+      "0019C3E0":
+      {
+        "Value":"001E1348"
+      }
+,
+      "0019C3E4":
+      {
+        "Value":"00000000"
+      }
+,
+      "0019C3E8":
+      {
+        "Value":"00000000"
+      }
+,
+      "0019C3EC":
+      {
+        "Value":"00000000"
+      }
+,
+      "0019C3F0":
+      {
+        "Value":"2018E150",
+        "Belongs":
+        {
+          "Name":"engine.dll",
+          "Relative":"0018E150",
+          "Memory Dump":
+          {
+            "2018E130":"  3A E0 18 20 1C E0 18 20 2B E0 18 20 46 E0 18 20",
+            "2018E140":"  00 03 01 03 03 00 03 03 03 03 03 02 CC CC CC CC",
+            "2018E150":"> B9 D8 67 53 20 E9 D6 FB FF FF CC CC CC CC CC CC",
+            "2018E160":"  64 A1 00 00 00 00 6A FF 68 AC BC 2C 20 50 64 89",
+            "2018E170":"  25 00 00 00 00 81 EC 34 06 00 00 56 8B F1 E8 AD"
+          }
+        }
+      }
+,
+      "0019C3F4":
+      {
+        "Value":"00000000"
+      }
+,
+      "0019C3F8":
+      {
+        "Value":"00000001"
+      }
+,
+      "0019C3FC":
+      {
+        "Value":"00000000"
+      }
+,
+      "0019C400":
+      {
+        "Value":"000D050C"
+      }
+,
+      "0019C404":
+      {
+        "Value":"80006010"
+      }
+,
+      "0019C408":
+      {
+        "Value":"00643540",
+        "String":"@5d"
+      }
+,
+      "0019C40C":
+      {
+        "Value":"0019C428"
+      }
+,
+      "0019C410":
+      {
+        "Value":"0019C59C"
+      }
+,
+      "0019C414":
+      {
+        "Value":"76433BB0",
+        "Belongs":
+        {
+          "Name":"USER32.dll",
+          "Relative":"00043BB0",
+          "Memory Dump":
+          {
+            "76433B90":"  FF 8B 46 08 8B 4E 0C 03 CF 33 0C 38 5F 5E 5D E9",
+            "76433BA0":"  49 E1 FF FF CC CC CC CC CC CC CC CC CC CC CC CC",
+            "76433BB0":"> 8B FF 55 8B EC 83 EC 18 53 56 57 8B 7D 0C C6 45",
+            "76433BC0":"  FF 00 C7 45 F4 01 00 00 00 8B 47 08 8D 5F 10 33",
+            "76433BD0":"  05 38 65 49 76 53 50 89 45 F8 E8 91 FF FF FF FF"
+          }
+        }
+      }
+,
+      "0019C418":
+      {
+        "Value":"0F6CE695"
+      }
+,
+      "0019C41C":
+      {
+        "Value":"00000000"
+      }
+,
+      "0019C420":
+      {
+        "Value":"0019C458"
+      }
+,
+      "0019C424":
+      {
+        "Value":"764279F6",
+        "Belongs":
+        {
+          "Name":"USER32.dll",
+          "Relative":"000379F6",
+          "Memory Dump":
+          {
+            "764279D6":"  00 00 00 8B 8E E0 00 00 00 89 45 FC 52 51 FF 75",
+            "764279E6":"  10 FF 75 0C FF 75 08 52 57 8B D3 E8 9A 05 00 00",
+            "764279F6":"> 5F 5E 5B C9 C2 10 00 8B B0 48 08 00 00 8B 90 4C",
+            "76427A06":"  08 00 00 EB BB B2 07 8B CF E8 22 25 00 00 8B C8",
+            "76427A16":"  0B CA 74 6A 81 FE 00 04 00 00 73 0F B9 00 01 00"
+          }
+        }
+,
+        "PString":"_^["
+      }
+,
+      "0019C428":
+      {
+        "Value":"2018E150",
+        "Belongs":
+        {
+          "Name":"engine.dll",
+          "Relative":"0018E150",
+          "Memory Dump":
+          {
+            "2018E130":"  3A E0 18 20 1C E0 18 20 2B E0 18 20 46 E0 18 20",
+            "2018E140":"  00 03 01 03 03 00 03 03 03 03 03 02 CC CC CC CC",
+            "2018E150":"> B9 D8 67 53 20 E9 D6 FB FF FF CC CC CC CC CC CC",
+            "2018E160":"  64 A1 00 00 00 00 6A FF 68 AC BC 2C 20 50 64 89",
+            "2018E170":"  25 00 00 00 00 81 EC 34 06 00 00 56 8B F1 E8 AD"
+          }
+        }
+      }
+,
+      "0019C42C":
+      {
+        "Value":"00000000"
+      }
+,
+      "0019C430":
+      {
+        "Value":"00000112"
+      }
+,
+      "0019C434":
+      {
+        "Value":"0000F060"
+      }
+,
+      "0019C438":
+      {
+        "Value":"00000000"
+      }
+,
+      "0019C43C":
+      {
+        "Value":"00000000"
+      }
+,
+      "0019C440":
+      {
+        "Value":"00000000"
+      }
+,
+      "0019C444":
+      {
+        "Value":"00000112"
+      }
+,
+      "0019C448":
+      {
+        "Value":"FFFF0451"
+      }
+,
+      "0019C44C":
+      {
+        "Value":"00000112"
+      }
+,
+      "0019C450":
+      {
+        "Value":"FFFF0451"
+      }
+,
+      "0019C454":
+      {
+        "Value":"00000000"
+      }
+,
+      "0019C458":
+      {
+        "Value":"0019C470"
+      }
+,
+      "0019C45C":
+      {
+        "Value":"76414BCB",
+        "Belongs":
+        {
+          "Name":"USER32.dll",
+          "Relative":"00024BCB",
+          "Memory Dump":
+          {
+            "76414BAB":"  CC CC CC CC CC 8B FF 55 8B EC 8B 55 0C 8B 4D 08",
+            "76414BBB":"  6A 01 FF 75 18 FF 75 14 FF 75 10 E8 AC 2D 01 00",
+            "76414BCB":"> 5D C2 14 00 CC CC CC CC CC CC CC CC CC CC CC CC",
+            "76414BDB":"  CC CC CC CC CC 8B FF 55 8B EC 8B 4D 08 83 39 08",
+            "76414BEB":"  0F 85 32 93 02 00 A1 50 6C 49 76 8B 80 68 13 00"
+          }
+        }
+      }
+,
+      "0019C460":
+      {
+        "Value":"00000112"
+      }
+,
+      "0019C464":
+      {
+        "Value":"0000F060"
+      }
+,
+      "0019C468":
+      {
+        "Value":"00000000"
+      }
+,
+      "0019C46C":
+      {
+        "Value":"00000001"
+      }
+,
+      "0019C470":
+      {
+        "Value":"0000F060"
+      }
+,
+      "0019C474":
+      {
+        "Value":"0F8F1A10",
+        "Belongs":
+        {
+          "Name":"inputsystem.dll",
+          "Relative":"00001A10",
+          "Memory Dump":
+          {
+            "0F8F19F0":"  24 18 8B 76 0C 85 F6 0F 84 A5 02 00 00 8B 4C 24",
+            "0F8F1A00":"  20 8B 54 24 14 51 55 53 52 56 FF 15 10 C1 8F 0F",
+            "0F8F1A10":"> 5F 5D 5B 5E C2 10 00 8D 83 FF FD FF FF 83 F8 03",
+            "0F8F1A20":"  77 D0 FF 24 85 C4 1C 8F 0F 80 4E 21 08 8B 86 34",
+            "0F8F1A30":"  06 00 00 6A 00 6A 00 6A 6B 50 6A 00 8B CE 89 86"
+          }
+        }
+,
+        "PString":"_][^"
+      }
+,
+      "0019C478":
+      {
+        "Value":"FFFF0451"
+      }
+,
+      "0019C47C":
+      {
+        "Value":"000D050C"
+      }
+,
+      "0019C480":
+      {
+        "Value":"00000112"
+      }
+,
+      "0019C484":
+      {
+        "Value":"0000F060"
+      }
+,
+      "0019C488":
+      {
+        "Value":"00000000"
+      }
+,
+      "0019C48C":
+      {
+        "Value":"00000112"
+      }
+,
+      "0019C490":
+      {
+        "Value":"0019C4C4"
+      }
+,
+      "0019C494":
+      {
+        "Value":"0F8F1D50",
+        "Belongs":
+        {
+          "Name":"inputsystem.dll",
+          "Relative":"00001D50",
+          "Memory Dump":
+          {
+            "0F8F1D30":"  0E 00 00 E8 B8 F9 FF FF F6 44 24 08 01 74 09 56",
+            "0F8F1D40":"  E8 9B 0C 00 00 83 C4 04 8B C6 5E C2 04 00 CC CC",
+            "0F8F1D50":"> B9 E0 FF 8F 0F E9 36 FB FF FF CC CC CC CC CC CC",
+            "0F8F1D60":"  56 8B F1 80 7E 10 00 74 12 68 90 C2 8F 0F FF 15",
+            "0F8F1D70":"  34 C1 8F 0F 83 C4 04 5E C2 04 00 57 8B 7C 24 0C"
+          }
+        }
+      }
+,
+      "0019C498":
+      {
+        "Value":"000D050C"
+      }
+,
+      "0019C49C":
+      {
+        "Value":"76431C0B",
+        "Belongs":
+        {
+          "Name":"USER32.dll",
+          "Relative":"00041C0B",
+          "Memory Dump":
+          {
+            "76431BEB":"  56 FF 75 18 FF 75 14 FF 75 10 FF 75 0C 64 80 0D",
+            "76431BFB":"  CA 0F 00 00 01 8B 4D 08 FF 15 58 B0 49 76 FF D1",
+            "76431C0B":"> 64 80 25 CA 0F 00 00 FE 81 7C 24 04 CD AB BA DC",
+            "76431C1B":"  74 11 81 3C 24 CD AB BA DC 75 05 83 EC 04 EB 03",
+            "76431C2B":"  83 C4 10 83 C4 08 5B 5F 5E 5D C2 14 00 55 8B EC"
+          }
+        }
+      }
+,
+      "0019C4A0":
+      {
+        "Value":"000D050C"
+      }
+,
+      "0019C4A4":
+      {
+        "Value":"00000112"
+      }
+,
+      "0019C4A8":
+      {
+        "Value":"0000F060"
+      }
+,
+      "0019C4AC":
+      {
+        "Value":"00000000"
+      }
+,
+      "0019C4B0":
+      {
+        "Value":"000D050C"
+      }
+,
+      "0019C4B4":
+      {
+        "Value":"DCBAABCD"
+      }
+,
+      "0019C4B8":
+      {
+        "Value":"0F8F1D50",
+        "Belongs":
+        {
+          "Name":"inputsystem.dll",
+          "Relative":"00001D50",
+          "Memory Dump":
+          {
+            "0F8F1D30":"  0E 00 00 E8 B8 F9 FF FF F6 44 24 08 01 74 09 56",
+            "0F8F1D40":"  E8 9B 0C 00 00 83 C4 04 8B C6 5E C2 04 00 CC CC",
+            "0F8F1D50":"> B9 E0 FF 8F 0F E9 36 FB FF FF CC CC CC CC CC CC",
+            "0F8F1D60":"  56 8B F1 80 7E 10 00 74 12 68 90 C2 8F 0F FF 15",
+            "0F8F1D70":"  34 C1 8F 0F 83 C4 04 5E C2 04 00 57 8B 7C 24 0C"
+          }
+        }
+      }
+,
+      "0019C4BC":
+      {
+        "Value":"00000112"
+      }
+,
+      "0019C4C0":
+      {
+        "Value":"000D050C"
+      }
+,
+      "0019C4C4":
+      {
+        "Value":"0019C5AC"
+      }
+,
+      "0019C4C8":
+      {
+        "Value":"764282CA",
+        "Belongs":
+        {
+          "Name":"USER32.dll",
+          "Relative":"000382CA",
+          "Memory Dump":
+          {
+            "764282AA":"  85 AA 00 00 00 8B CB E8 47 9A 00 00 FF 75 18 FF",
+            "764282BA":"  75 14 8B 7D 10 57 8B 75 E0 56 53 E8 16 99 00 00",
+            "764282CA":"> 89 45 DC 83 7D CC 00 74 20 8D 45 BC 50 8D 45 DC",
+            "764282DA":"  50 FF 75 18 FF 75 14 57 56 8B 35 44 60 49 76 8B",
+            "764282EA":"  CE FF 15 58 B0 49 76 FF D6 83 7D C8 00 0F 85 60"
+          }
+        }
+      }
+,
+      "0019C4CC":
+      {
+        "Value":"0F8F1D50",
+        "Belongs":
+        {
+          "Name":"inputsystem.dll",
+          "Relative":"00001D50",
+          "Memory Dump":
+          {
+            "0F8F1D30":"  0E 00 00 E8 B8 F9 FF FF F6 44 24 08 01 74 09 56",
+            "0F8F1D40":"  E8 9B 0C 00 00 83 C4 04 8B C6 5E C2 04 00 CC CC",
+            "0F8F1D50":"> B9 E0 FF 8F 0F E9 36 FB FF FF CC CC CC CC CC CC",
+            "0F8F1D60":"  56 8B F1 80 7E 10 00 74 12 68 90 C2 8F 0F FF 15",
+            "0F8F1D70":"  34 C1 8F 0F 83 C4 04 5E C2 04 00 57 8B 7C 24 0C"
+          }
+        }
+      }
+,
+      "0019C4D0":
+      {
+        "Value":"000D050C"
+      }
+,
+      "0019C4D4":
+      {
+        "Value":"00000112"
+      }
+,
+      "0019C4D8":
+      {
+        "Value":"0000F060"
+      }
+,
+      "0019C4DC":
+      {
+        "Value":"00000000"
+      }
+,
+      "0019C4E0":
+      {
+        "Value":"793D8DB1"
+      }
+,
+      "0019C4E4":
+      {
+        "Value":"0F8F1D50",
+        "Belongs":
+        {
+          "Name":"inputsystem.dll",
+          "Relative":"00001D50",
+          "Memory Dump":
+          {
+            "0F8F1D30":"  0E 00 00 E8 B8 F9 FF FF F6 44 24 08 01 74 09 56",
+            "0F8F1D40":"  E8 9B 0C 00 00 83 C4 04 8B C6 5E C2 04 00 CC CC",
+            "0F8F1D50":"> B9 E0 FF 8F 0F E9 36 FB FF FF CC CC CC CC CC CC",
+            "0F8F1D60":"  56 8B F1 80 7E 10 00 74 12 68 90 C2 8F 0F FF 15",
+            "0F8F1D70":"  34 C1 8F 0F 83 C4 04 5E C2 04 00 57 8B 7C 24 0C"
+          }
+        }
+      }
+,
+      "0019C4E8":
+      {
+        "Value":"00C33AD0"
+      }
+,
+      "0019C4EC":
+      {
+        "Value":"000D050C"
+      }
+,
+      "0019C4F0":
+      {
+        "Value":"0019C51C"
+      }
+,
+      "0019C4F4":
+      {
+        "Value":"73B0F47E",
+        "Belongs":
+        {
+          "Name":"CoreMessaging.dll",
+          "Relative":"0000F47E",
+          "Memory Dump":
+          {
+            "73B0F45E":"  35 54 20 B8 73 8B F9 FF 15 2C 61 B6 73 8B F0 3B",
+            "73B0F46E":"  F7 74 11 57 FF 35 54 20 B8 73 FF 15 44 61 B6 73",
+            "73B0F47E":"> 85 C0 74 05 5F 8B C6 5E C3 E8 ED 01 00 00 CC 55",
+            "73B0F48E":"  8B EC 56 8B F1 8B 8E 64 01 00 00 85 C9 74 16 E8",
+            "73B0F49E":"  B7 83 00 00 56 FF 35 54 20 B8 73 FF 15 44 61 B6"
+          }
+        }
+      }
+,
+      "0019C4F8":
+      {
+        "Value":"00000001"
+      }
+,
+      "0019C4FC":
+      {
+        "Value":"0000007E"
+      }
+,
+      "0019C500":
+      {
+        "Value":"76427067",
+        "Belongs":
+        {
+          "Name":"USER32.dll",
+          "Relative":"00037067",
+          "Memory Dump":
+          {
+            "76427047":"  A1 48 6C 49 76 D3 E2 8B 4C 24 24 84 14 08 75 1C",
+            "76427057":"  33 C0 8B 4C 24 6C 5F 5E 5B 33 CC E8 86 AC 00 00",
+            "76427067":"> 8B E5 5D C2 10 00 89 4C 24 24 EB C6 8B 0D 50 6C",
+            "76427077":"  49 76 81 FB 34 01 00 00 0F 86 9B 00 00 00 BA 4F",
+            "76427087":"  02 00 00 8D 42 FD 3B D8 0F 87 85 03 00 00 0F 84"
+          }
+        }
+,
+        "String":"gpBv"
+      }
+,
+      "0019C504":
+      {
+        "Value":"00000000"
+      }
+,
+      "0019C508":
+      {
+        "Value":"00000020"
+      }
+,
+      "0019C50C":
+      {
+        "Value":"000F0502"
+      }
+,
+      "0019C510":
+      {
+        "Value":"00000000"
+      }
+,
+      "0019C514":
+      {
+        "Value":"00000006"
+      }
+,
+      "0019C518":
+      {
+        "Value":"03000556"
+      }
+,
+      "0019C51C":
+      {
+        "Value":"0000000F"
+      }
+,
+      "0019C520":
+      {
+        "Value":"76427067",
+        "Belongs":
+        {
+          "Name":"USER32.dll",
+          "Relative":"00037067",
+          "Memory Dump":
+          {
+            "76427047":"  A1 48 6C 49 76 D3 E2 8B 4C 24 24 84 14 08 75 1C",
+            "76427057":"  33 C0 8B 4C 24 6C 5F 5E 5B 33 CC E8 86 AC 00 00",
+            "76427067":"> 8B E5 5D C2 10 00 89 4C 24 24 EB C6 8B 0D 50 6C",
+            "76427077":"  49 76 81 FB 34 01 00 00 0F 86 9B 00 00 00 BA 4F",
+            "76427087":"  02 00 00 8D 42 FD 3B D8 0F 87 85 03 00 00 0F 84"
+          }
+        }
+,
+        "String":"gpBvMm@o "
+      }
+,
+      "0019C524":
+      {
+        "Value":"6F406D4D",
+        "Belongs":
+        {
+          "Name":"igd9dxva32.dll",
+          "Relative":"020C6D4D",
+          "Memory Dump":
+          {
+            "6F406D2D":"  41 00 00 10 00 00 04 00 02 00 20 5C 00 00 16 14",
+            "6F406D3D":"  00 14 00 20 00 01 00 04 00 00 34 00 14 00 0E 30",
+            "6F406D4D":"> 00 00 00 40 00 00 00 08 02 5C 20 D4 06 00 02 DC",
+            "6F406D5D":"  46 00 00 10 00 00 05 00 02 00 20 5C 00 00 16 14",
+            "6F406D6D":"  00 14 00 20 00 01 00 04 00 00 34 00 14 00 0E 60"
+          }
+        }
+,
+        "String":"Mm@o "
+      }
+,
+      "0019C528":
+      {
+        "Value":"00000020"
+      }
+,
+      "0019C52C":
+      {
+        "Value":"00000024"
+      }
+,
+      "0019C530":
+      {
+        "Value":"00000001"
+      }
+,
+      "0019C534":
+      {
+        "Value":"00000000"
+      }
+,
+      "0019C538":
+      {
+        "Value":"00000000"
+      }
+,
+      "0019C53C":
+      {
+        "Value":"00000030"
+      }
+,
+      "0019C540":
+      {
+        "Value":"FFFFFFFF"
+      }
+,
+      "0019C544":
+      {
+        "Value":"FFFFFFFF"
+      }
+,
+      "0019C548":
+      {
+        "Value":"764280DE",
+        "Belongs":
+        {
+          "Name":"USER32.dll",
+          "Relative":"000380DE",
+          "Memory Dump":
+          {
+            "764280BE":"  85 F1 03 00 00 85 C9 75 09 81 CE 00 00 00 80 89",
+            "764280CE":"  75 E4 89 75 B4 8B D3 8D 4D 80 FF 15 28 A7 49 76",
+            "764280DE":"> F0 FF 05 A0 7E 49 76 83 3D 80 6C 49 76 00 0F 84",
+            "764280EE":"  5F E0 01 00 83 3D 7C 6C 49 76 00 0F 84 52 E0 01",
+            "764280FE":"  00 BB 01 00 00 00 89 5D D8 68 EC 7D 49 76 FF 15"
+          }
+        }
+      }
+,
+      "0019C54C":
+      {
+        "Value":"00000000"
+      }
+,
+      "0019C550":
+      {
+        "Value":"00000000"
+      }
+,
+      "0019C554":
+      {
+        "Value":"00000000"
+      }
+,
+      "0019C558":
+      {
+        "Value":"001E11C8"
+      }
+,
+      "0019C55C":
+      {
+        "Value":"00000000"
+      }
+,
+      "0019C560":
+      {
+        "Value":"80006010"
+      }
+,
+      "0019C564":
+      {
+        "Value":"00000000"
+      }
+,
+      "0019C568":
+      {
+        "Value":"00000000"
+      }
+,
+      "0019C56C":
+      {
+        "Value":"001E1348"
+      }
+,
+      "0019C570":
+      {
+        "Value":"00000000"
+      }
+,
+      "0019C574":
+      {
+        "Value":"00000000"
+      }
+,
+      "0019C578":
+      {
+        "Value":"00000000"
+      }
+,
+      "0019C57C":
+      {
+        "Value":"0F8F1D50",
+        "Belongs":
+        {
+          "Name":"inputsystem.dll",
+          "Relative":"00001D50",
+          "Memory Dump":
+          {
+            "0F8F1D30":"  0E 00 00 E8 B8 F9 FF FF F6 44 24 08 01 74 09 56",
+            "0F8F1D40":"  E8 9B 0C 00 00 83 C4 04 8B C6 5E C2 04 00 CC CC",
+            "0F8F1D50":"> B9 E0 FF 8F 0F E9 36 FB FF FF CC CC CC CC CC CC",
+            "0F8F1D60":"  56 8B F1 80 7E 10 00 74 12 68 90 C2 8F 0F FF 15",
+            "0F8F1D70":"  34 C1 8F 0F 83 C4 04 5E C2 04 00 57 8B 7C 24 0C"
+          }
+        }
+      }
+,
+      "0019C580":
+      {
+        "Value":"00000000"
+      }
+,
+      "0019C584":
+      {
+        "Value":"00000001"
+      }
+,
+      "0019C588":
+      {
+        "Value":"00000000"
+      }
+,
+      "0019C58C":
+      {
+        "Value":"000D050C"
+      }
+,
+      "0019C590":
+      {
+        "Value":"80006010"
+      }
+,
+      "0019C594":
+      {
+        "Value":"76426F67",
+        "Belongs":
+        {
+          "Name":"USER32.dll",
+          "Relative":"00036F67",
+          "Memory Dump":
+          {
+            "76426F47":"  FF 75 14 FF 75 10 56 FF 75 08 E8 9A F3 FF FF 8B",
+            "76426F57":"  F0 89 75 E4 C7 45 FC FE FF FF FF E8 32 00 00 00",
+            "76426F67":"> 8B C6 8B 4D F0 64 89 0D 00 00 00 00 59 5F 5E 5B",
+            "76426F77":"  8B E5 5D C2 10 00 FF 75 14 FF 75 10 56 FF 75 08",
+            "76426F87":"  8B 35 20 60 49 76 8B CE FF 15 58 B0 49 76 FF D6"
+          }
+        }
+,
+        "String":"goBv"
+      }
+,
+      "0019C598":
+      {
+        "Value":"793D8DCD"
+      }
+,
+      "0019C59C":
+      {
+        "Value":"0019C748"
+      }
+,
+      "0019C5A0":
+      {
+        "Value":"76433BB0",
+        "Belongs":
+        {
+          "Name":"USER32.dll",
+          "Relative":"00043BB0",
+          "Memory Dump":
+          {
+            "76433B90":"  FF 8B 46 08 8B 4E 0C 03 CF 33 0C 38 5F 5E 5D E9",
+            "76433BA0":"  49 E1 FF FF CC CC CC CC CC CC CC CC CC CC CC CC",
+            "76433BB0":"> 8B FF 55 8B EC 83 EC 18 53 56 57 8B 7D 0C C6 45",
+            "76433BC0":"  FF 00 C7 45 F4 01 00 00 00 8B 47 08 8D 5F 10 33",
+            "76433BD0":"  05 38 65 49 76 53 50 89 45 F8 E8 91 FF FF FF FF"
+          }
+        }
+      }
+,
+      "0019C5A4":
+      {
+        "Value":"0F6CE695"
+      }
+,
+      "0019C5A8":
+      {
+        "Value":"00000000"
+      }
+,
+      "0019C5AC":
+      {
+        "Value":"0019C5E4"
+      }
+,
+      "0019C5B0":
+      {
+        "Value":"764279F6",
+        "Belongs":
+        {
+          "Name":"USER32.dll",
+          "Relative":"000379F6",
+          "Memory Dump":
+          {
+            "764279D6":"  00 00 00 8B 8E E0 00 00 00 89 45 FC 52 51 FF 75",
+            "764279E6":"  10 FF 75 0C FF 75 08 52 57 8B D3 E8 9A 05 00 00",
+            "764279F6":"> 5F 5E 5B C9 C2 10 00 8B B0 48 08 00 00 8B 90 4C",
+            "76427A06":"  08 00 00 EB BB B2 07 8B CF E8 22 25 00 00 8B C8",
+            "76427A16":"  0B CA 74 6A 81 FE 00 04 00 00 73 0F B9 00 01 00"
+          }
+        }
+,
+        "PString":"_^["
+      }
+,
+      "0019C5B4":
+      {
+        "Value":"0F8F1D50",
+        "Belongs":
+        {
+          "Name":"inputsystem.dll",
+          "Relative":"00001D50",
+          "Memory Dump":
+          {
+            "0F8F1D30":"  0E 00 00 E8 B8 F9 FF FF F6 44 24 08 01 74 09 56",
+            "0F8F1D40":"  E8 9B 0C 00 00 83 C4 04 8B C6 5E C2 04 00 CC CC",
+            "0F8F1D50":"> B9 E0 FF 8F 0F E9 36 FB FF FF CC CC CC CC CC CC",
+            "0F8F1D60":"  56 8B F1 80 7E 10 00 74 12 68 90 C2 8F 0F FF 15",
+            "0F8F1D70":"  34 C1 8F 0F 83 C4 04 5E C2 04 00 57 8B 7C 24 0C"
+          }
+        }
+      }
+,
+      "0019C5B8":
+      {
+        "Value":"00000000"
+      }
+,
+      "0019C5BC":
+      {
+        "Value":"00000112"
+      }
+,
+      "0019C5C0":
+      {
+        "Value":"0000F060"
+      }
+,
+      "0019C5C4":
+      {
+        "Value":"00000000"
+      }
+,
+      "0019C5C8":
+      {
+        "Value":"00000000"
+      }
+,
+      "0019C5CC":
+      {
+        "Value":"00000000"
+      }
+,
+      "0019C5D0":
+      {
+        "Value":"0F8F1D50",
+        "Belongs":
+        {
+          "Name":"inputsystem.dll",
+          "Relative":"00001D50",
+          "Memory Dump":
+          {
+            "0F8F1D30":"  0E 00 00 E8 B8 F9 FF FF F6 44 24 08 01 74 09 56",
+            "0F8F1D40":"  E8 9B 0C 00 00 83 C4 04 8B C6 5E C2 04 00 CC CC",
+            "0F8F1D50":"> B9 E0 FF 8F 0F E9 36 FB FF FF CC CC CC CC CC CC",
+            "0F8F1D60":"  56 8B F1 80 7E 10 00 74 12 68 90 C2 8F 0F FF 15",
+            "0F8F1D70":"  34 C1 8F 0F 83 C4 04 5E C2 04 00 57 8B 7C 24 0C"
+          }
+        }
+      }
+,
+      "0019C5D4":
+      {
+        "Value":"000D050C"
+      }
+,
+      "0019C5D8":
+      {
+        "Value":"0000F060"
+      }
+,
+      "0019C5DC":
+      {
+        "Value":"0F8F1D50",
+        "Belongs":
+        {
+          "Name":"inputsystem.dll",
+          "Relative":"00001D50",
+          "Memory Dump":
+          {
+            "0F8F1D30":"  0E 00 00 E8 B8 F9 FF FF F6 44 24 08 01 74 09 56",
+            "0F8F1D40":"  E8 9B 0C 00 00 83 C4 04 8B C6 5E C2 04 00 CC CC",
+            "0F8F1D50":"> B9 E0 FF 8F 0F E9 36 FB FF FF CC CC CC CC CC CC",
+            "0F8F1D60":"  56 8B F1 80 7E 10 00 74 12 68 90 C2 8F 0F FF 15",
+            "0F8F1D70":"  34 C1 8F 0F 83 C4 04 5E C2 04 00 57 8B 7C 24 0C"
+          }
+        }
+      }
+,
+      "0019C5E0":
+      {
+        "Value":"00000000"
+      }
+,
+      "0019C5E4":
+      {
+        "Value":"0019C5FC"
+      }
+,
+      "0019C5E8":
+      {
+        "Value":"76414BCB",
+        "Belongs":
+        {
+          "Name":"USER32.dll",
+          "Relative":"00024BCB",
+          "Memory Dump":
+          {
+            "76414BAB":"  CC CC CC CC CC 8B FF 55 8B EC 8B 55 0C 8B 4D 08",
+            "76414BBB":"  6A 01 FF 75 18 FF 75 14 FF 75 10 E8 AC 2D 01 00",
+            "76414BCB":"> 5D C2 14 00 CC CC CC CC CC CC CC CC CC CC CC CC",
+            "76414BDB":"  CC CC CC CC CC 8B FF 55 8B EC 8B 4D 08 83 39 08",
+            "76414BEB":"  0F 85 32 93 02 00 A1 50 6C 49 76 8B 80 68 13 00"
+          }
+        }
+      }
+,
+      "0019C5EC":
+      {
+        "Value":"00000112"
+      }
+,
+      "0019C5F0":
+      {
+        "Value":"0000F060"
+      }
+,
+      "0019C5F4":
+      {
+        "Value":"00000000"
+      }
+,
+      "0019C5F8":
+      {
+        "Value":"00000001"
+      }
+,
+      "0019C5FC":
+      {
+        "Value":"0019C644"
+      }
+,
+      "0019C600":
+      {
+        "Value":"74B3C4C9",
+        "Belongs":
+        {
+          "Name":"d3d9.dll",
+          "Relative":"000AC4C9",
+          "Memory Dump":
+          {
+            "74B3C4A9":"  53 FF 75 0C 56 57 E9 87 4B FC FF FF 15 AC D4 C0",
+            "74B3C4B9":"  74 FF 75 14 53 FF 75 0C 56 57 FF 15 38 D5 C0 74",
+            "74B3C4C9":"> E9 73 4B FC FF 3B DA 0F 85 06 4B FC FF FF 15 40",
+            "74B3C4D9":"  D4 C0 74 50 6A 00 6A 1C 56 FF 15 34 D5 C0 74 EB",
+            "74B3C4E9":"  65 85 DB 0F 85 63 4B FC FF E9 71 4B FC FF 84 C0"
+          }
+        }
+      }
+,
+      "0019C604":
+      {
+        "Value":"0F8F1D50",
+        "Belongs":
+        {
+          "Name":"inputsystem.dll",
+          "Relative":"00001D50",
+          "Memory Dump":
+          {
+            "0F8F1D30":"  0E 00 00 E8 B8 F9 FF FF F6 44 24 08 01 74 09 56",
+            "0F8F1D40":"  E8 9B 0C 00 00 83 C4 04 8B C6 5E C2 04 00 CC CC",
+            "0F8F1D50":"> B9 E0 FF 8F 0F E9 36 FB FF FF CC CC CC CC CC CC",
+            "0F8F1D60":"  56 8B F1 80 7E 10 00 74 12 68 90 C2 8F 0F FF 15",
+            "0F8F1D70":"  34 C1 8F 0F 83 C4 04 5E C2 04 00 57 8B 7C 24 0C"
+          }
+        }
+      }
+,
+      "0019C608":
+      {
+        "Value":"000D050C"
+      }
+,
+      "0019C60C":
+      {
+        "Value":"00000112"
+      }
+,
+      "0019C610":
+      {
+        "Value":"0000F060"
+      }
+,
+      "0019C614":
+      {
+        "Value":"00000000"
+      }
+,
+      "0019C618":
+      {
+        "Value":"00000112"
+      }
+,
+      "0019C61C":
+      {
+        "Value":"000D050C"
+      }
+,
+      "0019C620":
+      {
+        "Value":"74B00F50",
+        "Belongs":
+        {
+          "Name":"d3d9.dll",
+          "Relative":"00070F50",
+          "Memory Dump":
+          {
+            "74B00F30":"  8B 4D 10 89 11 5D C3 B8 16 02 07 80 83 CA FF EB",
+            "74B00F40":"  EF CC CC CC CC CC CC CC CC CC CC CC CC CC CC CC",
+            "74B00F50":"> 8B FF 55 8B EC 83 E4 F8 83 EC 1C A1 40 53 C0 74",
+            "74B00F60":"  33 C4 89 44 24 18 53 8B 5D 10 56 8B 75 08 57 39",
+            "74B00F70":"  35 9C 7B C0 74 0F 85 46 B8 03 00 81 3D 98 7B C0"
+          }
+        }
+      }
+,
+      "0019C624":
+      {
+        "Value":"0F8F1D50",
+        "Belongs":
+        {
+          "Name":"inputsystem.dll",
+          "Relative":"00001D50",
+          "Memory Dump":
+          {
+            "0F8F1D30":"  0E 00 00 E8 B8 F9 FF FF F6 44 24 08 01 74 09 56",
+            "0F8F1D40":"  E8 9B 0C 00 00 83 C4 04 8B C6 5E C2 04 00 CC CC",
+            "0F8F1D50":"> B9 E0 FF 8F 0F E9 36 FB FF FF CC CC CC CC CC CC",
+            "0F8F1D60":"  56 8B F1 80 7E 10 00 74 12 68 90 C2 8F 0F FF 15",
+            "0F8F1D70":"  34 C1 8F 0F 83 C4 04 5E C2 04 00 57 8B 7C 24 0C"
+          }
+        }
+      }
+,
+      "0019C628":
+      {
+        "Value":"00000001"
+      }
+,
+      "0019C62C":
+      {
+        "Value":"000D050C"
+      }
+,
+      "0019C630":
+      {
+        "Value":"00000112"
+      }
+,
+      "0019C634":
+      {
+        "Value":"0000F060"
+      }
+,
+      "0019C638":
+      {
+        "Value":"00000000"
+      }
+,
+      "0019C63C":
+      {
+        "Value":"D2B4BD0B"
+      }
+,
+      "0019C640":
+      {
+        "Value":"000004B0"
+      }
+,
+      "0019C644":
+      {
+        "Value":"0019C670"
+      }
+,
+      "0019C648":
+      {
+        "Value":"76431C0B",
+        "Belongs":
+        {
+          "Name":"USER32.dll",
+          "Relative":"00041C0B",
+          "Memory Dump":
+          {
+            "76431BEB":"  56 FF 75 18 FF 75 14 FF 75 10 FF 75 0C 64 80 0D",
+            "76431BFB":"  CA 0F 00 00 01 8B 4D 08 FF 15 58 B0 49 76 FF D1",
+            "76431C0B":"> 64 80 25 CA 0F 00 00 FE 81 7C 24 04 CD AB BA DC",
+            "76431C1B":"  74 11 81 3C 24 CD AB BA DC 75 05 83 EC 04 EB 03",
+            "76431C2B":"  83 C4 10 83 C4 08 5B 5F 5E 5D C2 14 00 55 8B EC"
+          }
+        }
+      }
+,
+      "0019C64C":
+      {
+        "Value":"000D050C"
+      }
+,
+      "0019C650":
+      {
+        "Value":"00000112"
+      }
+,
+      "0019C654":
+      {
+        "Value":"0000F060"
+      }
+,
+      "0019C658":
+      {
+        "Value":"00000000"
+      }
+,
+      "0019C65C":
+      {
+        "Value":"000D050C"
+      }
+,
+      "0019C660":
+      {
+        "Value":"DCBAABCD"
+      }
+,
+      "0019C664":
+      {
+        "Value":"74B00F50",
+        "Belongs":
+        {
+          "Name":"d3d9.dll",
+          "Relative":"00070F50",
+          "Memory Dump":
+          {
+            "74B00F30":"  8B 4D 10 89 11 5D C3 B8 16 02 07 80 83 CA FF EB",
+            "74B00F40":"  EF CC CC CC CC CC CC CC CC CC CC CC CC CC CC CC",
+            "74B00F50":"> 8B FF 55 8B EC 83 E4 F8 83 EC 1C A1 40 53 C0 74",
+            "74B00F60":"  33 C4 89 44 24 18 53 8B 5D 10 56 8B 75 08 57 39",
+            "74B00F70":"  35 9C 7B C0 74 0F 85 46 B8 03 00 81 3D 98 7B C0"
+          }
+        }
+      }
+,
+      "0019C668":
+      {
+        "Value":"00000112"
+      }
+,
+      "0019C66C":
+      {
+        "Value":"000D050C"
+      }
+,
+      "0019C670":
+      {
+        "Value":"0019C758"
+      }
+,
+      "0019C674":
+      {
+        "Value":"764282CA",
+        "Belongs":
+        {
+          "Name":"USER32.dll",
+          "Relative":"000382CA",
+          "Memory Dump":
+          {
+            "764282AA":"  85 AA 00 00 00 8B CB E8 47 9A 00 00 FF 75 18 FF",
+            "764282BA":"  75 14 8B 7D 10 57 8B 75 E0 56 53 E8 16 99 00 00",
+            "764282CA":"> 89 45 DC 83 7D CC 00 74 20 8D 45 BC 50 8D 45 DC",
+            "764282DA":"  50 FF 75 18 FF 75 14 57 56 8B 35 44 60 49 76 8B",
+            "764282EA":"  CE FF 15 58 B0 49 76 FF D6 83 7D C8 00 0F 85 60"
+          }
+        }
+      }
+,
+      "0019C678":
+      {
+        "Value":"74B00F50",
+        "Belongs":
+        {
+          "Name":"d3d9.dll",
+          "Relative":"00070F50",
+          "Memory Dump":
+          {
+            "74B00F30":"  8B 4D 10 89 11 5D C3 B8 16 02 07 80 83 CA FF EB",
+            "74B00F40":"  EF CC CC CC CC CC CC CC CC CC CC CC CC CC CC CC",
+            "74B00F50":"> 8B FF 55 8B EC 83 E4 F8 83 EC 1C A1 40 53 C0 74",
+            "74B00F60":"  33 C4 89 44 24 18 53 8B 5D 10 56 8B 75 08 57 39",
+            "74B00F70":"  35 9C 7B C0 74 0F 85 46 B8 03 00 81 3D 98 7B C0"
+          }
+        }
+      }
+,
+      "0019C67C":
+      {
+        "Value":"000D050C"
+      }
+,
+      "0019C680":
+      {
+        "Value":"00000112"
+      }
+,
+      "0019C684":
+      {
+        "Value":"0000F060"
+      }
+,
+      "0019C688":
+      {
+        "Value":"00000000"
+      }
+,
+      "0019C68C":
+      {
+        "Value":"793D8F45"
+      }
+,
+      "0019C690":
+      {
+        "Value":"00000388"
+      }
+,
+      "0019C694":
+      {
+        "Value":"00000000"
+      }
+,
+      "0019C698":
+      {
+        "Value":"00000112"
+      }
+,
+      "0019C69C":
+      {
+        "Value":"776EC3E3",
+        "Belongs":
+        {
+          "Name":"ntdll.dll",
+          "Relative":"0004C3E3",
+          "Memory Dump":
+          {
+            "776EC3C3":"  0F 85 0A C9 04 00 8B C3 8B 4D F0 64 89 0D 00 00",
+            "776EC3D3":"  00 00 59 5F 5E 5B 8B 4D E4 33 CD E8 BD 8F 02 00",
+            "776EC3E3":"> 8B E5 5D C2 10 00 8B D1 E9 0A FD FF FF 8B 00 F6",
+            "776EC3F3":"  40 E0 20 0F 85 40 FF FF FF C6 85 40 FB FF FF 00",
+            "776EC403":"  83 C8 FF F0 0F C1 81 9C 00 00 00 0F 85 2F FF FF"
+          }
+        }
+      }
+,
+      "0019C6A0":
+      {
+        "Value":"11440000"
+      }
+    }
+,
+    "Modules":
+    {
+      "hl2.exe":
+      {
+        "Base":"00400000",
+        "Last":"0041BFFF",
+        "Size":"114688"
+      }
+,
+      "ntdll.dll":
+      {
+        "Base":"776A0000",
+        "Last":"77843FFF",
+        "Size":"1720320"
+      }
+,
+      "KERNEL32.DLL":
+      {
+        "Base":"77420000",
+        "Last":"7750FFFF",
+        "Size":"983040"
+      }
+,
+      "KERNELBASE.dll":
+      {
+        "Base":"77030000",
+        "Last":"77268FFF",
+        "Size":"2330624"
+      }
+,
+      "USER32.dll":
+      {
+        "Base":"763F0000",
+        "Last":"7658CFFF",
+        "Size":"1691648"
+      }
+,
+      "win32u.dll":
+      {
+        "Base":"76DE0000",
+        "Last":"76DF7FFF",
+        "Size":"98304"
+      }
+,
+      "GDI32.dll":
+      {
+        "Base":"76A40000",
+        "Last":"76A62FFF",
+        "Size":"143360"
+      }
+,
+      "gdi32full.dll":
+      {
+        "Base":"76950000",
+        "Last":"76A36FFF",
+        "Size":"946176"
+      }
+,
+      "msvcp_win.dll":
+      {
+        "Base":"76C20000",
+        "Last":"76C9AFFF",
+        "Size":"503808"
+      }
+,
+      "ucrtbase.dll":
+      {
+        "Base":"76EA0000",
+        "Last":"76FBFFFF",
+        "Size":"1179648"
+      }
+,
+      "IMM32.DLL":
+      {
+        "Base":"756E0000",
+        "Last":"75704FFF",
+        "Size":"151552"
+      }
+,
+      "launcher.dll":
+      {
+        "Base":"10000000",
+        "Last":"10030FFF",
+        "Size":"200704"
+      }
+,
+      "ADVAPI32.dll":
+      {
+        "Base":"77610000",
+        "Last":"7768CFFF",
+        "Size":"512000"
+      }
+,
+      "msvcrt.dll":
+      {
+        "Base":"75510000",
+        "Last":"755CEFFF",
+        "Size":"782336"
+      }
+,
+      "sechost.dll":
+      {
+        "Base":"768D0000",
+        "Last":"76946FFF",
+        "Size":"487424"
+      }
+,
+      "RPCRT4.dll":
+      {
+        "Base":"76CB0000",
+        "Last":"76D68FFF",
+        "Size":"757760"
+      }
+,
+      "WSOCK32.dll":
+      {
+        "Base":"75500000",
+        "Last":"75507FFF",
+        "Size":"32768"
+      }
+,
+      "bcrypt.dll":
+      {
+        "Base":"75BC0000",
+        "Last":"75BD8FFF",
+        "Size":"102400"
+      }
+,
+      "ole32.dll":
+      {
+        "Base":"75C90000",
+        "Last":"75D72FFF",
+        "Size":"929792"
+      }
+,
+      "WS2_32.dll":
+      {
+        "Base":"76FC0000",
+        "Last":"77022FFF",
+        "Size":"405504"
+      }
+,
+      "combase.dll":
+      {
+        "Base":"76650000",
+        "Last":"768CFFFF",
+        "Size":"2621440"
+      }
+,
+      "vstdlib.dll":
+      {
+        "Base":"02070000",
+        "Last":"0208DFFF",
+        "Size":"122880"
+      }
+,
+      "tier0.dll":
+      {
+        "Base":"024E0000",
+        "Last":"02515FFF",
+        "Size":"221184"
+      }
+,
+      "unitlib2.dll":
+      {
+        "Base":"0EDE0000",
+        "Last":"0EF0BFFF",
+        "Size":"1228800"
+      }
+,
+      "oleaut32.dll":
+      {
+        "Base":"76E00000",
+        "Last":"76E95FFF",
+        "Size":"614400"
+      }
+,
+      "version.dll":
+      {
+        "Base":"74C30000",
+        "Last":"74C37FFF",
+        "Size":"32768"
+      }
+,
+      "netapi32.dll":
+      {
+        "Base":"754E0000",
+        "Last":"754F3FFF",
+        "Size":"81920"
+      }
+,
+      "NETUTILS.DLL":
+      {
+        "Base":"754D0000",
+        "Last":"754DAFFF",
+        "Size":"45056"
+      }
+,
+      "libeay32.dll":
+      {
+        "Base":"0F160000",
+        "Last":"0F259FFF",
+        "Size":"1024000"
+      }
+,
+      "MSVCR71.dll":
+      {
+        "Base":"7C340000",
+        "Last":"7C395FFF",
+        "Size":"352256"
+      }
+,
+      "ssleay32.dll":
+      {
+        "Base":"02560000",
+        "Last":"0258FFFF",
+        "Size":"196608"
+      }
+,
+      "wkscli.dll":
+      {
+        "Base":"754B0000",
+        "Last":"754C0FFF",
+        "Size":"69632"
+      }
+,
+      "srvcli.dll":
+      {
+        "Base":"75490000",
+        "Last":"754ACFFF",
+        "Size":"118784"
+      }
+,
+      "CRYPTSP.dll":
+      {
+        "Base":"75470000",
+        "Last":"75482FFF",
+        "Size":"77824"
+      }
+,
+      "rsaenh.dll":
+      {
+        "Base":"75430000",
+        "Last":"75460FFF",
+        "Size":"200704"
+      }
+,
+      "CRYPTBASE.dll":
+      {
+        "Base":"75420000",
+        "Last":"75429FFF",
+        "Size":"40960"
+      }
+,
+      "bcryptPrimitives.dll":
+      {
+        "Base":"765F0000",
+        "Last":"7664EFFF",
+        "Size":"389120"
+      }
+,
+      "napinsp.dll":
+      {
+        "Base":"75400000",
+        "Last":"75410FFF",
+        "Size":"69632"
+      }
+,
+      "filesystem_steam.dll":
+      {
+        "Base":"0F5C0000",
+        "Last":"0F613FFF",
+        "Size":"344064"
+      }
+,
+      "SHELL32.dll":
+      {
+        "Base":"75E10000",
+        "Last":"763EAFFF",
+        "Size":"6139904"
+      }
+,
+      "Steam.dll":
+      {
+        "Base":"753A0000",
+        "Last":"753F5FFF",
+        "Size":"352256"
+      }
+,
+      "DbgHelp.dll":
+      {
+        "Base":"751F0000",
+        "Last":"7539AFFF",
+        "Size":"1748992"
+      }
+,
+      "dbgcore.DLL":
+      {
+        "Base":"751C0000",
+        "Last":"751EAFFF",
+        "Size":"176128"
+      }
+,
+      "shcore.dll":
+      {
+        "Base":"75BE0000",
+        "Last":"75C66FFF",
+        "Size":"552960"
+      }
+,
+      "pnrpnsp.dll":
+      {
+        "Base":"751A0000",
+        "Last":"751B5FFF",
+        "Size":"90112"
+      }
+,
+      "wshbth.dll":
+      {
+        "Base":"75180000",
+        "Last":"75195FFF",
+        "Size":"90112"
+      }
+,
+      "kernel.appcore.dll":
+      {
+        "Base":"749C0000",
+        "Last":"749CEFFF",
+        "Size":"61440"
+      }
+,
+      "NLAapi.dll":
+      {
+        "Base":"75160000",
+        "Last":"75175FFF",
+        "Size":"90112"
+      }
+,
+      "IPHLPAPI.DLL":
+      {
+        "Base":"74880000",
+        "Last":"748B1FFF",
+        "Size":"204800"
+      }
+,
+      "uxtheme.dll":
+      {
+        "Base":"750E0000",
+        "Last":"75153FFF",
+        "Size":"475136"
+      }
+,
+      "mswsock.dll":
+      {
+        "Base":"75080000",
+        "Last":"750D1FFF",
+        "Size":"335872"
+      }
+,
+      "DNSAPI.dll":
+      {
+        "Base":"74FF0000",
+        "Last":"7507FFFF",
+        "Size":"589824"
+      }
+,
+      "NSI.dll":
+      {
+        "Base":"76DD0000",
+        "Last":"76DD6FFF",
+        "Size":"28672"
+      }
+,
+      "datamodel.dll":
+      {
+        "Base":"0F7C0000",
+        "Last":"0F8BDFFF",
+        "Size":"1040384"
+      }
+,
+      "parsifal.dll":
+      {
+        "Base":"628C0000",
+        "Last":"628D8FFF",
+        "Size":"102400"
+      }
+,
+      "winrnr.dll":
+      {
+        "Base":"74FE0000",
+        "Last":"74FEDFFF",
+        "Size":"57344"
+      }
+,
+      "dmserializers.dll":
+      {
+        "Base":"0F760000",
+        "Last":"0F79CFFF",
+        "Size":"249856"
+      }
+,
+      "mdnsNSP.dll":
+      {
+        "Base":"74FB0000",
+        "Last":"74FD0FFF",
+        "Size":"135168"
+      }
+,
+      "datacache.dll":
+      {
+        "Base":"0F8C0000",
+        "Last":"0F8E4FFF",
+        "Size":"151552"
+      }
+,
+      "inputsystem.dll":
+      {
+        "Base":"0F8F0000",
+        "Last":"0F904FFF",
+        "Size":"86016"
+      }
+,
+      "WINMM.dll":
+      {
+        "Base":"74F80000",
+        "Last":"74FA7FFF",
+        "Size":"163840"
+      }
+,
+      "materialsystem.dll":
+      {
+        "Base":"0FB70000",
+        "Last":"0FC24FFF",
+        "Size":"741376"
+      }
+,
+      "studiorender.dll":
+      {
+        "Base":"2C000000",
+        "Last":"2C3E2FFF",
+        "Size":"4075520"
+      }
+,
+      "vphysics.dll":
+      {
+        "Base":"26000000",
+        "Last":"26137FFF",
+        "Size":"1277952"
+      }
+,
+      "valve_avi.dll":
+      {
+        "Base":"0F910000",
+        "Last":"0F925FFF",
+        "Size":"90112"
+      }
+,
+      "AVIFIL32.dll":
+      {
+        "Base":"74F60000",
+        "Last":"74F7AFFF",
+        "Size":"110592"
+      }
+,
+      "MSACM32.dll":
+      {
+        "Base":"74F40000",
+        "Last":"74F58FFF",
+        "Size":"102400"
+      }
+,
+      "winmmbase.dll":
+      {
+        "Base":"74F20000",
+        "Last":"74F3CFFF",
+        "Size":"118784"
+      }
+,
+      "MSVFW32.dll":
+      {
+        "Base":"74EF0000",
+        "Last":"74F11FFF",
+        "Size":"139264"
+      }
+,
+      "COMCTL32.dll":
+      {
+        "Base":"74E60000",
+        "Last":"74EECFFF",
+        "Size":"577536"
+      }
+,
+      "vguimatsurface.dll":
+      {
+        "Base":"0FC30000",
+        "Last":"0FCFFFFF",
+        "Size":"851968"
+      }
+,
+      "vgui2.dll":
+      {
+        "Base":"0FAC0000",
+        "Last":"0FB34FFF",
+        "Size":"479232"
+      }
+,
+      "SHLWAPI.dll":
+      {
+        "Base":"76A70000",
+        "Last":"76AB8FFF",
+        "Size":"299008"
+      }
+,
+      "engine.dll":
+      {
+        "Base":"20000000",
+        "Last":"205EEFFF",
+        "Size":"6221824"
+      }
+,
+      "WININET.dll":
+      {
+        "Base":"742E0000",
+        "Last":"74734FFF",
+        "Size":"4542464"
+      }
+,
+      "steam_api.dll":
+      {
+        "Base":"0F980000",
+        "Last":"0F993FFF",
+        "Size":"81920"
+      }
+,
+      "fwpuclnt.dll":
+      {
+        "Base":"74CF0000",
+        "Last":"74D47FFF",
+        "Size":"360448"
+      }
+,
+      "shaderapidx9.dll":
+      {
+        "Base":"2A000000",
+        "Last":"2A0A7FFF",
+        "Size":"688128"
+      }
+,
+      "d3d9.dll":
+      {
+        "Base":"74A90000",
+        "Last":"74C21FFF",
+        "Size":"1646592"
+      }
+,
+      "dwmapi.dll":
+      {
+        "Base":"74C50000",
+        "Last":"74C75FFF",
+        "Size":"155648"
+      }
+,
+      "windows.storage.dll":
+      {
+        "Base":"73CC0000",
+        "Last":"742D8FFF",
+        "Size":"6393856"
+      }
+,
+      "Wldp.dll":
+      {
+        "Base":"74A30000",
+        "Last":"74A54FFF",
+        "Size":"151552"
+      }
+,
+      "rasadhlp.dll":
+      {
+        "Base":"74C40000",
+        "Last":"74C47FFF",
+        "Size":"32768"
+      }
+,
+      "DINPUT.DLL":
+      {
+        "Base":"73C90000",
+        "Last":"73CB5FFF",
+        "Size":"155648"
+      }
+,
+      "HID.DLL":
+      {
+        "Base":"749E0000",
+        "Last":"749E9FFF",
+        "Size":"40960"
+      }
+,
+      "SETUPAPI.DLL":
+      {
+        "Base":"75720000",
+        "Last":"75B59FFF",
+        "Size":"4431872"
+      }
+,
+      "cfgmgr32.dll":
+      {
+        "Base":"773E0000",
+        "Last":"7741AFFF",
+        "Size":"241664"
+      }
+,
+      "inputhost.dll":
+      {
+        "Base":"73BA0000",
+        "Last":"73C8CFFF",
+        "Size":"970752"
+      }
+,
+      "CoreMessaging.dll":
+      {
+        "Base":"73B00000",
+        "Last":"73B9AFFF",
+        "Size":"634880"
+      }
+,
+      "PROPSYS.dll":
+      {
+        "Base":"73A40000",
+        "Last":"73AFFFFF",
+        "Size":"786432"
+      }
+,
+      "wintypes.dll":
+      {
+        "Base":"73960000",
+        "Last":"73A3CFFF",
+        "Size":"905216"
+      }
+,
+      "CoreUIComponents.dll":
+      {
+        "Base":"736E0000",
+        "Last":"7395EFFF",
+        "Size":"2617344"
+      }
+,
+      "ntmarta.dll":
+      {
+        "Base":"736B0000",
+        "Last":"736D8FFF",
+        "Size":"167936"
+      }
+,
+      "DEVOBJ.dll":
+      {
+        "Base":"73680000",
+        "Last":"736A8FFF",
+        "Size":"167936"
+      }
+,
+      "WINTRUST.dll":
+      {
+        "Base":"75680000",
+        "Last":"756D8FFF",
+        "Size":"364544"
+      }
+,
+      "CRYPT32.dll":
+      {
+        "Base":"77510000",
+        "Last":"7760EFFF",
+        "Size":"1044480"
+      }
+,
+      "MSASN1.dll":
+      {
+        "Base":"74750000",
+        "Last":"7475DFFF",
+        "Size":"57344"
+      }
+,
+      "igdumdim32.dll":
+      {
+        "Base":"73350000",
+        "Last":"734CFFFF",
+        "Size":"1572864"
+      }
+,
+      "igd9dxva32.dll":
+      {
+        "Base":"6D340000",
+        "Last":"702DBFFF",
+        "Size":"49922048"
+      }
+,
+      "igdgmm32.dll":
+      {
+        "Base":"72B30000",
+        "Last":"72E51FFF",
+        "Size":"3284992"
+      }
+,
+      "stdshader_dbg.dll":
+      {
+        "Base":"118C0000",
+        "Last":"118E8FFF",
+        "Size":"167936"
+      }
+,
+      "stdshader_dx6.dll":
+      {
+        "Base":"118F0000",
+        "Last":"11924FFF",
+        "Size":"217088"
+      }
+,
+      "stdshader_dx7.dll":
+      {
+        "Base":"11940000",
+        "Last":"11967FFF",
+        "Size":"163840"
+      }
+,
+      "stdshader_dx8.dll":
+      {
+        "Base":"11970000",
+        "Last":"119B2FFF",
+        "Size":"274432"
+      }
+,
+      "stdshader_dx9.dll":
+      {
+        "Base":"119C0000",
+        "Last":"11A10FFF",
+        "Size":"331776"
+      }
+,
+      "clbcatq.dll":
+      {
+        "Base":"76BA0000",
+        "Last":"76C1DFFF",
+        "Size":"516096"
+      }
+,
+      "wbemprox.dll":
+      {
+        "Base":"72120000",
+        "Last":"7212CFFF",
+        "Size":"53248"
+      }
+,
+      "wbemcomn.dll":
+      {
+        "Base":"71F80000",
+        "Last":"71FEFFFF",
+        "Size":"458752"
+      }
+,
+      "wbemsvc.dll":
+      {
+        "Base":"72110000",
+        "Last":"7211FFFF",
+        "Size":"65536"
+      }
+,
+      "fastprox.dll":
+      {
+        "Base":"71EB0000",
+        "Last":"71F79FFF",
+        "Size":"827392"
+      }
+,
+      "amsi.dll":
+      {
+        "Base":"71E90000",
+        "Last":"71EA7FFF",
+        "Size":"98304"
+      }
+,
+      "USERENV.dll":
+      {
+        "Base":"71E60000",
+        "Last":"71E84FFF",
+        "Size":"151552"
+      }
+,
+      "profapi.dll":
+      {
+        "Base":"72980000",
+        "Last":"7299AFFF",
+        "Size":"110592"
+      }
+,
+      "MpOav.dll":
+      {
+        "Base":"71DD0000",
+        "Last":"71E5CFFF",
+        "Size":"577536"
+      }
+,
+      "unicode.dll":
+      {
+        "Base":"11FF0000",
+        "Last":"11FFEFFF",
+        "Size":"61440"
+      }
+,
+      "MSCTF.dll":
+      {
+        "Base":"76AC0000",
+        "Last":"76B93FFF",
+        "Size":"868352"
+      }
+,
+      "textinputframework.dll":
+      {
+        "Base":"71AC0000",
+        "Last":"71B78FFF",
+        "Size":"757760"
+      }
+,
+      "dxcore.dll":
+      {
+        "Base":"720E0000",
+        "Last":"7210BFFF",
+        "Size":"180224"
+      }
+,
+      "igdinfo32.dll":
+      {
+        "Base":"71C20000",
+        "Last":"71C3EFFF",
+        "Size":"126976"
+      }
+,
+      "igc32.dll":
+      {
+        "Base":"6A410000",
+        "Last":"6D335FFF",
+        "Size":"49438720"
+      }
+,
+      "dcomp.dll":
+      {
+        "Base":"6A2A0000",
+        "Last":"6A404FFF",
+        "Size":"1462272"
+      }
+,
+      "mscms.dll":
+      {
+        "Base":"695E0000",
+        "Last":"69672FFF",
+        "Size":"602112"
+      }
+,
+      "ColorAdapterClient.dll":
+      {
+        "Base":"695D0000",
+        "Last":"695DBFFF",
+        "Size":"49152"
+      }
+,
+      "Windows.Internal.Graphics.Display.DisplayColorManagement.dll":
+      {
+        "Base":"69590000",
+        "Last":"695C0FFF",
+        "Size":"200704"
+      }
+,
+      "client.dll":
+      {
+        "Base":"24000000",
+        "Last":"24478FFF",
+        "Size":"4689920"
+      }
+,
+      "server.dll":
+      {
+        "Base":"22000000",
+        "Last":"22641FFF",
+        "Size":"6561792"
+      }
+,
+      "soundemittersystem.dll":
+      {
+        "Base":"16CE0000",
+        "Last":"16D15FFF",
+        "Size":"221184"
+      }
+,
+      "scenefilecache.dll":
+      {
+        "Base":"16D20000",
+        "Last":"16D3AFFF",
+        "Size":"110592"
+      }
+,
+      "steamclient.dll":
+      {
+        "Base":"16E80000",
+        "Last":"16FE5FFF",
+        "Size":"1466368"
+      }
+,
+      "vstdlib_s.dll":
+      {
+        "Base":"17000000",
+        "Last":"1703CFFF",
+        "Size":"249856"
+      }
+,
+      "tier0_s.dll":
+      {
+        "Base":"17040000",
+        "Last":"1707FFFF",
+        "Size":"262144"
+      }
+,
+      "psapi.dll":
+      {
+        "Base":"76CA0000",
+        "Last":"76CA5FFF",
+        "Size":"24576"
+      }
+,
+      "gameui.dll":
+      {
+        "Base":"17210000",
+        "Last":"173F6FFF",
+        "Size":"1994752"
+      }
+,
+      "ieframe.dll":
+      {
+        "Base":"72330000",
+        "Last":"72970FFF",
+        "Size":"6557696"
+      }
+,
+      "WINHTTP.dll":
+      {
+        "Base":"747B0000",
+        "Last":"74879FFF",
+        "Size":"827392"
+      }
+,
+      "iertutil.dll":
+      {
+        "Base":"73110000",
+        "Last":"73347FFF",
+        "Size":"2326528"
+      }
+,
+      "comctl32.dll":
+      {
+        "Base":"72EF0000",
+        "Last":"73100FFF",
+        "Size":"2166784"
+      }
+,
+      "dataexchange.dll":
+      {
+        "Base":"74E20000",
+        "Last":"74E50FFF",
+        "Size":"200704"
+      }
+,
+      "d3d11.dll":
+      {
+        "Base":"72150000",
+        "Last":"7232FFFF",
+        "Size":"1966080"
+      }
+,
+      "dxgi.dll":
+      {
+        "Base":"74D50000",
+        "Last":"74E14FFF",
+        "Size":"806912"
+      }
+,
+      "twinapi.appcore.dll":
+      {
+        "Base":"734E0000",
+        "Last":"73670FFF",
+        "Size":"1642496"
+      }
+,
+      "urlmon.dll":
+      {
+        "Base":"71910000",
+        "Last":"71ABCFFF",
+        "Size":"1757184"
+      }
+    }
+,
+    "Message":"nil"
+  }
+}

@@ -1,0 +1,3296 @@
+// This file is created by Game Protector due to unrecoverable error. It
+// contains data necessary to locate and remove this error. Please describe
+// circumstances that preceded exception and send this report to product developer.
+//
+// Feel free to remove any private data. Thank you for your help!
+
+{
+  "Game":
+  {
+    "System":
+    {
+      "Name":"Windows 10",
+      "Arch":"Intel x64",
+      "Build":"19041",
+      "Version":"10.0"
+    }
+,
+    "Protector":
+    {
+      "Build":"575"
+    }
+  }
+,
+  "Exception":
+  {
+    "Code":"C0000005",
+    "Flags":"00000000",
+    "Absolute Address":"71637690",
+    "Relative Address":"00037690",
+    "Memory Dump":
+    {
+      "71637670":"  08 3B D8 75 06 8B 40 08 89 47 04 8B 47 08 3B D8",
+      "71637680":"  75 06 8B 40 04 89 47 08 85 DB 74 12 8B 03 6A 01",
+      "71637690":"> 8B 30 8B CE FF 15 F0 62 67 71 8B CB FF D6 FF 4F",
+      "716376A0":"  0C 5F 5E 5B 5D C2 04 00 CC CC CC CC CC CC CC CC",
+      "716376B0":"  8B FF 55 8B EC 56 57 8D 79 14 8B 07 8D 4D 08 51"
+    }
+,
+    "Module Base":"71600000",
+    "Module Name":"C:\Windows\SYSTEM32\dsound.dll",
+    "Thread Id":"5776",
+    "Thread Start":"hl2.0000153C",
+    "Registers":
+    {
+      "EAX":"00000000",
+      "EDX":"00000000",
+      "ECX":"1A6E05F0",
+      "EDI":"1A6E05F0",
+      "ESI":"7162E390",
+      "EBX":"1A6EB508",
+      "EBP":"00186A80",
+      "ESP":"00186A70",
+      "EIP":"71637690",
+      "EFlags":"00010202"
+    }
+,
+    "Executable Stack":
+    {
+      "Address":"dsound.00037650",
+      "Address":"dsound.0003B37C",
+      "Address":"dsound.00001034",
+      "Address":"dsound.0002E420",
+      "Address":"dsound.0003B2E9",
+      "Address":"dsound.0003B2A0",
+      "Address":"dsound.0004AA2A",
+      "Address":"dsound.0004B37D",
+      "Address":"dsound.00001034",
+      "Address":"dsound.00001000",
+      "Address":"dsound.00001034",
+      "Address":"dsound.00001000",
+      "Address":"dsound.0004B2E6",
+      "Address":"dsound.0004AB8A",
+      "Address":"dsound.0004B982",
+      "Address":"dsound.00001034",
+      "Address":"dsound.00001000",
+      "Address":"dsound.0004405C",
+      "Address":"dsound.00008960",
+      "Address":"dsound.0003BEDB",
+      "Address":"engine.001E5CD3",
+      "Address":"tier0.00004130",
+      "Address":"tier0.0000456F",
+      "Address":"engine.000F360A",
+      "Address":"engine.002C5F7D",
+      "Address":"engine.002CF228",
+      "Address":"engine.001E5BD6",
+      "Address":"engine.002CF24B",
+      "Address":"engine.001E42D3",
+      "Address":"unitlib2.000E91A0",
+      "Address":"unitlib2.000E91EB",
+      "Address":"engine.002B97BF",
+      "Address":"engine.0013BF5C"
+    }
+,
+    "Stack":
+    {
+      "00186A70":
+      {
+        "Value":"00000001"
+      }
+,
+      "00186A74":
+      {
+        "Value":"1A6E05EC"
+      }
+,
+      "00186A78":
+      {
+        "Value":"71637650",
+        "Belongs":
+        {
+          "Name":"dsound.dll",
+          "Relative":"00037650",
+          "Memory Dump":
+          {
+            "71637630":"  17 8B 0F 50 8B 71 10 8B CE FF 15 F0 62 67 71 8B",
+            "71637640":"  CF FF D6 33 C0 40 EB 02 33 C0 5F 5E 5D C2 04 00",
+            "71637650":"> 8B FF 55 8B EC 53 56 57 8B F9 8B 07 8B 70 30 8B",
+            "71637660":"  CE FF 15 F0 62 67 71 8B CF FF D6 8B 47 04 8B 5D",
+            "71637670":"  08 3B D8 75 06 8B 40 08 89 47 04 8B 47 08 3B D8"
+          }
+        }
+,
+        "String":"Pvcq"
+      }
+,
+      "00186A7C":
+      {
+        "Value":"1A6EB508"
+      }
+,
+      "00186A80":
+      {
+        "Value":"00186A98"
+      }
+,
+      "00186A84":
+      {
+        "Value":"7163B37C",
+        "Belongs":
+        {
+          "Name":"dsound.dll",
+          "Relative":"0003B37C",
+          "Memory Dump":
+          {
+            "7163B35C":"  FF 15 F0 62 67 71 FF D6 83 63 0C 00 8B 47 04 53",
+            "7163B36C":"  8B 70 10 8B CE FF 15 F0 62 67 71 8D 4F 04 FF D6",
+            "7163B37C":"> 5F 5E 5B 5D C2 04 00 8B FF 55 8B EC 83 E4 F8 B8",
+            "7163B38C":"  64 14 00 00 E8 8B 4D FF FF A1 C0 40 67 71 33 C4",
+            "7163B39C":"  89 84 24 60 14 00 00 83 7D 18 00 8B 45 08 53 8B"
+          }
+        }
+,
+        "PString":"_^[]"
+      }
+,
+      "00186A88":
+      {
+        "Value":"1A6EB508"
+      }
+,
+      "00186A8C":
+      {
+        "Value":"71601034",
+        "Belongs":
+        {
+          "Name":"dsound.dll",
+          "Relative":"00001034",
+          "Memory Dump":
+          {
+            "71601014":"  D0 75 63 71 10 76 63 71 B0 73 63 71 C0 71 63 71",
+            "71601024":"  20 E4 62 71 30 E4 62 71 B0 E4 62 71 90 E3 62 71",
+            "71601034":"> D0 9E 63 71 C0 A0 63 71 40 AB 63 71 40 B3 63 71",
+            "71601044":"  A0 B2 63 71 00 B3 63 71 30 AE 63 71 B0 A8 63 71",
+            "71601054":"  40 A7 63 71 60 A7 63 71 E0 A8 63 71 30 A9 64 71"
+          }
+        }
+      }
+,
+      "00186A90":
+      {
+        "Value":"7162E420",
+        "Belongs":
+        {
+          "Name":"dsound.dll",
+          "Relative":"0002E420",
+          "Memory Dump":
+          {
+            "7162E400":"  8B FF 55 8B EC 8B 45 08 D9 41 60 D9 18 33 C0 5D",
+            "7162E410":"  C2 04 00 CC CC CC CC CC CC CC CC CC CC CC CC CC",
+            "7162E420":"> 8B 41 04 C3 CC CC CC CC CC CC CC CC CC CC CC CC",
+            "7162E430":"  8B 41 08 C3 CC CC CC CC CC CC CC CC CC CC CC CC",
+            "7162E440":"  8B 41 14 C3 CC CC CC CC CC CC CC CC CC CC CC CC"
+          }
+        }
+      }
+,
+      "00186A94":
+      {
+        "Value":"1A6E05F0"
+      }
+,
+      "00186A98":
+      {
+        "Value":"00186AB4"
+      }
+,
+      "00186A9C":
+      {
+        "Value":"7163B2E9",
+        "Belongs":
+        {
+          "Name":"dsound.dll",
+          "Relative":"0003B2E9",
+          "Memory Dump":
+          {
+            "7163B2C9":"  3F 8B 70 24 8B CE FF 15 F0 62 67 71 8B CB FF D6",
+            "7163B2D9":"  8B 4F 0C 50 FF 15 F0 62 67 71 8B 4D FC FF 57 0C",
+            "7163B2E9":"> 8B 7D FC EB C3 5F 5E 5B C9 C3 CC CC CC CC CC CC",
+            "7163B2F9":"  CC CC CC CC CC CC CC 8B FF 55 8B EC 56 57 FF 75",
+            "7163B309":"  08 8B F9 8B 07 8B 70 18 8B CE FF 15 F0 62 67 71"
+          }
+        }
+      }
+,
+      "00186AA0":
+      {
+        "Value":"1A6EB508"
+      }
+,
+      "00186AA4":
+      {
+        "Value":"1A6E05EC"
+      }
+,
+      "00186AA8":
+      {
+        "Value":"7163B2A0",
+        "Belongs":
+        {
+          "Name":"dsound.dll",
+          "Relative":"0003B2A0",
+          "Memory Dump":
+          {
+            "7163B280":"  75 0E 51 8B 4D 04 BA 30 09 00 00 E8 BD 09 00 00",
+            "7163B290":"  5D C2 04 00 CC CC CC CC CC CC CC CC CC CC CC CC",
+            "7163B2A0":"> 8B FF 55 8B EC 51 53 56 57 8B F9 89 7D FC 8D 5F",
+            "7163B2B0":"  04 8B 03 8B 70 24 8B CE FF 15 F0 62 67 71 8B CB",
+            "7163B2C0":"  FF D6 85 C0 74 28 8B 03 8B 3F 8B 70 24 8B CE FF"
+          }
+        }
+      }
+,
+      "00186AAC":
+      {
+        "Value":"00000988"
+      }
+,
+      "00186AB0":
+      {
+        "Value":"1A6E05EC"
+      }
+,
+      "00186AB4":
+      {
+        "Value":"00186AD0"
+      }
+,
+      "00186AB8":
+      {
+        "Value":"7164AA2A",
+        "Belongs":
+        {
+          "Name":"dsound.dll",
+          "Relative":"0004AA2A",
+          "Memory Dump":
+          {
+            "7164AA0A":"  3B 8B 0D C8 5B 67 71 3B 48 04 74 29 8D 7E 24 8B",
+            "7164AA1A":"  07 8B 70 10 8B CE FF 15 F0 62 67 71 8B CF FF D6",
+            "7164AA2A":"> 8B 45 F8 83 60 38 00 8B 45 FC 8B 40 04 A3 C8 5B",
+            "7164AA3A":"  67 71 8B 45 FC 50 FF 15 F0 60 67 71 53 FF 15 70",
+            "7164AA4A":"  60 67 71 5F 5E 5B C9 C3 8B FF 55 8B EC 8B 45 08"
+          }
+        }
+      }
+,
+      "00186ABC":
+      {
+        "Value":"1A6E05C8"
+      }
+,
+      "00186AC0":
+      {
+        "Value":"00000000"
+      }
+,
+      "00186AC4":
+      {
+        "Value":"00000000"
+      }
+,
+      "00186AC8":
+      {
+        "Value":"1A6E05C8"
+      }
+,
+      "00186ACC":
+      {
+        "Value":"0F5A0000"
+      }
+,
+      "00186AD0":
+      {
+        "Value":"00186B14"
+      }
+,
+      "00186AD4":
+      {
+        "Value":"7164B37D",
+        "Belongs":
+        {
+          "Name":"dsound.dll",
+          "Relative":"0004B37D",
+          "Memory Dump":
+          {
+            "7164B35D":"  D8 89 45 DC C7 45 E0 34 10 60 71 C7 45 E4 00 10",
+            "7164B36D":"  60 71 89 45 E8 89 45 EC 89 45 F0 E8 50 F6 FF FF",
+            "7164B37D":"> 8B 4D 08 8B 47 38 33 C1 23 C8 89 4D 08 0F 84 06",
+            "7164B38D":"  01 00 00 56 8D 45 CC 50 51 E8 0D F7 FF FF 8B 4D",
+            "7164B39D":"  D0 8B D8 8B 71 24 8B CE FF 15 F0 62 67 71 8D 4D"
+          }
+        }
+      }
+,
+      "00186AD8":
+      {
+        "Value":"1A6E05C8"
+      }
+,
+      "00186ADC":
+      {
+        "Value":"00000000"
+      }
+,
+      "00186AE0":
+      {
+        "Value":"71601034",
+        "Belongs":
+        {
+          "Name":"dsound.dll",
+          "Relative":"00001034",
+          "Memory Dump":
+          {
+            "71601014":"  D0 75 63 71 10 76 63 71 B0 73 63 71 C0 71 63 71",
+            "71601024":"  20 E4 62 71 30 E4 62 71 B0 E4 62 71 90 E3 62 71",
+            "71601034":"> D0 9E 63 71 C0 A0 63 71 40 AB 63 71 40 B3 63 71",
+            "71601044":"  A0 B2 63 71 00 B3 63 71 30 AE 63 71 B0 A8 63 71",
+            "71601054":"  40 A7 63 71 60 A7 63 71 E0 A8 63 71 30 A9 64 71"
+          }
+        }
+      }
+,
+      "00186AE4":
+      {
+        "Value":"71601000",
+        "Belongs":
+        {
+          "Name":"dsound.dll",
+          "Relative":"00001000",
+          "Memory Dump":
+          {
+            "71600FE0":"  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00",
+            "71600FF0":"  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00",
+            "71601000":"> 00 6D 63 71 60 6E 63 71 90 6E 63 71 80 72 63 71",
+            "71601010":"  50 76 63 71 D0 75 63 71 10 76 63 71 B0 73 63 71",
+            "71601020":"  C0 71 63 71 20 E4 62 71 30 E4 62 71 B0 E4 62 71"
+          }
+        }
+      }
+,
+      "00186AE8":
+      {
+        "Value":"00000000"
+      }
+,
+      "00186AEC":
+      {
+        "Value":"00000000"
+      }
+,
+      "00186AF0":
+      {
+        "Value":"00000000"
+      }
+,
+      "00186AF4":
+      {
+        "Value":"71601034",
+        "Belongs":
+        {
+          "Name":"dsound.dll",
+          "Relative":"00001034",
+          "Memory Dump":
+          {
+            "71601014":"  D0 75 63 71 10 76 63 71 B0 73 63 71 C0 71 63 71",
+            "71601024":"  20 E4 62 71 30 E4 62 71 B0 E4 62 71 90 E3 62 71",
+            "71601034":"> D0 9E 63 71 C0 A0 63 71 40 AB 63 71 40 B3 63 71",
+            "71601044":"  A0 B2 63 71 00 B3 63 71 30 AE 63 71 B0 A8 63 71",
+            "71601054":"  40 A7 63 71 60 A7 63 71 E0 A8 63 71 30 A9 64 71"
+          }
+        }
+      }
+,
+      "00186AF8":
+      {
+        "Value":"71601000",
+        "Belongs":
+        {
+          "Name":"dsound.dll",
+          "Relative":"00001000",
+          "Memory Dump":
+          {
+            "71600FE0":"  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00",
+            "71600FF0":"  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00",
+            "71601000":"> 00 6D 63 71 60 6E 63 71 90 6E 63 71 80 72 63 71",
+            "71601010":"  50 76 63 71 D0 75 63 71 10 76 63 71 B0 73 63 71",
+            "71601020":"  C0 71 63 71 20 E4 62 71 30 E4 62 71 B0 E4 62 71"
+          }
+        }
+      }
+,
+      "00186AFC":
+      {
+        "Value":"00000000"
+      }
+,
+      "00186B00":
+      {
+        "Value":"00000000"
+      }
+,
+      "00186B04":
+      {
+        "Value":"00000000"
+      }
+,
+      "00186B08":
+      {
+        "Value":"7164B2E6",
+        "Belongs":
+        {
+          "Name":"dsound.dll",
+          "Relative":"0004B2E6",
+          "Memory Dump":
+          {
+            "7164B2C6":"  E8 B7 A5 FE FF 8B F0 85 F6 79 43 8D 45 F8 83 C9",
+            "7164B2D6":"  FF 50 8D 45 FC 50 68 15 20 00 00 E8 9C A5 FE FF",
+            "7164B2E6":"> 8B F0 85 F6 79 28 8B 4D 08 8D 45 F4 50 8D 55 FC",
+            "7164B2F6":"  E8 E4 A5 FE FF 85 C0 78 0C 33 C0 39 45 F4 0F 95",
+            "7164B306":"  C0 33 F6 EB 03 8B 45 F8 85 F6 78 1E EB 03 8B 45"
+          }
+        }
+      }
+,
+      "00186B0C":
+      {
+        "Value":"00002015"
+      }
+,
+      "00186B10":
+      {
+        "Value":"1A6E05C8"
+      }
+,
+      "00186B14":
+      {
+        "Value":"00186B2C"
+      }
+,
+      "00186B18":
+      {
+        "Value":"7164AB8A",
+        "Belongs":
+        {
+          "Name":"dsound.dll",
+          "Relative":"0004AB8A",
+          "Memory Dump":
+          {
+            "7164AB6A":"  BF 0E 00 07 80 8B C7 5F 5E 5B C9 C2 08 00 8B FF",
+            "7164AB7A":"  55 8B EC 53 56 57 FF 75 08 8B F9 E8 AD 07 00 00",
+            "7164AB8A":"> 8B D8 85 DB 78 6C 8B 57 24 8B 72 20 8B CE FF 15",
+            "7164AB9A":"  F0 62 67 71 8D 4F 24 FF D6 8B F8 EB 3C 85 DB 78",
+            "7164ABAA":"  51 8B 47 0C 8B 48 14 8B 45 08 85 41 14 74 27 8B"
+          }
+        }
+      }
+,
+      "00186B1C":
+      {
+        "Value":"00000008"
+      }
+,
+      "00186B20":
+      {
+        "Value":"1A6E05C8"
+      }
+,
+      "00186B24":
+      {
+        "Value":"00000000"
+      }
+,
+      "00186B28":
+      {
+        "Value":"00000000"
+      }
+,
+      "00186B2C":
+      {
+        "Value":"00186B70"
+      }
+,
+      "00186B30":
+      {
+        "Value":"7164B982",
+        "Belongs":
+        {
+          "Name":"dsound.dll",
+          "Relative":"0004B982",
+          "Memory Dump":
+          {
+            "7164B962":"  F9 FF FF 8B F0 85 F6 0F 88 E8 00 00 00 8B 5D F4",
+            "7164B972":"  8D 45 DC 8B CF 50 6A 01 FF 75 08 E8 F6 F1 FF FF",
+            "7164B982":"> 8B F0 89 75 F4 85 F6 0F 88 C8 00 00 00 8B 45 E0",
+            "7164B992":"  8B 70 24 8B CE FF 15 F0 62 67 71 8D 4D E0 FF D6",
+            "7164B9A2":"  83 7D F8 00 8B F8 75 1D 85 FF 74 1D 8B 57 0C 8B"
+          }
+        }
+      }
+,
+      "00186B34":
+      {
+        "Value":"00000008"
+      }
+,
+      "00186B38":
+      {
+        "Value":"00000001"
+      }
+,
+      "00186B3C":
+      {
+        "Value":"00186B4C"
+      }
+,
+      "00186B40":
+      {
+        "Value":"00186BBC"
+      }
+,
+      "00186B44":
+      {
+        "Value":"00186BAC"
+      }
+,
+      "00186B48":
+      {
+        "Value":"1A6E2008"
+      }
+,
+      "00186B4C":
+      {
+        "Value":"71601034",
+        "Belongs":
+        {
+          "Name":"dsound.dll",
+          "Relative":"00001034",
+          "Memory Dump":
+          {
+            "71601014":"  D0 75 63 71 10 76 63 71 B0 73 63 71 C0 71 63 71",
+            "71601024":"  20 E4 62 71 30 E4 62 71 B0 E4 62 71 90 E3 62 71",
+            "71601034":"> D0 9E 63 71 C0 A0 63 71 40 AB 63 71 40 B3 63 71",
+            "71601044":"  A0 B2 63 71 00 B3 63 71 30 AE 63 71 B0 A8 63 71",
+            "71601054":"  40 A7 63 71 60 A7 63 71 E0 A8 63 71 30 A9 64 71"
+          }
+        }
+      }
+,
+      "00186B50":
+      {
+        "Value":"71601000",
+        "Belongs":
+        {
+          "Name":"dsound.dll",
+          "Relative":"00001000",
+          "Memory Dump":
+          {
+            "71600FE0":"  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00",
+            "71600FF0":"  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00",
+            "71601000":"> 00 6D 63 71 60 6E 63 71 90 6E 63 71 80 72 63 71",
+            "71601010":"  50 76 63 71 D0 75 63 71 10 76 63 71 B0 73 63 71",
+            "71601020":"  C0 71 63 71 20 E4 62 71 30 E4 62 71 B0 E4 62 71"
+          }
+        }
+      }
+,
+      "00186B54":
+      {
+        "Value":"00000000"
+      }
+,
+      "00186B58":
+      {
+        "Value":"00000000"
+      }
+,
+      "00186B5C":
+      {
+        "Value":"00000000"
+      }
+,
+      "00186B60":
+      {
+        "Value":"00000000"
+      }
+,
+      "00186B64":
+      {
+        "Value":"00000000"
+      }
+,
+      "00186B68":
+      {
+        "Value":"00000001"
+      }
+,
+      "00186B6C":
+      {
+        "Value":"0000000C"
+      }
+,
+      "00186B70":
+      {
+        "Value":"00186BC4"
+      }
+,
+      "00186B74":
+      {
+        "Value":"7164405C",
+        "Belongs":
+        {
+          "Name":"dsound.dll",
+          "Relative":"0004405C",
+          "Memory Dump":
+          {
+            "7164403C":"  63 6F 00 00 8D 43 30 50 6A 00 68 60 89 60 71 8D",
+            "7164404C":"  44 24 28 50 8D 44 24 1C 50 6A 08 E8 96 78 00 00",
+            "7164405C":"> 85 C0 78 0D E8 DE 54 FF FF 85 C0 78 04 83 63 54",
+            "7164406C":"  00 8B 4C 24 2C 5F 5E 5B 33 CC E8 95 B5 FE FF 8B",
+            "7164407C":"  E5 5D C2 04 00 CC CC CC CC CC CC CC CC CC CC CC"
+          }
+        }
+,
+        "String":"\@dq"
+      }
+,
+      "00186B78":
+      {
+        "Value":"00000008"
+      }
+,
+      "00186B7C":
+      {
+        "Value":"00186B9C"
+      }
+,
+      "00186B80":
+      {
+        "Value":"00186BAC"
+      }
+,
+      "00186B84":
+      {
+        "Value":"71608960",
+        "Belongs":
+        {
+          "Name":"dsound.dll",
+          "Relative":"00008960",
+          "Memory Dump":
+          {
+            "71608940":"  6C 00 5C 00 53 00 4D 00 30 00 3A 00 25 00 64 00",
+            "71608950":"  3A 00 25 00 64 00 3A 00 25 00 68 00 73 00 00 00",
+            "71608960":"> 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00",
+            "71608970":"  A4 0E 0D 3B A9 D0 0E 4B 93 5B 09 51 67 46 FA C0",
+            "71608980":"  77 61 76 65 49 6E 47 65 74 4E 75 6D 44 65 76 73"
+          }
+        }
+      }
+,
+      "00186B88":
+      {
+        "Value":"00000000"
+      }
+,
+      "00186B8C":
+      {
+        "Value":"1A6E2038",
+        "String":"8 n"
+      }
+,
+      "00186B90":
+      {
+        "Value":"1A6E2008"
+      }
+,
+      "00186B94":
+      {
+        "Value":"00000000"
+      }
+,
+      "00186B98":
+      {
+        "Value":"044360A8"
+      }
+,
+      "00186B9C":
+      {
+        "Value":"00000000"
+      }
+,
+      "00186BA0":
+      {
+        "Value":"00000000"
+      }
+,
+      "00186BA4":
+      {
+        "Value":"00000000"
+      }
+,
+      "00186BA8":
+      {
+        "Value":"00000000"
+      }
+,
+      "00186BAC":
+      {
+        "Value":"00000000"
+      }
+,
+      "00186BB0":
+      {
+        "Value":"00000000"
+      }
+,
+      "00186BB4":
+      {
+        "Value":"00000000"
+      }
+,
+      "00186BB8":
+      {
+        "Value":"00000000"
+      }
+,
+      "00186BBC":
+      {
+        "Value":"F4C1BBCE"
+      }
+,
+      "00186BC0":
+      {
+        "Value":"044360A8"
+      }
+,
+      "00186BC4":
+      {
+        "Value":"00186BEC"
+      }
+,
+      "00186BC8":
+      {
+        "Value":"7163BEDB",
+        "Belongs":
+        {
+          "Name":"dsound.dll",
+          "Relative":"0003BEDB",
+          "Memory Dump":
+          {
+            "7163BEBB":"  8B F7 F7 DE 1B F6 81 E6 F2 FF F8 7F 81 C6 0E 00",
+            "7163BECB":"  07 80 85 FF 74 3A FF 75 08 8B CF E8 15 81 00 00",
+            "7163BEDB":"> 8B F0 85 F6 78 20 8D 44 24 10 50 6A 01 68 7C 7F",
+            "7163BEEB":"  60 71 57 E8 9D 20 FF FF 8B F0 85 F6 78 08 8B 44",
+            "7163BEFB":"  24 10 89 03 EB 0A 85 FF 74 06 57 E8 B5 10 FF FF"
+          }
+        }
+      }
+,
+      "00186BCC":
+      {
+        "Value":"00000000"
+      }
+,
+      "00186BD0":
+      {
+        "Value":"0A800738",
+        "PString":"vaudio_speex"
+      }
+,
+      "00186BD4":
+      {
+        "Value":"044360A0"
+      }
+,
+      "00186BD8":
+      {
+        "Value":"044360A8"
+      }
+,
+      "00186BDC":
+      {
+        "Value":"00000000"
+      }
+,
+      "00186BE0":
+      {
+        "Value":"00000000"
+      }
+,
+      "00186BE4":
+      {
+        "Value":"00000878"
+      }
+,
+      "00186BE8":
+      {
+        "Value":"044360A0"
+      }
+,
+      "00186BEC":
+      {
+        "Value":"00186CD0"
+      }
+,
+      "00186BF0":
+      {
+        "Value":"201E5CD3",
+        "Belongs":
+        {
+          "Name":"engine.dll",
+          "Relative":"001E5CD3",
+          "Memory Dump":
+          {
+            "201E5CB3":"  00 00 68 C8 2A 32 20 50 FF 15 8C 01 2E 20 85 C0",
+            "201E5CC3":"  0F 84 F3 00 00 00 6A 00 8D 5E 08 53 6A 00 FF D0",
+            "201E5CD3":"> 85 C0 0F 8C E1 00 00 00 8B 54 24 30 33 C9 89 4C",
+            "201E5CE3":"  24 3C 89 4C 24 40 89 4C 24 44 89 4C 24 48 6A 00",
+            "201E5CF3":"  89 4C 24 50 89 54 24 48 89 4C 24 54 8D 44 24 2C"
+          }
+        }
+      }
+,
+      "00186BF4":
+      {
+        "Value":"00000000"
+      }
+,
+      "00186BF8":
+      {
+        "Value":"044360A8"
+      }
+,
+      "00186BFC":
+      {
+        "Value":"00000000"
+      }
+,
+      "00186C00":
+      {
+        "Value":"0A800738",
+        "PString":"vaudio_speex"
+      }
+,
+      "00186C04":
+      {
+        "Value":"044360A0"
+      }
+,
+      "00186C08":
+      {
+        "Value":"00000000"
+      }
+,
+      "00186C0C":
+      {
+        "Value":"020CBEA4",
+        "Belongs":
+        {
+          "Name":"tier0.dll",
+          "Relative":"0002BEA4",
+          "Memory Dump":
+          {
+            "020CBE84":"  8C F5 FD 03 1C 00 00 00 EC F5 FE 03 00 00 FF 03",
+            "020CBE94":"  00 00 3D 04 00 00 FD 03 00 00 00 00 00 00 00 00",
+            "020CBEA4":"> 80 5D 43 04 20 00 00 00 A0 E7 44 04 00 00 45 04",
+            "020CBEB4":"  00 00 7D 04 00 00 3D 04 00 00 00 00 00 00 00 00",
+            "020CBEC4":"  30 85 7F 04 24 00 00 00 D8 66 83 04 00 80 83 04"
+          }
+        }
+      }
+,
+      "00186C10":
+      {
+        "Value":"020A4130",
+        "Belongs":
+        {
+          "Name":"tier0.dll",
+          "Relative":"00004130",
+          "Memory Dump":
+          {
+            "020A4110":"  0C 5F 5E C2 0C 00 CC CC CC CC CC CC CC CC CC CC",
+            "020A4120":"  56 8B F1 57 8D 7E 18 6A 01 8B CF E8 70 CF FF FF",
+            "020A4130":"> 8B 06 85 C0 74 06 8B 08 89 0E EB 63 8B 56 04 8B",
+            "020A4140":"  46 08 8D 0C 02 3B 4E 10 72 0B 8B 4F 04 83 E9 01",
+            "020A4150":"  89 4F 04 EB 27 8B 46 0C 3B C8 76 38 6A 04 68 00"
+          }
+        }
+,
+        "String":"0A."
+      }
+,
+      "00186C14":
+      {
+        "Value":"00000001"
+      }
+,
+      "00186C18":
+      {
+        "Value":"00000020"
+      }
+,
+      "00186C1C":
+      {
+        "Value":"020CBEA4",
+        "Belongs":
+        {
+          "Name":"tier0.dll",
+          "Relative":"0002BEA4",
+          "Memory Dump":
+          {
+            "020CBE84":"  8C F5 FD 03 1C 00 00 00 EC F5 FE 03 00 00 FF 03",
+            "020CBE94":"  00 00 3D 04 00 00 FD 03 00 00 00 00 00 00 00 00",
+            "020CBEA4":"> 80 5D 43 04 20 00 00 00 A0 E7 44 04 00 00 45 04",
+            "020CBEB4":"  00 00 7D 04 00 00 3D 04 00 00 00 00 00 00 00 00",
+            "020CBEC4":"  30 85 7F 04 24 00 00 00 D8 66 83 04 00 80 83 04"
+          }
+        }
+      }
+,
+      "00186C20":
+      {
+        "Value":"020A456F",
+        "Belongs":
+        {
+          "Name":"tier0.dll",
+          "Relative":"0000456F",
+          "Memory Dump":
+          {
+            "020A454F":"  CC 56 57 8B 7C 24 0C 85 FF 75 05 BF 01 00 00 00",
+            "020A455F":"  8D 47 FF C1 E8 02 8B 34 81 8B CE E8 B1 FB FF FF",
+            "020A456F":"> 85 C0 75 1E 57 FF 15 0C C4 0C 02 83 C4 04 8B CE",
+            "020A457F":"  E8 9C FB FF FF 85 C0 75 09 57 E8 47 F3 00 00 83",
+            "020A458F":"  C4 04 5F 5E C2 04 00 CC CC CC CC CC CC CC CC CC"
+          }
+        }
+,
+        "String":"oE."
+      }
+,
+      "00186C24":
+      {
+        "Value":"0A800738",
+        "PString":"vaudio_speex"
+      }
+,
+      "00186C28":
+      {
+        "Value":"00010001"
+      }
+,
+      "00186C2C":
+      {
+        "Value":"00002B11"
+      }
+,
+      "00186C30":
+      {
+        "Value":"00005622"
+      }
+,
+      "00186C34":
+      {
+        "Value":"00100002"
+      }
+,
+      "00186C38":
+      {
+        "Value":"00000012"
+      }
+,
+      "00186C3C":
+      {
+        "Value":"200F360A",
+        "Belongs":
+        {
+          "Name":"engine.dll",
+          "Relative":"000F360A",
+          "Memory Dump":
+          {
+            "200F35EA":"  C7 44 24 08 FF FF FF FF EB 05 A1 98 0C 4F 20 85",
+            "200F35FA":"  C0 75 1B A1 78 04 2E 20 8B 08 8B 11 56 FF 52 04",
+            "200F360A":"> 8B 0C 24 64 89 0D 00 00 00 00 83 C4 0C C3 8B 0D",
+            "200F361A":"  78 04 2E 20 8B 09 8B 11 6A 00 50 56 FF 12 8B 0C",
+            "200F362A":"  24 64 89 0D 00 00 00 00 83 C4 0C C3 CC CC CC CC"
+          }
+        }
+      }
+,
+      "00186C40":
+      {
+        "Value":"00000020"
+      }
+,
+      "00186C44":
+      {
+        "Value":"00186C68"
+      }
+,
+      "00186C48":
+      {
+        "Value":"202C5F7D",
+        "Belongs":
+        {
+          "Name":"engine.dll",
+          "Relative":"002C5F7D",
+          "Memory Dump":
+          {
+            "202C5F5D":"  67 35 20 E9 D8 D9 FD FF CC CC CC CC CC CC CC CC",
+            "202C5F6D":"  CC CC CC A1 9C 0C 4F 20 24 FE A3 9C 0C 4F 20 C3",
+            "202C5F7D":"> B8 C4 67 35 20 E9 B6 D9 FD FF CC CC CC CC CC CC",
+            "202C5F8D":"  CC CC CC A1 A4 0C 4F 20 24 FE A3 A4 0C 4F 20 C3",
+            "202C5F9D":"  B8 E8 67 35 20 E9 96 D9 FD FF CC CC CC CC CC CC"
+          }
+        }
+,
+        "String":"}_, "
+      }
+,
+      "00186C4C":
+      {
+        "Value":"044360A0"
+      }
+,
+      "00186C50":
+      {
+        "Value":"00186C68"
+      }
+,
+      "00186C54":
+      {
+        "Value":"202CF228",
+        "Belongs":
+        {
+          "Name":"engine.dll",
+          "Relative":"002CF228",
+          "Memory Dump":
+          {
+            "202CF208":"  FF 59 C3 B8 5C 0B 36 20 E9 28 47 FD FF CC CC CC",
+            "202CF218":"  CC CC CC CC CC CC CC CC 8B 4D F0 E9 38 66 F1 FF",
+            "202CF228":"> B8 80 0B 36 20 E9 0B 47 FD FF CC CC CC CC CC CC",
+            "202CF238":"  CC CC CC CC CC CC CC CC 8B 45 F0 50 E8 07 47 E2",
+            "202CF248":"  FF 59 C3 B8 A4 0B 36 20 E9 E8 46 FD FF CC CC CC"
+          }
+        }
+      }
+,
+      "00186C58":
+      {
+        "Value":"201E5BD6",
+        "Belongs":
+        {
+          "Name":"engine.dll",
+          "Relative":"001E5BD6",
+          "Memory Dump":
+          {
+            "201E5BB6":"  FF FF 8B F0 EB 02 33 F6 C7 44 24 10 FF FF FF FF",
+            "201E5BC6":"  85 F6 74 29 8B 4C 24 18 8B 06 51 8B CE FF 50 18",
+            "201E5BD6":"> 84 C0 74 12 8B C6 5E 8B 4C 24 04 64 89 0D 00 00",
+            "201E5BE6":"  00 00 83 C4 10 C3 8B 16 8B CE FF 52 04 8B 4C 24",
+            "201E5BF6":"  08 33 C0 5E 64 89 0D 00 00 00 00 83 C4 10 C3 CC"
+          }
+        }
+      }
+,
+      "00186C5C":
+      {
+        "Value":"00002B11"
+      }
+,
+      "00186C60":
+      {
+        "Value":"0A800720"
+      }
+,
+      "00186C64":
+      {
+        "Value":"044360A0"
+      }
+,
+      "00186C68":
+      {
+        "Value":"00186C90"
+      }
+,
+      "00186C6C":
+      {
+        "Value":"202CF24B",
+        "Belongs":
+        {
+          "Name":"engine.dll",
+          "Relative":"002CF24B",
+          "Memory Dump":
+          {
+            "202CF22B":"  36 20 E9 0B 47 FD FF CC CC CC CC CC CC CC CC CC",
+            "202CF23B":"  CC CC CC CC CC 8B 45 F0 50 E8 07 47 E2 FF 59 C3",
+            "202CF24B":"> B8 A4 0B 36 20 E9 E8 46 FD FF CC CC CC CC CC CC",
+            "202CF25B":"  CC CC CC CC CC 8B 4D F0 E9 F8 65 F1 FF B8 C8 0B",
+            "202CF26B":"  36 20 E9 CB 46 FD FF CC CC CC CC CC CC CC CC CC"
+          }
+        }
+      }
+,
+      "00186C70":
+      {
+        "Value":"FFFFFFFF"
+      }
+,
+      "00186C74":
+      {
+        "Value":"201E42D3",
+        "Belongs":
+        {
+          "Name":"engine.dll",
+          "Relative":"001E42D3",
+          "Memory Dump":
+          {
+            "201E42B3":"  59 C3 8B 0D 88 F9 36 20 8D 14 24 56 52 89 4C 24",
+            "201E42C3":"  08 E8 47 21 FD FF 8B 44 24 08 50 E8 AD 18 00 00",
+            "201E42D3":"> 8B 35 84 05 2E 20 83 C4 08 85 C0 A3 74 42 57 20",
+            "201E42E3":"  75 0A 68 A8 8F 76 02 FF D6 83 C4 04 53 8B 5C 24",
+            "201E42F3":"  10 57 53 E8 F5 66 EC FF 83 C4 04 85 C0 A3 70 42"
+          }
+        }
+      }
+,
+      "00186C78":
+      {
+        "Value":"00002B11"
+      }
+,
+      "00186C7C":
+      {
+        "Value":"00186C84"
+      }
+,
+      "00186C80":
+      {
+        "Value":"0A800720"
+      }
+,
+      "00186C84":
+      {
+        "Value":"00002B11"
+      }
+,
+      "00186C88":
+      {
+        "Value":"027691A0",
+        "Belongs":
+        {
+          "Name":"unitlib2.dll",
+          "Relative":"000E91A0",
+          "Memory Dump":
+          {
+            "02769180":"  45 F8 06 8D 55 F4 33 C9 B8 D0 92 76 02 E8 B6 7C",
+            "02769190":"  FD FF 33 DB EB 3A 57 A1 98 02 78 02 8B 00 FF D0",
+            "027691A0":"> 59 8B D8 6A 02 0F B6 05 1C 92 76 02 50 89 7D D8",
+            "027691B0":"  C6 45 DC 06 0F B6 C3 89 45 E0 C6 45 E4 00 8D 55",
+            "027691C0":"  D8 B9 01 00 00 00 B8 04 93 76 02 E8 E4 D6 FD FF"
+          }
+        }
+      }
+,
+      "00186C8C":
+      {
+        "Value":"0A800738",
+        "PString":"vaudio_speex"
+      }
+,
+      "00186C90":
+      {
+        "Value":"0019E4AC"
+      }
+,
+      "00186C94":
+      {
+        "Value":"027691EB",
+        "Belongs":
+        {
+          "Name":"unitlib2.dll",
+          "Relative":"000E91EB",
+          "Memory Dump":
+          {
+            "027691CB":"  E8 E4 D6 FD FF 33 C0 5A 59 59 64 89 10 68 F2 91",
+            "027691DB":"  76 02 8D 45 EC BA 02 00 00 00 E8 1A F7 F1 FF C3",
+            "027691EB":"> E9 50 EC F1 FF EB EB 8B C3 5F 5E 5B 8B E5 5D C3",
+            "027691FB":"  00 76 61 75 64 69 6F 5F 6D 69 6C 65 73 00 00 00",
+            "0276920B":"  00 76 61 75 64 69 6F 5F 73 70 65 65 78 00 00 00"
+          }
+        }
+      }
+,
+      "00186C98":
+      {
+        "Value":"00186CD0"
+      }
+,
+      "00186C9C":
+      {
+        "Value":"00186D40"
+      }
+,
+      "00186CA0":
+      {
+        "Value":"0A800720"
+      }
+,
+      "00186CA4":
+      {
+        "Value":"02BD0180",
+        "PString":"none"
+      }
+,
+      "00186CA8":
+      {
+        "Value":"06FD02C0"
+      }
+,
+      "00186CAC":
+      {
+        "Value":"CF03ED74"
+      }
+,
+      "00186CB0":
+      {
+        "Value":"00186CD8"
+      }
+,
+      "00186CB4":
+      {
+        "Value":"202B97BF",
+        "Belongs":
+        {
+          "Name":"engine.dll",
+          "Relative":"002B97BF",
+          "Memory Dump":
+          {
+            "202B979F":"  56 8B 75 08 57 8B 7D 0C 0F B6 06 50 53 E8 0B AF",
+            "202B97AF":"  FE FF 89 45 FC 0F B6 07 50 53 46 E8 FD AE FE FF",
+            "202B97BF":"> 83 C4 10 8B C8 8B 45 FC 47 85 C0 74 04 3B C1 74",
+            "202B97CF":"  D7 5F 2B C1 5E 5B C9 C3 83 7C 24 08 00 74 06 C6",
+            "202B97DF":"  01 2D 41 F7 D8 56 8B F1 33 D2 F7 74 24 08 83 FA"
+          }
+        }
+      }
+,
+      "00186CB8":
+      {
+        "Value":"06FD02C0"
+      }
+,
+      "00186CBC":
+      {
+        "Value":"00000000"
+      }
+,
+      "00186CC0":
+      {
+        "Value":"00000000"
+      }
+,
+      "00186CC4":
+      {
+        "Value":"0000006E"
+      }
+,
+      "00186CC8":
+      {
+        "Value":"00186D40"
+      }
+,
+      "00186CCC":
+      {
+        "Value":"00800720"
+      }
+,
+      "00186CD0":
+      {
+        "Value":"1BD81150",
+        "PString":"Do0 "
+      }
+,
+      "00186CD4":
+      {
+        "Value":"2013BF5C",
+        "Belongs":
+        {
+          "Name":"engine.dll",
+          "Relative":"0013BF5C",
+          "Memory Dump":
+          {
+            "2013BF3C":"  CC CC CC CC 8B 44 24 04 8B 40 10 80 38 00 75 0A",
+            "2013BF4C":"  E8 FF 7F 0A 00 B0 01 C2 04 00 50 E8 14 D1 62 E2",
+            "2013BF5C":"> 83 C4 04 B0 01 C2 04 00 CC CC CC CC CC CC CC CC",
+            "2013BF6C":"  CC CC CC CC B8 00 10 00 00 E8 16 7F 16 00 53 8B",
+            "2013BF7C":"  9C 24 08 10 00 00 55 56 57 8B 7B 10 8B E9 8B 85"
+          }
+        }
+      }
+,
+      "00186CD8":
+      {
+        "Value":"0A800738",
+        "PString":"vaudio_speex"
+      }
+,
+      "00186CDC":
+      {
+        "Value":"20006FFB",
+        "Belongs":
+        {
+          "Name":"engine.dll",
+          "Relative":"00006FFB",
+          "Memory Dump":
+          {
+            "20006FDB":"  CC CC CC CC CC B8 BC 19 2E 20 C3 CC CC CC CC CC",
+            "20006FEB":"  CC CC CC CC CC 8B C1 8B 48 0C 8B 11 50 FF 52 30",
+            "20006FFB":"> C3 CC CC CC CC B8 0C 00 00 00 C3 CC CC CC CC CC",
+            "2000700B":"  CC CC CC CC CC 56 8B F1 E8 18 00 00 00 F6 44 24",
+            "2000701B":"  08 01 74 09 56 E8 2B C9 0E 00 83 C4 04 8B C6 5E"
+          }
+        }
+      }
+,
+      "00186CE0":
+      {
+        "Value":"0A800720"
+      }
+,
+      "00186CE4":
+      {
+        "Value":"20102215",
+        "Belongs":
+        {
+          "Name":"engine.dll",
+          "Relative":"00102215",
+          "Memory Dump":
+          {
+            "201021F5":"  8B CE FF 52 2C 50 68 00 6C 30 20 E8 3B 01 F7 FF",
+            "20102205":"  83 C4 08 EB 34 C6 45 04 01 8B 06 8B CE FF 50 0C",
+            "20102215":"> 80 7D 05 00 C6 45 04 00 0F 85 AE 00 00 00 84 C0",
+            "20102225":"  0F 84 BC 00 00 00 8B 55 00 8B CD FF 92 D4 00 00",
+            "20102235":"  00 84 C0 0F 85 E3 00 00 00 80 7F 10 00 0F 84 69"
+          }
+        }
+      }
+,
+      "00186CE8":
+      {
+        "Value":"1BD8121C"
+      }
+,
+      "00186CEC":
+      {
+        "Value":"1BD81218"
+      }
+,
+      "00186CF0":
+      {
+        "Value":"00000000"
+      }
+,
+      "00186CF4":
+      {
+        "Value":"1BD81150",
+        "PString":"Do0 "
+      }
+,
+      "00186CF8":
+      {
+        "Value":"00000000"
+      }
+,
+      "00186CFC":
+      {
+        "Value":"02BD0180",
+        "PString":"none"
+      }
+,
+      "00186D00":
+      {
+        "Value":"1BD81150",
+        "PString":"Do0 "
+      }
+,
+      "00186D04":
+      {
+        "Value":"20306F44",
+        "Belongs":
+        {
+          "Name":"engine.dll",
+          "Relative":"00306F44",
+          "Memory Dump":
+          {
+            "20306F24":"  6E 65 74 63 68 61 6E 5F 74 3A 3A 75 6E 72 65 6C",
+            "20306F34":"  69 61 62 6C 65 64 61 74 61 00 00 00 48 5F 34 20",
+            "20306F44":"> 90 F2 0F 20 A0 F2 0F 20 A0 FE 0F 20 E0 FB 0F 20",
+            "20306F54":"  B0 FD 0F 20 D0 FB 0F 20 50 F0 0F 20 70 FC 0F 20",
+            "20306F64":"  C0 F2 0F 20 20 FE 0F 20 60 FE 0F 20 80 FE 0F 20"
+          }
+        }
+,
+        "String":"Do0 "
+      }
+,
+      "00186D08":
+      {
+        "Value":"00000000"
+      }
+,
+      "00186D0C":
+      {
+        "Value":"027CDE50"
+      }
+,
+      "00186D10":
+      {
+        "Value":"00000F8C"
+      }
+,
+      "00186D14":
+      {
+        "Value":"00007C60"
+      }
+,
+      "00186D18":
+      {
+        "Value":"00000000"
+      }
+,
+      "00186D1C":
+      {
+        "Value":"1BD80100"
+      }
+,
+      "00186D20":
+      {
+        "Value":"20102B22",
+        "Belongs":
+        {
+          "Name":"engine.dll",
+          "Relative":"00102B22",
+          "Memory Dump":
+          {
+            "20102B02":"  B8 00 00 00 00 0F 95 C0 89 6C 24 14 89 57 0C 85",
+            "20102B12":"  C0 74 15 8B 4C 24 18 51 57 8B CE E8 AE DA FF FF",
+            "20102B22":"> 84 C0 0F 84 7F 00 00 00 8B 44 24 18 83 C0 01 83",
+            "20102B32":"  F8 02 89 44 24 18 7C 9A 8B 46 18 85 C3 74 09 F7",
+            "20102B42":"  D3 23 D8 89 5E 18 EB 05 0B C3 89 46 18 33 ED 55"
+          }
+        }
+      }
+,
+      "00186D24":
+      {
+        "Value":"201024C3",
+        "Belongs":
+        {
+          "Name":"engine.dll",
+          "Relative":"001024C3",
+          "Memory Dump":
+          {
+            "201024A3":"  00 8B 86 08 01 00 00 6A FF 52 50 8D 4C 24 20 E8",
+            "201024B3":"  C9 44 12 00 8D 4C 24 14 51 8B CB E8 FD FA FF FF",
+            "201024C3":"> 84 C0 0F 85 E8 01 00 00 5F 5D 5E 5B 83 C4 1C C2",
+            "201024D3":"  04 00 A1 08 43 4F 20 85 C0 75 1D 8B 0D 88 78 36",
+            "201024E3":"  20 8B 11 68 34 6D 30 20 FF 52 20 85 C0 A3 08 43"
+          }
+        }
+      }
+,
+      "00186D28":
+      {
+        "Value":"202E19BC",
+        "Belongs":
+        {
+          "Name":"engine.dll",
+          "Relative":"002E19BC",
+          "Memory Dump":
+          {
+            "202E199C":"  00 BB 10 20 B0 BA 10 20 10 1C 00 20 D0 6F 00 20",
+            "202E19AC":"  00 70 00 20 E0 6F 00 20 F0 1B 00 20 40 BB 10 20",
+            "202E19BC":"> 73 76 63 5F 56 6F 69 63 65 49 6E 69 74 00 00 00",
+            "202E19CC":"  30 1A 34 20 20 71 00 20 20 1C 00 20 00 1C 00 20",
+            "202E19DC":"  00 71 00 20 C0 BB 10 20 70 BB 10 20 10 1C 00 20"
+          }
+        }
+,
+        "PString":"svc_VoiceInit"
+      }
+,
+      "00186D2C":
+      {
+        "Value":"204F5A6C",
+        "Belongs":
+        {
+          "Name":"engine.dll",
+          "Relative":"004F5A6C",
+          "Memory Dump":
+          {
+            "204F5A4C":"  00 00 00 00 03 00 00 00 7F 00 00 01 69 87 00 00",
+            "204F5A5C":"  00 00 00 00 14 DC B4 3E 28 E4 EA 40 8C 6D 18 00",
+            "204F5A6C":"> 8C 6D 18 00 1D 00 00 00 E8 00 00 00 E3 00 00 00",
+            "204F5A7C":"  00 01 00 00 6C 84 30 20 1D 00 00 00 00 00 00 00",
+            "204F5A8C":"  00 00 00 00 01 00 00 00 00 00 00 00 C4 53 D9 81"
+          }
+        }
+,
+        "String":"lZO "
+      }
+,
+      "00186D30":
+      {
+        "Value":"00000000"
+      }
+,
+      "00186D34":
+      {
+        "Value":"1BD81150",
+        "PString":"Do0 "
+      }
+,
+      "00186D38":
+      {
+        "Value":"00000000"
+      }
+,
+      "00186D3C":
+      {
+        "Value":"1BD81150",
+        "PString":"Do0 "
+      }
+,
+      "00186D40":
+      {
+        "Value":"027CDE50"
+      }
+,
+      "00186D44":
+      {
+        "Value":"00000F8C"
+      }
+,
+      "00186D48":
+      {
+        "Value":"00007C60"
+      }
+,
+      "00186D4C":
+      {
+        "Value":"00002AE8"
+      }
+,
+      "00186D50":
+      {
+        "Value":"1BD80100"
+      }
+,
+      "00186D54":
+      {
+        "Value":"20102B22",
+        "Belongs":
+        {
+          "Name":"engine.dll",
+          "Relative":"00102B22",
+          "Memory Dump":
+          {
+            "20102B02":"  B8 00 00 00 00 0F 95 C0 89 6C 24 14 89 57 0C 85",
+            "20102B12":"  C0 74 15 8B 4C 24 18 51 57 8B CE E8 AE DA FF FF",
+            "20102B22":"> 84 C0 0F 84 7F 00 00 00 8B 44 24 18 83 C0 01 83",
+            "20102B32":"  F8 02 89 44 24 18 7C 9A 8B 46 18 85 C3 74 09 F7",
+            "20102B42":"  D3 23 D8 89 5E 18 EB 05 0B C3 89 46 18 33 ED 55"
+          }
+        }
+      }
+,
+      "00186D58":
+      {
+        "Value":"20102B59",
+        "Belongs":
+        {
+          "Name":"engine.dll",
+          "Relative":"00102B59",
+          "Memory Dump":
+          {
+            "20102B39":"  9A 8B 46 18 85 C3 74 09 F7 D3 23 D8 89 5E 18 EB",
+            "20102B49":"  05 0B C3 89 46 18 33 ED 55 8B CE E8 A7 F8 FF FF",
+            "20102B59":"> 84 C0 74 4C 83 C5 01 83 FD 02 7C EC 8B 57 08 2B",
+            "20102B69":"  57 0C 85 D2 7E 0C 57 8B CE E8 49 F4 FF FF 84 C0",
+            "20102B79":"  74 2E 8B 8E E8 1D 00 00 8B 01 FF 50 14 83 BE 00"
+          }
+        }
+      }
+,
+      "00186D5C":
+      {
+        "Value":"00000000"
+      }
+,
+      "00186D60":
+      {
+        "Value":"020A3200",
+        "Belongs":
+        {
+          "Name":"tier0.dll",
+          "Relative":"00003200",
+          "Memory Dump":
+          {
+            "020A31E0":"  10 8B 15 48 D5 0C 02 8D 44 24 14 50 51 52 E8 2D",
+            "020A31F0":"  FE FF FF 83 C4 0C 59 C3 CC CC CC CC CC CC CC CC",
+            "020A3200":"> 8B 4C 24 04 8D 44 24 08 50 51 6A 00 E8 0F FE FF",
+            "020A3210":"  FF 83 C4 0C C3 CC CC CC CC CC CC CC CC CC CC CC",
+            "020A3220":"  51 8B 4C 24 08 8D 04 24 50 51 E8 11 FB FF FF 83"
+          }
+        }
+      }
+,
+      "00186D64":
+      {
+        "Value":"204F5A50",
+        "Belongs":
+        {
+          "Name":"engine.dll",
+          "Relative":"004F5A50",
+          "Memory Dump":
+          {
+            "204F5A30":"  00 00 00 00 00 00 00 00 14 DC B4 3E 28 E4 EA 40",
+            "204F5A40":"  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00",
+            "204F5A50":"> 03 00 00 00 7F 00 00 01 69 87 00 00 00 00 00 00",
+            "204F5A60":"  14 DC B4 3E 28 E4 EA 40 8C 6D 18 00 8C 6D 18 00",
+            "204F5A70":"  1D 00 00 00 E8 00 00 00 E3 00 00 00 00 01 00 00"
+          }
+        }
+,
+        "String":"PZO "
+      }
+,
+      "00186D68":
+      {
+        "Value":"20390984",
+        "Belongs":
+        {
+          "Name":"engine.dll",
+          "Relative":"00390984",
+          "Memory Dump":
+          {
+            "20390964":"  58 FC 2E 20 60 FC 2E 20 00 00 00 00 10 23 04 20",
+            "20390974":"  00 73 22 20 00 00 00 00 00 00 00 00 04 27 2F 20",
+            "20390984":"> F4 26 2F 20 7C 26 2F 20 00 00 00 00 50 11 D8 1B",
+            "20390994":"  00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00",
+            "203909A4":"  6C 6F 63 61 6C 68 6F 73 74 3A 32 37 30 31 35 00"
+          }
+        }
+      }
+,
+      "00186D6C":
+      {
+        "Value":"00000000"
+      }
+,
+      "00186D70":
+      {
+        "Value":"20108C1F",
+        "Belongs":
+        {
+          "Name":"engine.dll",
+          "Relative":"00108C1F",
+          "Memory Dump":
+          {
+            "20108BFF":"  FF 50 04 EB 1B 56 53 E8 85 D2 FF FF 83 C4 08 85",
+            "20108C0F":"  C0 74 0D 8B 10 6A 01 56 8B C8 FF 92 8C 00 00 00",
+            "20108C1F":"> 8D 44 24 10 50 53 E8 26 FC FF FF 8B F0 83 C4 08",
+            "20108C2F":"  85 F6 0F 85 6E FF FF FF 5D 5F 5E 5B 81 C4 10 77",
+            "20108C3F":"  01 00 C3 CC CC CC CC CC CC CC CC CC CC CC CC CC"
+          }
+        }
+      }
+,
+      "00186D74":
+      {
+        "Value":"00000000"
+      }
+,
+      "00186D78":
+      {
+        "Value":"00000002"
+      }
+,
+      "00186D7C":
+      {
+        "Value":"0019E4E4"
+      }
+,
+      "00186D80":
+      {
+        "Value":"00000000"
+      }
+,
+      "00186D84":
+      {
+        "Value":"00000001"
+      }
+,
+      "00186D88":
+      {
+        "Value":"00000001"
+      }
+,
+      "00186D8C":
+      {
+        "Value":"0000001B"
+      }
+,
+      "00186D90":
+      {
+        "Value":"00000004"
+      }
+,
+      "00186D94":
+      {
+        "Value":"FB010011"
+      }
+,
+      "00186D98":
+      {
+        "Value":"C16C8001"
+      }
+,
+      "00186D9C":
+      {
+        "Value":"90BBFB5C"
+      }
+,
+      "00186DA0":
+      {
+        "Value":"8685C22B"
+      }
+,
+      "00186DA4":
+      {
+        "Value":"B9F141B8"
+      }
+,
+      "00186DA8":
+      {
+        "Value":"797F5E02"
+      }
+,
+      "00186DAC":
+      {
+        "Value":"82832596"
+      }
+,
+      "00186DB0":
+      {
+        "Value":"4E53D328"
+      }
+,
+      "00186DB4":
+      {
+        "Value":"80E8A5B3"
+      }
+,
+      "00186DB8":
+      {
+        "Value":"9854ACEA"
+      }
+,
+      "00186DBC":
+      {
+        "Value":"EFE19753"
+      }
+,
+      "00186DC0":
+      {
+        "Value":"F18C74E2"
+      }
+,
+      "00186DC4":
+      {
+        "Value":"37617DE8"
+      }
+,
+      "00186DC8":
+      {
+        "Value":"B84E968B"
+      }
+,
+      "00186DCC":
+      {
+        "Value":"665A665C",
+        "String":"\fZf"
+      }
+,
+      "00186DD0":
+      {
+        "Value":"F7F38DA4"
+      }
+,
+      "00186DD4":
+      {
+        "Value":"1A17AD10"
+      }
+,
+      "00186DD8":
+      {
+        "Value":"C7543774",
+        "String":"t7T"
+      }
+,
+      "00186DDC":
+      {
+        "Value":"89DD8212"
+      }
+,
+      "00186DE0":
+      {
+        "Value":"CEF91F29"
+      }
+,
+      "00186DE4":
+      {
+        "Value":"F14CDFBB"
+      }
+,
+      "00186DE8":
+      {
+        "Value":"ABD95874"
+      }
+,
+      "00186DEC":
+      {
+        "Value":"4707823D"
+      }
+,
+      "00186DF0":
+      {
+        "Value":"F5953A9A"
+      }
+,
+      "00186DF4":
+      {
+        "Value":"E0D59DE9"
+      }
+,
+      "00186DF8":
+      {
+        "Value":"884A00B5"
+      }
+,
+      "00186DFC":
+      {
+        "Value":"F61D15F0"
+      }
+,
+      "00186E00":
+      {
+        "Value":"BE77A643"
+      }
+,
+      "00186E04":
+      {
+        "Value":"16EA48D1"
+      }
+,
+      "00186E08":
+      {
+        "Value":"7862DD0F"
+      }
+,
+      "00186E0C":
+      {
+        "Value":"781F905E"
+      }
+,
+      "00186E10":
+      {
+        "Value":"F5595609"
+      }
+,
+      "00186E14":
+      {
+        "Value":"0E129359"
+      }
+,
+      "00186E18":
+      {
+        "Value":"56180C9B"
+      }
+,
+      "00186E1C":
+      {
+        "Value":"2A6B3D95"
+      }
+,
+      "00186E20":
+      {
+        "Value":"482CE15E"
+      }
+,
+      "00186E24":
+      {
+        "Value":"AFB010F9"
+      }
+,
+      "00186E28":
+      {
+        "Value":"03AAD949"
+      }
+,
+      "00186E2C":
+      {
+        "Value":"1262F8A6"
+      }
+,
+      "00186E30":
+      {
+        "Value":"8F030535"
+      }
+,
+      "00186E34":
+      {
+        "Value":"8050F23A"
+      }
+,
+      "00186E38":
+      {
+        "Value":"01635432",
+        "String":"2Tc"
+      }
+,
+      "00186E3C":
+      {
+        "Value":"36BFEFD1"
+      }
+,
+      "00186E40":
+      {
+        "Value":"3F53C845"
+      }
+,
+      "00186E44":
+      {
+        "Value":"0E6D8560"
+      }
+,
+      "00186E48":
+      {
+        "Value":"65C28D80"
+      }
+,
+      "00186E4C":
+      {
+        "Value":"16FA5640"
+      }
+,
+      "00186E50":
+      {
+        "Value":"C6FD873A"
+      }
+,
+      "00186E54":
+      {
+        "Value":"DAF800CB"
+      }
+,
+      "00186E58":
+      {
+        "Value":"3360545C",
+        "String":"\T`3"
+      }
+,
+      "00186E5C":
+      {
+        "Value":"F72FB7CD"
+      }
+,
+      "00186E60":
+      {
+        "Value":"DEB04397"
+      }
+,
+      "00186E64":
+      {
+        "Value":"E5B9A96D"
+      }
+,
+      "00186E68":
+      {
+        "Value":"99033693"
+      }
+,
+      "00186E6C":
+      {
+        "Value":"4D8EC71F"
+      }
+    }
+,
+    "Modules":
+    {
+      "hl2.exe":
+      {
+        "Base":"00400000",
+        "Last":"0041BFFF",
+        "Size":"114688"
+      }
+,
+      "ntdll.dll":
+      {
+        "Base":"777D0000",
+        "Last":"77973FFF",
+        "Size":"1720320"
+      }
+,
+      "KERNEL32.DLL":
+      {
+        "Base":"767C0000",
+        "Last":"768AFFFF",
+        "Size":"983040"
+      }
+,
+      "KERNELBASE.dll":
+      {
+        "Base":"75D00000",
+        "Last":"75F38FFF",
+        "Size":"2330624"
+      }
+,
+      "USER32.dll":
+      {
+        "Base":"76A50000",
+        "Last":"76BECFFF",
+        "Size":"1691648"
+      }
+,
+      "win32u.dll":
+      {
+        "Base":"76D70000",
+        "Last":"76D87FFF",
+        "Size":"98304"
+      }
+,
+      "GDI32.dll":
+      {
+        "Base":"76C30000",
+        "Last":"76C52FFF",
+        "Size":"143360"
+      }
+,
+      "gdi32full.dll":
+      {
+        "Base":"75C10000",
+        "Last":"75CF6FFF",
+        "Size":"946176"
+      }
+,
+      "msvcp_win.dll":
+      {
+        "Base":"772F0000",
+        "Last":"7736AFFF",
+        "Size":"503808"
+      }
+,
+      "ucrtbase.dll":
+      {
+        "Base":"76F20000",
+        "Last":"7703FFFF",
+        "Size":"1179648"
+      }
+,
+      "IMM32.DLL":
+      {
+        "Base":"76DF0000",
+        "Last":"76E14FFF",
+        "Size":"151552"
+      }
+,
+      "launcher.dll":
+      {
+        "Base":"10000000",
+        "Last":"10030FFF",
+        "Size":"200704"
+      }
+,
+      "ADVAPI32.dll":
+      {
+        "Base":"76140000",
+        "Last":"761BCFFF",
+        "Size":"512000"
+      }
+,
+      "msvcrt.dll":
+      {
+        "Base":"75F40000",
+        "Last":"75FFEFFF",
+        "Size":"782336"
+      }
+,
+      "sechost.dll":
+      {
+        "Base":"768B0000",
+        "Last":"76926FFF",
+        "Size":"487424"
+      }
+,
+      "WSOCK32.dll":
+      {
+        "Base":"733C0000",
+        "Last":"733C7FFF",
+        "Size":"32768"
+      }
+,
+      "RPCRT4.dll":
+      {
+        "Base":"76990000",
+        "Last":"76A48FFF",
+        "Size":"757760"
+      }
+,
+      "WS2_32.dll":
+      {
+        "Base":"75640000",
+        "Last":"756A2FFF",
+        "Size":"405504"
+      }
+,
+      "bcrypt.dll":
+      {
+        "Base":"772D0000",
+        "Last":"772E8FFF",
+        "Size":"102400"
+      }
+,
+      "ole32.dll":
+      {
+        "Base":"77040000",
+        "Last":"77122FFF",
+        "Size":"929792"
+      }
+,
+      "combase.dll":
+      {
+        "Base":"75990000",
+        "Last":"75C0FFFF",
+        "Size":"2621440"
+      }
+,
+      "vstdlib.dll":
+      {
+        "Base":"00420000",
+        "Last":"0043DFFF",
+        "Size":"122880"
+      }
+,
+      "tier0.dll":
+      {
+        "Base":"020A0000",
+        "Last":"020D5FFF",
+        "Size":"221184"
+      }
+,
+      "unitlib2.dll":
+      {
+        "Base":"02680000",
+        "Last":"027ABFFF",
+        "Size":"1228800"
+      }
+,
+      "oleaut32.dll":
+      {
+        "Base":"756C0000",
+        "Last":"75755FFF",
+        "Size":"614400"
+      }
+,
+      "version.dll":
+      {
+        "Base":"755F0000",
+        "Last":"755F7FFF",
+        "Size":"32768"
+      }
+,
+      "netapi32.dll":
+      {
+        "Base":"733A0000",
+        "Last":"733B3FFF",
+        "Size":"81920"
+      }
+,
+      "NETUTILS.DLL":
+      {
+        "Base":"74760000",
+        "Last":"7476AFFF",
+        "Size":"45056"
+      }
+,
+      "libeay32.dll":
+      {
+        "Base":"0F220000",
+        "Last":"0F319FFF",
+        "Size":"1024000"
+      }
+,
+      "MSVCR71.dll":
+      {
+        "Base":"7C340000",
+        "Last":"7C395FFF",
+        "Size":"352256"
+      }
+,
+      "ssleay32.dll":
+      {
+        "Base":"02100000",
+        "Last":"0212FFFF",
+        "Size":"196608"
+      }
+,
+      "wkscli.dll":
+      {
+        "Base":"73380000",
+        "Last":"73390FFF",
+        "Size":"69632"
+      }
+,
+      "srvcli.dll":
+      {
+        "Base":"74770000",
+        "Last":"7478CFFF",
+        "Size":"118784"
+      }
+,
+      "CRYPTSP.dll":
+      {
+        "Base":"70820000",
+        "Last":"70832FFF",
+        "Size":"77824"
+      }
+,
+      "rsaenh.dll":
+      {
+        "Base":"707E0000",
+        "Last":"70810FFF",
+        "Size":"200704"
+      }
+,
+      "CRYPTBASE.dll":
+      {
+        "Base":"707D0000",
+        "Last":"707D9FFF",
+        "Size":"40960"
+      }
+,
+      "bcryptPrimitives.dll":
+      {
+        "Base":"76930000",
+        "Last":"7698EFFF",
+        "Size":"389120"
+      }
+,
+      "filesystem_steam.dll":
+      {
+        "Base":"025F0000",
+        "Last":"02643FFF",
+        "Size":"344064"
+      }
+,
+      "SHELL32.dll":
+      {
+        "Base":"761E0000",
+        "Last":"767BAFFF",
+        "Size":"6139904"
+      }
+,
+      "Steam.dll":
+      {
+        "Base":"73320000",
+        "Last":"73375FFF",
+        "Size":"352256"
+      }
+,
+      "DbgHelp.dll":
+      {
+        "Base":"73170000",
+        "Last":"7331AFFF",
+        "Size":"1748992"
+      }
+,
+      "dbgcore.DLL":
+      {
+        "Base":"73140000",
+        "Last":"7316AFFF",
+        "Size":"176128"
+      }
+,
+      "shcore.dll":
+      {
+        "Base":"760B0000",
+        "Last":"76136FFF",
+        "Size":"552960"
+      }
+,
+      "napinsp.dll":
+      {
+        "Base":"73120000",
+        "Last":"73130FFF",
+        "Size":"69632"
+      }
+,
+      "pnrpnsp.dll":
+      {
+        "Base":"73100000",
+        "Last":"73115FFF",
+        "Size":"90112"
+      }
+,
+      "kernel.appcore.dll":
+      {
+        "Base":"753B0000",
+        "Last":"753BEFFF",
+        "Size":"61440"
+      }
+,
+      "wshbth.dll":
+      {
+        "Base":"730E0000",
+        "Last":"730F5FFF",
+        "Size":"90112"
+      }
+,
+      "uxtheme.dll":
+      {
+        "Base":"75430000",
+        "Last":"754A3FFF",
+        "Size":"475136"
+      }
+,
+      "NLAapi.dll":
+      {
+        "Base":"730C0000",
+        "Last":"730D5FFF",
+        "Size":"90112"
+      }
+,
+      "IPHLPAPI.DLL":
+      {
+        "Base":"75600000",
+        "Last":"75631FFF",
+        "Size":"204800"
+      }
+,
+      "datamodel.dll":
+      {
+        "Base":"0F880000",
+        "Last":"0F97DFFF",
+        "Size":"1040384"
+      }
+,
+      "parsifal.dll":
+      {
+        "Base":"628C0000",
+        "Last":"628D8FFF",
+        "Size":"102400"
+      }
+,
+      "mswsock.dll":
+      {
+        "Base":"73780000",
+        "Last":"737D1FFF",
+        "Size":"335872"
+      }
+,
+      "dmserializers.dll":
+      {
+        "Base":"0F780000",
+        "Last":"0F7BCFFF",
+        "Size":"249856"
+      }
+,
+      "DNSAPI.dll":
+      {
+        "Base":"73530000",
+        "Last":"735BFFFF",
+        "Size":"589824"
+      }
+,
+      "NSI.dll":
+      {
+        "Base":"777B0000",
+        "Last":"777B6FFF",
+        "Size":"28672"
+      }
+,
+      "datacache.dll":
+      {
+        "Base":"0F7C0000",
+        "Last":"0F7E4FFF",
+        "Size":"151552"
+      }
+,
+      "winrnr.dll":
+      {
+        "Base":"730B0000",
+        "Last":"730BDFFF",
+        "Size":"57344"
+      }
+,
+      "inputsystem.dll":
+      {
+        "Base":"0F7F0000",
+        "Last":"0F804FFF",
+        "Size":"86016"
+      }
+,
+      "WINMM.dll":
+      {
+        "Base":"73080000",
+        "Last":"730A7FFF",
+        "Size":"163840"
+      }
+,
+      "mdnsNSP.dll":
+      {
+        "Base":"73500000",
+        "Last":"73520FFF",
+        "Size":"135168"
+      }
+,
+      "materialsystem.dll":
+      {
+        "Base":"0FA80000",
+        "Last":"0FB34FFF",
+        "Size":"741376"
+      }
+,
+      "studiorender.dll":
+      {
+        "Base":"2C000000",
+        "Last":"2C3E2FFF",
+        "Size":"4075520"
+      }
+,
+      "vphysics.dll":
+      {
+        "Base":"26000000",
+        "Last":"26137FFF",
+        "Size":"1277952"
+      }
+,
+      "valve_avi.dll":
+      {
+        "Base":"0F810000",
+        "Last":"0F825FFF",
+        "Size":"90112"
+      }
+,
+      "AVIFIL32.dll":
+      {
+        "Base":"73060000",
+        "Last":"7307AFFF",
+        "Size":"110592"
+      }
+,
+      "MSACM32.dll":
+      {
+        "Base":"73040000",
+        "Last":"73058FFF",
+        "Size":"102400"
+      }
+,
+      "winmmbase.dll":
+      {
+        "Base":"73020000",
+        "Last":"7303CFFF",
+        "Size":"118784"
+      }
+,
+      "MSVFW32.dll":
+      {
+        "Base":"72FF0000",
+        "Last":"73011FFF",
+        "Size":"139264"
+      }
+,
+      "COMCTL32.dll":
+      {
+        "Base":"72F60000",
+        "Last":"72FECFFF",
+        "Size":"577536"
+      }
+,
+      "vguimatsurface.dll":
+      {
+        "Base":"0FB40000",
+        "Last":"0FC0FFFF",
+        "Size":"851968"
+      }
+,
+      "vgui2.dll":
+      {
+        "Base":"0FC70000",
+        "Last":"0FCE4FFF",
+        "Size":"479232"
+      }
+,
+      "SHLWAPI.dll":
+      {
+        "Base":"75770000",
+        "Last":"757B8FFF",
+        "Size":"299008"
+      }
+,
+      "fwpuclnt.dll":
+      {
+        "Base":"73490000",
+        "Last":"734E7FFF",
+        "Size":"360448"
+      }
+,
+      "engine.dll":
+      {
+        "Base":"20000000",
+        "Last":"205EEFFF",
+        "Size":"6221824"
+      }
+,
+      "WININET.dll":
+      {
+        "Base":"73AB0000",
+        "Last":"73F04FFF",
+        "Size":"4542464"
+      }
+,
+      "steam_api.dll":
+      {
+        "Base":"0FC10000",
+        "Last":"0FC23FFF",
+        "Size":"81920"
+      }
+,
+      "rasadhlp.dll":
+      {
+        "Base":"734F0000",
+        "Last":"734F7FFF",
+        "Size":"32768"
+      }
+,
+      "shaderapidx9.dll":
+      {
+        "Base":"2A000000",
+        "Last":"2A0A7FFF",
+        "Size":"688128"
+      }
+,
+      "d3d9.dll":
+      {
+        "Base":"72DC0000",
+        "Last":"72F51FFF",
+        "Size":"1646592"
+      }
+,
+      "windows.storage.dll":
+      {
+        "Base":"748D0000",
+        "Last":"74EE8FFF",
+        "Size":"6393856"
+      }
+,
+      "dwmapi.dll":
+      {
+        "Base":"72D90000",
+        "Last":"72DB5FFF",
+        "Size":"155648"
+      }
+,
+      "Wldp.dll":
+      {
+        "Base":"75400000",
+        "Last":"75424FFF",
+        "Size":"151552"
+      }
+,
+      "DINPUT.DLL":
+      {
+        "Base":"72D60000",
+        "Last":"72D85FFF",
+        "Size":"155648"
+      }
+,
+      "HID.DLL":
+      {
+        "Base":"72D50000",
+        "Last":"72D59FFF",
+        "Size":"40960"
+      }
+,
+      "inputhost.dll":
+      {
+        "Base":"72C60000",
+        "Last":"72D4CFFF",
+        "Size":"970752"
+      }
+,
+      "wintypes.dll":
+      {
+        "Base":"73F10000",
+        "Last":"73FECFFF",
+        "Size":"905216"
+      }
+,
+      "CoreMessaging.dll":
+      {
+        "Base":"74440000",
+        "Last":"744DAFFF",
+        "Size":"634880"
+      }
+,
+      "PROPSYS.dll":
+      {
+        "Base":"72BA0000",
+        "Last":"72C5FFFF",
+        "Size":"786432"
+      }
+,
+      "CoreUIComponents.dll":
+      {
+        "Base":"73FF0000",
+        "Last":"7426EFFF",
+        "Size":"2617344"
+      }
+,
+      "ntmarta.dll":
+      {
+        "Base":"74790000",
+        "Last":"747B8FFF",
+        "Size":"167936"
+      }
+,
+      "SETUPAPI.DLL":
+      {
+        "Base":"77370000",
+        "Last":"777A9FFF",
+        "Size":"4431872"
+      }
+,
+      "cfgmgr32.dll":
+      {
+        "Base":"76BF0000",
+        "Last":"76C2AFFF",
+        "Size":"241664"
+      }
+,
+      "DEVOBJ.dll":
+      {
+        "Base":"72B70000",
+        "Last":"72B98FFF",
+        "Size":"167936"
+      }
+,
+      "WINTRUST.dll":
+      {
+        "Base":"76D90000",
+        "Last":"76DE8FFF",
+        "Size":"364544"
+      }
+,
+      "CRYPT32.dll":
+      {
+        "Base":"76E20000",
+        "Last":"76F1EFFF",
+        "Size":"1044480"
+      }
+,
+      "MSASN1.dll":
+      {
+        "Base":"754C0000",
+        "Last":"754CDFFF",
+        "Size":"57344"
+      }
+,
+      "igdumdim32.dll":
+      {
+        "Base":"729F0000",
+        "Last":"72B6FFFF",
+        "Size":"1572864"
+      }
+,
+      "igd9dxva32.dll":
+      {
+        "Base":"6D7E0000",
+        "Last":"7077BFFF",
+        "Size":"49922048"
+      }
+,
+      "igdgmm32.dll":
+      {
+        "Base":"726C0000",
+        "Last":"729E1FFF",
+        "Size":"3284992"
+      }
+,
+      "stdshader_dbg.dll":
+      {
+        "Base":"10B80000",
+        "Last":"10BA8FFF",
+        "Size":"167936"
+      }
+,
+      "stdshader_dx6.dll":
+      {
+        "Base":"10BB0000",
+        "Last":"10BE4FFF",
+        "Size":"217088"
+      }
+,
+      "stdshader_dx7.dll":
+      {
+        "Base":"10BF0000",
+        "Last":"10C17FFF",
+        "Size":"163840"
+      }
+,
+      "stdshader_dx8.dll":
+      {
+        "Base":"11740000",
+        "Last":"11782FFF",
+        "Size":"274432"
+      }
+,
+      "stdshader_dx9.dll":
+      {
+        "Base":"11790000",
+        "Last":"117E0FFF",
+        "Size":"331776"
+      }
+,
+      "clbcatq.dll":
+      {
+        "Base":"76CF0000",
+        "Last":"76D6DFFF",
+        "Size":"516096"
+      }
+,
+      "wbemprox.dll":
+      {
+        "Base":"726B0000",
+        "Last":"726BCFFF",
+        "Size":"53248"
+      }
+,
+      "wbemcomn.dll":
+      {
+        "Base":"72640000",
+        "Last":"726AFFFF",
+        "Size":"458752"
+      }
+,
+      "wbemsvc.dll":
+      {
+        "Base":"72630000",
+        "Last":"7263FFFF",
+        "Size":"65536"
+      }
+,
+      "fastprox.dll":
+      {
+        "Base":"72560000",
+        "Last":"72629FFF",
+        "Size":"827392"
+      }
+,
+      "amsi.dll":
+      {
+        "Base":"72540000",
+        "Last":"72557FFF",
+        "Size":"98304"
+      }
+,
+      "USERENV.dll":
+      {
+        "Base":"72510000",
+        "Last":"72534FFF",
+        "Size":"151552"
+      }
+,
+      "profapi.dll":
+      {
+        "Base":"74810000",
+        "Last":"7482AFFF",
+        "Size":"110592"
+      }
+,
+      "MpOav.dll":
+      {
+        "Base":"72480000",
+        "Last":"7250CFFF",
+        "Size":"577536"
+      }
+,
+      "unicode.dll":
+      {
+        "Base":"11D90000",
+        "Last":"11D9EFFF",
+        "Size":"61440"
+      }
+,
+      "MSCTF.dll":
+      {
+        "Base":"77130000",
+        "Last":"77203FFF",
+        "Size":"868352"
+      }
+,
+      "textinputframework.dll":
+      {
+        "Base":"744E0000",
+        "Last":"74598FFF",
+        "Size":"757760"
+      }
+,
+      "igdinfo32.dll":
+      {
+        "Base":"72460000",
+        "Last":"7247EFFF",
+        "Size":"126976"
+      }
+,
+      "igc32.dll":
+      {
+        "Base":"6A8B0000",
+        "Last":"6D7D5FFF",
+        "Size":"49438720"
+      }
+,
+      "dxcore.dll":
+      {
+        "Base":"72430000",
+        "Last":"7245BFFF",
+        "Size":"180224"
+      }
+,
+      "dcomp.dll":
+      {
+        "Base":"722C0000",
+        "Last":"72424FFF",
+        "Size":"1462272"
+      }
+,
+      "mscms.dll":
+      {
+        "Base":"72220000",
+        "Last":"722B2FFF",
+        "Size":"602112"
+      }
+,
+      "ColorAdapterClient.dll":
+      {
+        "Base":"72210000",
+        "Last":"7221BFFF",
+        "Size":"49152"
+      }
+,
+      "Windows.Internal.Graphics.Display.DisplayColorManagement.dll":
+      {
+        "Base":"721D0000",
+        "Last":"72200FFF",
+        "Size":"200704"
+      }
+,
+      "client.dll":
+      {
+        "Base":"24000000",
+        "Last":"24478FFF",
+        "Size":"4689920"
+      }
+,
+      "server.dll":
+      {
+        "Base":"22000000",
+        "Last":"22641FFF",
+        "Size":"6561792"
+      }
+,
+      "soundemittersystem.dll":
+      {
+        "Base":"16B90000",
+        "Last":"16BC5FFF",
+        "Size":"221184"
+      }
+,
+      "scenefilecache.dll":
+      {
+        "Base":"16BD0000",
+        "Last":"16BEAFFF",
+        "Size":"110592"
+      }
+,
+      "steamclient.dll":
+      {
+        "Base":"16D30000",
+        "Last":"16E95FFF",
+        "Size":"1466368"
+      }
+,
+      "vstdlib_s.dll":
+      {
+        "Base":"16EB0000",
+        "Last":"16EECFFF",
+        "Size":"249856"
+      }
+,
+      "tier0_s.dll":
+      {
+        "Base":"16F30000",
+        "Last":"16F6FFFF",
+        "Size":"262144"
+      }
+,
+      "psapi.dll":
+      {
+        "Base":"756B0000",
+        "Last":"756B5FFF",
+        "Size":"24576"
+      }
+,
+      "gameui.dll":
+      {
+        "Base":"170D0000",
+        "Last":"172B6FFF",
+        "Size":"1994752"
+      }
+,
+      "ieframe.dll":
+      {
+        "Base":"71B80000",
+        "Last":"721C0FFF",
+        "Size":"6557696"
+      }
+,
+      "iertutil.dll":
+      {
+        "Base":"737E0000",
+        "Last":"73A17FFF",
+        "Size":"2326528"
+      }
+,
+      "WINHTTP.dll":
+      {
+        "Base":"75520000",
+        "Last":"755E9FFF",
+        "Size":"827392"
+      }
+,
+      "comctl32.dll":
+      {
+        "Base":"75190000",
+        "Last":"753A0FFF",
+        "Size":"2166784"
+      }
+,
+      "dataexchange.dll":
+      {
+        "Base":"71B40000",
+        "Last":"71B70FFF",
+        "Size":"200704"
+      }
+,
+      "d3d11.dll":
+      {
+        "Base":"71960000",
+        "Last":"71B3FFFF",
+        "Size":"1966080"
+      }
+,
+      "dxgi.dll":
+      {
+        "Base":"71890000",
+        "Last":"71954FFF",
+        "Size":"806912"
+      }
+,
+      "twinapi.appcore.dll":
+      {
+        "Base":"716F0000",
+        "Last":"71880FFF",
+        "Size":"1642496"
+      }
+,
+      "urlmon.dll":
+      {
+        "Base":"735C0000",
+        "Last":"7376CFFF",
+        "Size":"1757184"
+      }
+,
+      "sxs.dll":
+      {
+        "Base":"73A20000",
+        "Last":"73AA6FFF",
+        "Size":"552960"
+      }
+,
+      "ieproxy.dll":
+      {
+        "Base":"71680000",
+        "Last":"716E6FFF",
+        "Size":"421888"
+      }
+,
+      "vaudio_miles.dll":
+      {
+        "Base":"1A1D0000",
+        "Last":"1A1DFFFF",
+        "Size":"65536"
+      }
+,
+      "mss32.dll":
+      {
+        "Base":"21100000",
+        "Last":"21163FFF",
+        "Size":"409600"
+      }
+,
+      "mssmp3.asi":
+      {
+        "Base":"26F00000",
+        "Last":"26F2DFFF",
+        "Size":"188416"
+      }
+,
+      "mssvoice.asi":
+      {
+        "Base":"26400000",
+        "Last":"26438FFF",
+        "Size":"233472"
+      }
+,
+      "dsound.dll":
+      {
+        "Base":"71600000",
+        "Last":"7167EFFF",
+        "Size":"520192"
+      }
+,
+      "powrprof.dll":
+      {
+        "Base":"754D0000",
+        "Last":"75513FFF",
+        "Size":"278528"
+      }
+,
+      "UMPDC.dll":
+      {
+        "Base":"754B0000",
+        "Last":"754BCFFF",
+        "Size":"53248"
+      }
+,
+      "MMDevApi.dll":
+      {
+        "Base":"71590000",
+        "Last":"715FAFFF",
+        "Size":"438272"
+      }
+,
+      "AUDIOSES.DLL":
+      {
+        "Base":"71450000",
+        "Last":"71585FFF",
+        "Size":"1269760"
+      }
+,
+      "resourcepolicyclient.dll":
+      {
+        "Base":"71440000",
+        "Last":"7144EFFF",
+        "Size":"61440"
+      }
+,
+      "Windows.UI.dll":
+      {
+        "Base":"71340000",
+        "Last":"71432FFF",
+        "Size":"995328"
+      }
+,
+      "WindowManagementAPI.dll":
+      {
+        "Base":"712C0000",
+        "Last":"71332FFF",
+        "Size":"471040"
+      }
+,
+      "avrt.dll":
+      {
+        "Base":"712B0000",
+        "Last":"712B7FFF",
+        "Size":"32768"
+      }
+,
+      "serverbrowser.dll":
+      {
+        "Base":"1B230000",
+        "Last":"1B343FFF",
+        "Size":"1130496"
+      }
+,
+      "dhcpcsvc.DLL":
+      {
+        "Base":"71290000",
+        "Last":"712A5FFF",
+        "Size":"90112"
+      }
+,
+      "wdmaud.drv":
+      {
+        "Base":"71250000",
+        "Last":"71289FFF",
+        "Size":"237568"
+      }
+,
+      "ksuser.dll":
+      {
+        "Base":"71240000",
+        "Last":"71246FFF",
+        "Size":"28672"
+      }
+,
+      "msacm32.drv":
+      {
+        "Base":"71230000",
+        "Last":"71239FFF",
+        "Size":"40960"
+      }
+,
+      "midimap.dll":
+      {
+        "Base":"71220000",
+        "Last":"71227FFF",
+        "Size":"32768"
+      }
+,
+      "msIso.dll":
+      {
+        "Base":"711D0000",
+        "Last":"71215FFF",
+        "Size":"286720"
+      }
+,
+      "SspiCli.dll":
+      {
+        "Base":"74410000",
+        "Last":"74430FFF",
+        "Size":"135168"
+      }
+,
+      "virtdisk.dll":
+      {
+        "Base":"711C0000",
+        "Last":"711CEFFF",
+        "Size":"61440"
+      }
+,
+      "FLTLIB.DLL":
+      {
+        "Base":"711B0000",
+        "Last":"711B7FFF",
+        "Size":"32768"
+      }
+,
+      "mshtml.dll":
+      {
+        "Base":"69650000",
+        "Last":"6A8A2FFF",
+        "Size":"19214336"
+      }
+,
+      "srpapi.dll":
+      {
+        "Base":"71180000",
+        "Last":"711A4FFF",
+        "Size":"151552"
+      }
+,
+      "mlang.dll":
+      {
+        "Base":"71140000",
+        "Last":"71173FFF",
+        "Size":"212992"
+      }
+,
+      "pdm.dll":
+      {
+        "Base":"710C0000",
+        "Last":"71139FFF",
+        "Size":"499712"
+      }
+,
+      "msdbg2.dll":
+      {
+        "Base":"71070000",
+        "Last":"710BAFFF",
+        "Size":"307200"
+      }
+,
+      "msimtf.dll":
+      {
+        "Base":"71060000",
+        "Last":"7106DFFF",
+        "Size":"57344"
+      }
+,
+      "msls31.dll":
+      {
+        "Base":"746A0000",
+        "Last":"746D0FFF",
+        "Size":"200704"
+      }
+,
+      "d2d1.dll":
+      {
+        "Base":"70B40000",
+        "Last":"71054FFF",
+        "Size":"5328896"
+      }
+,
+      "DWrite.dll":
+      {
+        "Base":"70930000",
+        "Last":"70B3BFFF",
+        "Size":"2146304"
+      }
+,
+      "d3d10warp.dll":
+      {
+        "Base":"69080000",
+        "Last":"69641FFF",
+        "Size":"6037504"
+      }
+,
+      "uiautomationcore.dll":
+      {
+        "Base":"68E00000",
+        "Last":"69072FFF",
+        "Size":"2568192"
+      }
+,
+      "Secur32.dll":
+      {
+        "Base":"70920000",
+        "Last":"70929FFF",
+        "Size":"40960"
+      }
+    }
+,
+    "Message":"nil"
+  }
+}
