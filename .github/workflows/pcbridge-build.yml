@@ -1,0 +1,32 @@
+name: PCBridge Windows build and tests
+on:
+  push:
+    paths:
+      - 'PCBridge/**'
+      - '.github/workflows/pcbridge-build.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+      - name: Build Release
+        run: dotnet publish PCBridge/guest-agent/PCBridge.csproj -c Release -r win-x64 --self-contained true -p:PublishSingleFile=true -o artifacts/PCBridge
+      - name: Smoke checks
+        shell: pwsh
+        run: |
+          $exe = Get-ChildItem artifacts/PCBridge -Filter *.exe
+          if (-not $exe) { throw 'No EXE produced' }
+          if ((Get-Item $exe.FullName).Length -lt 100KB) { throw 'EXE unexpectedly small' }
+          Write-Host "EXE: $($exe.FullName), $((Get-Item $exe.FullName).Length) bytes"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: PCBridge-win-x64
+          path: artifacts/PCBridge/**
+          if-no-files-found: error
+          retention-days: 14
