@@ -1,0 +1,33 @@
+name: CSSBC SourcePawn build
+on:
+  push:
+    paths:
+      - 'sourcemod/**'
+      - '.github/workflows/cssbc-sourcemod.yml'
+  workflow_dispatch:
+jobs:
+  compile:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download SourceMod compiler
+        shell: pwsh
+        run: |
+          Invoke-WebRequest 'https://sm.alliedmods.net/smdrop/1.11/sourcemod-latest-windows.zip' -OutFile sm.zip
+          Expand-Archive sm.zip -DestinationPath sm
+      - name: Compile plugin
+        shell: pwsh
+        run: |
+          $compiler = Get-ChildItem sm -Recurse -Filter spcomp.exe | Select-Object -First 1
+          if (!$compiler) { throw 'spcomp.exe not found in SourceMod archive' }
+          $include = Join-Path $compiler.Directory.FullName 'include'
+          if (!(Test-Path $include)) { $include = Join-Path $compiler.Directory.Parent.FullName 'include' }
+          New-Item -ItemType Directory -Force build | Out-Null
+          & $compiler.FullName -i $include -o build/cssbc.smx sourcemod/scripting/cssbc.sp
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          if (!(Test-Path build/cssbc.smx) -or (Get-Item build/cssbc.smx).Length -lt 1000) { throw 'Compiled plugin missing or suspiciously small' }
+      - uses: actions/upload-artifact@v4
+        with:
+          name: CSSBC-SourceMod
+          path: build/cssbc.smx
+          if-no-files-found: error
