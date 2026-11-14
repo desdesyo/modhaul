@@ -43,6 +43,10 @@ async Task<object> CallToolAsync(JsonElement root, JsonElement id) {
       "pc_open_url" => new { action="open_url", url=a.GetProperty("url").GetString() },
       "pc_open_folder" => new { action="open_folder", path=a.GetProperty("path").GetString() },
       "pc_powershell" => new { action="run_confirmed", command=a.GetProperty("command").GetString() },
+      "pc_file_list" => new { action="file_list", path=a.GetProperty("path").GetString() },
+      "pc_file_read" => new { action="file_read", path=a.GetProperty("path").GetString() },
+      "pc_file_write" => new { action="file_write", path=a.GetProperty("path").GetString(), content=a.GetProperty("content").GetString() },
+      "pc_file_hash" => new { action="file_hash", path=a.GetProperty("path").GetString() },
       _ => throw new Exception("Unknown tool")
     };
     using var req=new HttpRequestMessage(HttpMethod.Post,endpoint){Content=new StringContent(JsonSerializer.Serialize(payload),Encoding.UTF8,"application/json")};
@@ -59,5 +63,9 @@ static object[] GetToolDefs() => new object[] {
  new {name="pc_press_key",description="Press allowlisted key (ENTER, ESC, TAB, SPACE, BACKSPACE, F10, UP, DOWN, LEFT, RIGHT)",inputSchema=new {type="object",properties=new {key=new {type="string"}},required=new[]{"key"}}},
  new {name="pc_open_url",description="Open HTTP(S) URL in guest browser",inputSchema=new {type="object",properties=new {url=new {type="string"}},required=new[]{"url"}}},
  new {name="pc_open_folder",description="Open existing folder in guest Explorer",inputSchema=new {type="object",properties=new {path=new {type="string"}},required=new[]{"path"}}},
- new {name="pc_powershell",description="Run PowerShell command only after guest consent dialog; limited to 15 seconds",inputSchema=new {type="object",properties=new {command=new {type="string"}},required=new[]{"command"}}}
+ new {name="pc_powershell",description="Run PowerShell command only after guest consent dialog; limited to 15 seconds",inputSchema=new {type="object",properties=new {command=new {type="string"}},required=new[]{"command"}}},
+ new {name="pc_file_list",description="List files and folders under configured allowed root (path relative to root)",inputSchema=new {type="object",properties=new {path=new {type="string"}},required=new[]{"path"}}},
+ new {name="pc_file_read",description="Read UTF-8/text file up to 2 MB inside configured root",inputSchema=new {type="object",properties=new {path=new {type="string"}},required=new[]{"path"}}},
+ new {name="pc_file_write",description="Write text file inside configured root (up to 1 MB)",inputSchema=new {type="object",properties=new {path=new {type="string"},content=new {type="string"}},required=new[]{"path","content"}}},
+ new {name="pc_file_hash",description="Calculate SHA256 for a file inside configured root",inputSchema=new {type="object",properties=new {path=new {type="string"}},required=new[]{"path"}}}
 };
