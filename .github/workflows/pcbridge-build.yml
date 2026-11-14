@@ -19,8 +19,8 @@ jobs:
         run: dotnet publish PCBridge/guest-agent/PCBridge.csproj -c Release -r win-x64 --self-contained true -p:PublishSingleFile=true -o artifacts/PCBridge
       - name: Publish MCP stdio server
         run: dotnet publish PCBridge/mcp-server/PCBridge.Mcp.csproj -c Release -r win-x64 --self-contained true -p:PublishSingleFile=true -o artifacts/MCP
-      - name: Build CSS Dev Controller\n        run: dotnet publish PCBridge/controller/PCBridge.Controller.csproj -c Release -o artifacts/Controller\n      - name: Smoke checks
-        shell: pwsh
+      - name: Build CSS Dev Controller
+        run: dotnet publish PCBridge/controller/PCBridge.Controller.csproj -c Release -o artifacts/Controller
         run: |
           foreach ($dir in @('artifacts/PCBridge','artifacts/MCP','artifacts/Controller')) {
             $exe = Get-ChildItem $dir -Filter *.exe
