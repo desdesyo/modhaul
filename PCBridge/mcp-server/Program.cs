@@ -21,7 +21,7 @@ while (true) {
             "initialize" => new { jsonrpc="2.0", id, result=new { protocolVersion="2024-11-05", capabilities=new { tools=new {} }, serverInfo=new { name="pcbridge", version="0.3.0" } } },
             "notifications/initialized" => null,
             "ping" => new { jsonrpc="2.0", id, result=new {} },
-            "tools/list" => new { jsonrpc="2.0", id, result=new { tools=ToolDefs } },
+            "tools/list" => new { jsonrpc="2.0", id, result=new { tools=GetToolDefs() } },
             "tools/call" => await CallToolAsync(root, id),
             _ => new { jsonrpc="2.0", id, error=new { code=-32601, message="Method not found" } }
         };
@@ -51,7 +51,7 @@ async Task<object> CallToolAsync(JsonElement root, JsonElement id) {
 }
 async Task WriteAsync(Stream s,string text) { var b=Encoding.UTF8.GetBytes(text+"\n"); await s.WriteAsync(b); await s.FlushAsync(); }
 static async Task<string?> ReadLineAsync(Stream s) { var b=new List<byte>(); var one=new byte[1]; while(await s.ReadAsync(one)==1){if(one[0]==10)break;if(one[0]!=13)b.Add(one[0]);}return b.Count==0?null:Encoding.UTF8.GetString(b.ToArray());}
-static object[] ToolDefs => new object[] {
+static object[] GetToolDefs() => new object[] {
  new {name="pc_status",description="Check PCBridge guest agent status",inputSchema=new {type="object",properties=new {},required=Array.Empty<string>()}},
  new {name="pc_screenshot",description="Capture guest desktop screenshot (PNG base64 in JSON)",inputSchema=new {type="object",properties=new {},required=Array.Empty<string>()}},
  new {name="pc_click",description="Click guest screen coordinates",inputSchema=new {type="object",properties=new {x=new {type="integer"},y=new {type="integer"}},required=new[]{"x","y"}}},
