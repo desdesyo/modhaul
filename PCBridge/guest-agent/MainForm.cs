@@ -20,13 +20,13 @@ public sealed class MainForm : Form
     const uint INPUT_KEYBOARD=1, KEYEVENTF_UNICODE=4, KEYEVENTF_KEYUP=2, MOUSE_DOWN=2, MOUSE_UP=4;
     readonly SemaphoreSlim commandLock = new(1,1);
     HttpListener? server; CancellationTokenSource? cts; int active=0;
-    readonly TextBox tokenBox=new(){Width=300}, log=new(){Multiline=true,ScrollBars=ScrollBars.Vertical,Dock=DockStyle.Fill};
+    readonly TextBox tokenBox=new(){Width=300}, rootBox=new(){Width=420,Text=@"C:\Games\Counter-Strike Source v34"}, log=new(){Multiline=true,ScrollBars=ScrollBars.Vertical,Dock=DockStyle.Fill};
     readonly Button start=new(){Text="Start agent"}, stop=new(){Text="Stop"};
     public MainForm(){
         Text="PCBridge Guest Agent"; Width=760; Height=500;
         tokenBox.Text=Convert.ToHexString(RandomNumberGenerator.GetBytes(32));
         var bar=new FlowLayoutPanel{Dock=DockStyle.Top,Height=65,Padding=new Padding(8)};
-        bar.Controls.Add(new Label{Text="Bearer token",AutoSize=true});bar.Controls.Add(tokenBox);bar.Controls.Add(start);bar.Controls.Add(stop);
+        bar.Controls.Add(new Label{Text="Bearer token",AutoSize=true});bar.Controls.Add(tokenBox);bar.Controls.Add(new Label{Text="Allowed root",AutoSize=true});bar.Controls.Add(rootBox);bar.Controls.Add(start);bar.Controls.Add(stop);
         Controls.Add(log);Controls.Add(bar);start.Click+=async(_,__)=>await StartServer();stop.Click+=(_,__)=>StopServer();
         Log("Stopped by default; loopback only.");
     }
@@ -58,6 +58,10 @@ public sealed class MainForm : Form
                     "type"=>TypeUnicode(root.GetProperty("text").GetString()??""),
                     "key"=>Key(root.GetProperty("key").GetString()??""),
                     "run_confirmed"=>await RunPowerShell(root.GetProperty("command").GetString()??""),
+                    "file_list"=>FileList(root.GetProperty("path").GetString()??""),
+                    "file_read"=>FileRead(root.GetProperty("path").GetString()??""),
+                    "file_write"=>FileWrite(root.GetProperty("path").GetString()??"",root.GetProperty("content").GetString()??""),
+                    "file_hash"=>FileHash(root.GetProperty("path").GetString()??""),
                     _=>new{error="Unknown action"}
                 };
                 await Reply(c,200,new{ok=true,action,result});
@@ -66,6 +70,17 @@ public sealed class MainForm : Form
         catch(OperationCanceledException){await Reply(c,503,new{error="Agent stopping"});}
         catch(Exception e){await Reply(c,400,new{error=e.Message});}
     }
+    string ResolveAllowed(string relativeOrFull){
+        string root=Path.GetFullPath(rootBox.Text.Trim());if(!Directory.Exists(root))throw new Exception("Allowed root folder does not exist");
+        string full=Path.GetFullPath(Path.IsPathRooted(relativeOrFull)?relativeOrFull:Path.Combine(root,relativeOrFull));
+        string prefix=root.TrimEnd(Path.DirectorySeparatorChar,Path.AltDirectorySeparatorChar)+Path.DirectorySeparatorChar;
+        if(!full.Equals(root,StringComparison.OrdinalIgnoreCase)&&!full.StartsWith(prefix,StringComparison.OrdinalIgnoreCase))throw new Exception("Path is outside configured allowed root");
+        return full;
+    }
+    object FileList(string path){string p=ResolveAllowed(path);if(!Directory.Exists(p))throw new Exception("Directory not found");return new{path=p,dirs=Directory.GetDirectories(p).Select(Path.GetFileName),files=Directory.GetFiles(p).Select(x=>new FileInfo(x)).Select(x=>new{name=x.Name,size=x.Length,modified=x.LastWriteTimeUtc})};}
+    object FileRead(string path){string p=ResolveAllowed(path);if(!File.Exists(p))throw new Exception("File not found");var fi=new FileInfo(p);if(fi.Length>2_000_000)throw new Exception("File exceeds 2 MB; use targeted log extraction");return new{path=p,content=File.ReadAllText(p),size=fi.Length};}
+    object FileWrite(string path,string content){string p=ResolveAllowed(path);if(content.Length>1_000_000)throw new Exception("Write limit 1 MB");Directory.CreateDirectory(Path.GetDirectoryName(p)!);File.WriteAllText(p,content,new UTF8Encoding(false));return new{path=p,written=true,bytes=new FileInfo(p).Length};}
+    object FileHash(string path){string p=ResolveAllowed(path);if(!File.Exists(p))throw new Exception("File not found");using var sha=SHA256.Create();return new{path=p,sha256=Convert.ToHexString(sha.ComputeHash(File.ReadAllBytes(p)))};}
     string OpenUrl(string u){if(!Uri.TryCreate(u,UriKind.Absolute,out var z)||(z.Scheme!="https"&&z.Scheme!="http"))throw new Exception("Only HTTP(S) URLs allowed");Process.Start(new ProcessStartInfo(z.ToString()){UseShellExecute=true});return "opened";}
     string OpenFolder(string p){if(!Directory.Exists(p))throw new Exception("Folder does not exist");Process.Start(new ProcessStartInfo("explorer.exe"){UseShellExecute=true,ArgumentList={p}});return "opened";}
     object Screenshot(){var b=Screen.PrimaryScreen?.Bounds??throw new Exception("No display");using var bmp=new Bitmap(b.Width,b.Height);using(var g=Graphics.FromImage(bmp))g.CopyFromScreen(b.Location,Point.Empty,b.Size);using var ms=new MemoryStream();bmp.Save(ms,System.Drawing.Imaging.ImageFormat.Png);return new{mime="image/png",base64=Convert.ToBase64String(ms.ToArray()),width=b.Width,height=b.Height};}
