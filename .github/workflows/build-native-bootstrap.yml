@@ -1,0 +1,35 @@
+name: CSSBC Native Bootstrap (x86)
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'native/**'
+      - '.github/workflows/build-native-bootstrap.yml'
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Checkout CSS SDK
+        uses: actions/checkout@v4
+        with:
+          repository: alliedmodders/hl2sdk
+          ref: css
+          path: deps/hl2sdk-css
+      - name: Build x86 DLL
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $vs = Get-ChildItem 'C:\Program Files\Microsoft Visual Studio\2022' -Directory | Select-Object -First 1
+          if (!$vs) { throw 'VS 2022 not found' }
+          $vcvars = Join-Path $vs.FullName 'VC\Auxiliary\Build\vcvars32.bat'
+          cmd /c "`"$vcvars`" && cl /nologo /EHsc /std:c++17 /LD /I deps\hl2sdk-css\public native\CSSBC_Native.cpp /link /OUT:CSSBC_Native.dll"
+          if (!(Test-Path CSSBC_Native.dll)) { throw 'DLL build output missing' }
+      - uses: actions/upload-artifact@v4
+        with:
+          name: CSSBC_Native_x86_bootstrap
+          path: CSSBC_Native.dll
+          if-no-files-found: error
+          retention-days: 14
