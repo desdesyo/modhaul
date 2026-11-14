@@ -19,16 +19,17 @@ jobs:
         run: dotnet publish PCBridge/guest-agent/PCBridge.csproj -c Release -r win-x64 --self-contained true -p:PublishSingleFile=true -o artifacts/PCBridge
       - name: Publish MCP stdio server
         run: dotnet publish PCBridge/mcp-server/PCBridge.Mcp.csproj -c Release -r win-x64 --self-contained true -p:PublishSingleFile=true -o artifacts/MCP
-      - name: Build CSS Dev Controller
-        run: dotnet publish PCBridge/controller/PCBridge.Controller.csproj -c Release -o artifacts/Controller
-      - name: Smoke checks
+      - name: Publish CSS Dev Controller
+        run: dotnet publish PCBridge/controller/PCBridge.Controller.csproj -c Release -r win-x64 --self-contained true -p:PublishSingleFile=true -o artifacts/Controller
+      - name: Verify outputs
         shell: pwsh
         run: |
-          foreach ($dir in @('artifacts/PCBridge','artifacts/MCP','artifacts/Controller')) {
+          $dirs = @('artifacts/PCBridge','artifacts/MCP','artifacts/Controller')
+          foreach ($dir in $dirs) {
             $exe = Get-ChildItem $dir -Filter *.exe
             if (-not $exe) { throw "No EXE produced in $dir" }
             if ((Get-Item $exe.FullName).Length -lt 100KB) { throw "EXE unexpectedly small: $dir" }
-            Write-Host "EXE: $($exe.FullName), $((Get-Item $exe.FullName).Length) bytes"
+            Write-Host "OK $($exe.FullName) ($((Get-Item $exe.FullName).Length) bytes)"
           }
       - uses: actions/upload-artifact@v4
         with:
