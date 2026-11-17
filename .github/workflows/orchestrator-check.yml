@@ -9,74 +9,74 @@ permissions:
 jobs:
   check:
     runs-on: windows-latest
+    timeout-minutes: 20
     steps:
-      - name: Validate GitHub secrets and Worker reachability
+      - name: End-to-end GitHub Chat smoke test
         shell: pwsh
         env:
           CSSBC_CHAT_ENDPOINT: ${{ secrets.CSSBC_CHAT_ENDPOINT }}
           CSSBC_CHAT_APP_PASSWORD: ${{ secrets.CSSBC_CHAT_APP_PASSWORD }}
+          GITHUB_RUN_ID: ${{ github.run_id }}
         run: |
           $ErrorActionPreference = 'Stop'
 
           if ([string]::IsNullOrWhiteSpace($env:CSSBC_CHAT_ENDPOINT)) {
-            throw 'MISSING_SECRET: CSSBC_CHAT_ENDPOINT is empty or unavailable to this workflow.'
+            throw 'MISSING_SECRET: CSSBC_CHAT_ENDPOINT is empty.'
           }
           if ([string]::IsNullOrWhiteSpace($env:CSSBC_CHAT_APP_PASSWORD)) {
-            throw 'MISSING_SECRET: CSSBC_CHAT_APP_PASSWORD is empty or unavailable to this workflow.'
+            throw 'MISSING_SECRET: CSSBC_CHAT_APP_PASSWORD is empty.'
           }
 
-          # Normalize common user input mistakes without exposing the secret value.
-          $endpoint = $env:CSSBC_CHAT_ENDPOINT.Trim()
-          $endpoint = $endpoint.Trim('"').Trim("'").Trim()
-
-          if ([string]::IsNullOrWhiteSpace($endpoint)) {
-            throw 'INVALID_ENDPOINT: CSSBC_CHAT_ENDPOINT is empty after trimming.'
-          }
-
-          # Accept a hostname pasted without a scheme; HTTPS is always enforced.
-          if ($endpoint -notmatch '^[a-zA-Z][a-zA-Z0-9+.-]*://') {
-            $endpoint = "https://$endpoint"
-          }
-
-          try {
-            $uri = [Uri]$endpoint
-          } catch {
-            throw 'INVALID_ENDPOINT: CSSBC_CHAT_ENDPOINT is not a valid URL. Use https://your-worker.workers.dev'
-          }
+          $endpoint = $env:CSSBC_CHAT_ENDPOINT.Trim().Trim('"').Trim("'").Trim()
+          if ($endpoint -notmatch '^[a-zA-Z][a-zA-Z0-9+.-]*://') { $endpoint = "https://$endpoint" }
+          try { $uri = [Uri]$endpoint } catch { throw 'INVALID_ENDPOINT: Worker URL is malformed.' }
           if (-not $uri.IsAbsoluteUri -or $uri.Scheme -ne 'https' -or [string]::IsNullOrWhiteSpace($uri.Host)) {
-            throw 'INVALID_ENDPOINT: endpoint must be a valid HTTPS URL, for example https://your-worker.workers.dev'
+            throw 'INVALID_ENDPOINT: Worker URL must use HTTPS.'
           }
-
-          # Remove a trailing slash to keep the root probe canonical.
           $endpoint = $uri.AbsoluteUri.TrimEnd('/')
-          $uri = [Uri]$endpoint
-          Write-Host 'OK: endpoint normalized as HTTPS; configured value is not displayed.'
-          if ($uri.AbsolutePath -ne '/' -and $uri.AbsolutePath -ne '') {
-            Write-Host 'NOTE: endpoint contains a path; probing the exact configured URL.'
-          }
+          $headers = @{ Authorization = "Bearer $($env:CSSBC_CHAT_APP_PASSWORD)" }
 
-          Write-Host 'OK: both GitHub secrets are present (values are not displayed).'
-          Write-Host "Probing configured Worker origin: $($uri.GetLeftPart([UriPartial]::Authority))"
-
+          Write-Host '1/4 Checking authenticated agent status...'
           try {
-            $response = Invoke-WebRequest -Uri $endpoint -Method Get -TimeoutSec 25 -MaximumRedirection 5 -SkipHttpErrorCheck
-            $status = [int]$response.StatusCode
+            $agent = Invoke-RestMethod -Uri "$endpoint/api/agent/status" -Method Get -Headers $headers -TimeoutSec 30
           } catch {
-            throw "WORKER_UNREACHABLE: HTTPS request failed: $($_.Exception.GetType().Name)"
+            $code = if ($_.Exception.Response) { [int]$_.Exception.Response.StatusCode } else { 'network' }
+            throw "AGENT_AUTH_OR_STATUS_FAILED: HTTP $code. Check Cloudflare APP_PASSWORD and AgentSession deployment."
           }
+          Write-Host 'PASS: Worker accepted the chat password and the Durable Agent status route responded.'
 
-          Write-Host "Worker HTTP status: $status"
-          if ($status -ge 500) {
-            throw "WORKER_ERROR: Worker responded with HTTP $status."
+          Write-Host '2/4 Sending a real message through the browser chat API...'
+          $marker = "CSSBC_CHAT_E2E_$($env:GITHUB_RUN_ID)"
+          $payload = @{ message = "Connection test. Reply with the exact marker $marker"; webSearch = $false; files = @() } | ConvertTo-Json -Depth 5
+          try {
+            $chat = Invoke-RestMethod -Uri "$endpoint/api/chat" -Method Post -Headers $headers -ContentType 'application/json; charset=utf-8' -Body ([Text.Encoding]::UTF8.GetBytes($payload)) -TimeoutSec 900
+          } catch {
+            $code = if ($_.Exception.Response) { [int]$_.Exception.Response.StatusCode } else { 'network/timeout' }
+            $detail = $_.ErrorDetails.Message
+            if ($detail) { $detail = $detail.Substring(0, [Math]::Min(300, $detail.Length)) }
+            throw "CHAT_REQUEST_FAILED: HTTP $code. $detail"
           }
+          if ([string]::IsNullOrWhiteSpace([string]$chat.reply) -or -not $chat.thread) {
+            throw 'CHAT_EMPTY_REPLY: chat API did not return a thread and non-empty assistant reply.'
+          }
+          Write-Host "PASS: AI replied; conversation #$($chat.thread) was created."
 
-          if ($status -in @(401, 403)) {
-            Write-Host 'REACHABLE: Worker is responding and appears to require authentication.'
-            Write-Host 'AUTH_NOT_VERIFIED: the deployed Worker password cannot be compared from GitHub Actions without its documented auth request contract.'
-          } elseif ($status -in @(404, 405)) {
-            Write-Host 'REACHABLE: Worker host is responding; root route does not support this probe.'
-            Write-Host 'AUTH_NOT_VERIFIED: endpoint route and password handshake need the Worker API contract.'
-          } else {
-            Write-Host 'REACHABLE: Worker returned a non-server-error HTTP response.'
-            Write-Host 'AUTH_NOT_VERIFIED: this probe confirms secret presence and network reachability, not that the password matches the deployed Worker secret.'
+          Write-Host '3/4 Verifying persisted user and assistant messages...'
+          try {
+            $history = Invoke-RestMethod -Uri "$endpoint/api/messages?thread=$([int]$chat.thread)" -Method Get -Headers $headers -TimeoutSec 60
+          } catch {
+            throw 'CHAT_HISTORY_READ_FAILED: the conversation was not readable after sending.'
           }
+          $assistantMessages = @($history.messages | Where-Object { $_.role -eq 'assistant' -and -not [string]::IsNullOrWhiteSpace([string]$_.content) })
+          $userMessages = @($history.messages | Where-Object { $_.role -eq 'user' -and $_.content -like "*$marker*" })
+          if ($assistantMessages.Count -lt 1 -or $userMessages.Count -lt 1) {
+            throw 'CHAT_HISTORY_INCOMPLETE: user prompt or assistant reply was not persisted.'
+          }
+          Write-Host 'PASS: both sides of the conversation were saved and can be reloaded.'
+
+          Write-Host '4/4 Verifying conversation appears in the sidebar list...'
+          $threads = Invoke-RestMethod -Uri "$endpoint/api/threads" -Method Get -Headers $headers -TimeoutSec 60
+          if (-not (@($threads.threads | Where-Object { [int]$_.number -eq [int]$chat.thread }).Count)) {
+            throw 'CHAT_THREAD_LIST_FAILED: newly created conversation is missing from the thread list.'
+          }
+          Write-Host 'PASS: conversation is listed. GitHub Chat end-to-end test succeeded.'
