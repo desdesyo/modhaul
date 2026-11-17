@@ -25,14 +25,32 @@ jobs:
             throw 'MISSING_SECRET: CSSBC_CHAT_APP_PASSWORD is empty or unavailable to this workflow.'
           }
 
+          # Normalize common user input mistakes without exposing the secret value.
+          $endpoint = $env:CSSBC_CHAT_ENDPOINT.Trim()
+          $endpoint = $endpoint.Trim('"').Trim("'").Trim()
+
+          if ([string]::IsNullOrWhiteSpace($endpoint)) {
+            throw 'INVALID_ENDPOINT: CSSBC_CHAT_ENDPOINT is empty after trimming.'
+          }
+
+          # Accept a hostname pasted without a scheme; HTTPS is always enforced.
+          if ($endpoint -notmatch '^[a-zA-Z][a-zA-Z0-9+.-]*://') {
+            $endpoint = "https://$endpoint"
+          }
+
           try {
-            $uri = [Uri]$env:CSSBC_CHAT_ENDPOINT
+            $uri = [Uri]$endpoint
           } catch {
-            throw 'INVALID_ENDPOINT: CSSBC_CHAT_ENDPOINT is not a valid absolute URL.'
+            throw 'INVALID_ENDPOINT: CSSBC_CHAT_ENDPOINT is not a valid URL. Use https://your-worker.workers.dev'
           }
-          if (-not $uri.IsAbsoluteUri -or $uri.Scheme -ne 'https') {
-            throw 'INVALID_ENDPOINT: endpoint must be an absolute HTTPS URL.'
+          if (-not $uri.IsAbsoluteUri -or $uri.Scheme -ne 'https' -or [string]::IsNullOrWhiteSpace($uri.Host)) {
+            throw 'INVALID_ENDPOINT: endpoint must be a valid HTTPS URL, for example https://your-worker.workers.dev'
           }
+
+          # Remove a trailing slash to keep the root probe canonical.
+          $endpoint = $uri.AbsoluteUri.TrimEnd('/')
+          $uri = [Uri]$endpoint
+          Write-Host 'OK: endpoint normalized as HTTPS; configured value is not displayed.'
           if ($uri.AbsolutePath -ne '/' -and $uri.AbsolutePath -ne '') {
             Write-Host 'NOTE: endpoint contains a path; probing the exact configured URL.'
           }
@@ -41,7 +59,7 @@ jobs:
           Write-Host "Probing configured Worker origin: $($uri.GetLeftPart([UriPartial]::Authority))"
 
           try {
-            $response = Invoke-WebRequest -Uri $uri.AbsoluteUri -Method Get -TimeoutSec 25 -MaximumRedirection 5 -SkipHttpErrorCheck
+            $response = Invoke-WebRequest -Uri $endpoint -Method Get -TimeoutSec 25 -MaximumRedirection 5 -SkipHttpErrorCheck
             $status = [int]$response.StatusCode
           } catch {
             throw "WORKER_UNREACHABLE: HTTPS request failed: $($_.Exception.GetType().Name)"
