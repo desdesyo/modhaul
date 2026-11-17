@@ -1,0 +1,64 @@
+name: CSSBC orchestrator configuration check
+on:
+  push:
+    paths:
+      - '.github/workflows/orchestrator-check.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: windows-latest
+    steps:
+      - name: Validate GitHub secrets and Worker reachability
+        shell: pwsh
+        env:
+          CSSBC_CHAT_ENDPOINT: ${{ secrets.CSSBC_CHAT_ENDPOINT }}
+          CSSBC_CHAT_APP_PASSWORD: ${{ secrets.CSSBC_CHAT_APP_PASSWORD }}
+        run: |
+          $ErrorActionPreference = 'Stop'
+
+          if ([string]::IsNullOrWhiteSpace($env:CSSBC_CHAT_ENDPOINT)) {
+            throw 'MISSING_SECRET: CSSBC_CHAT_ENDPOINT is empty or unavailable to this workflow.'
+          }
+          if ([string]::IsNullOrWhiteSpace($env:CSSBC_CHAT_APP_PASSWORD)) {
+            throw 'MISSING_SECRET: CSSBC_CHAT_APP_PASSWORD is empty or unavailable to this workflow.'
+          }
+
+          try {
+            $uri = [Uri]$env:CSSBC_CHAT_ENDPOINT
+          } catch {
+            throw 'INVALID_ENDPOINT: CSSBC_CHAT_ENDPOINT is not a valid absolute URL.'
+          }
+          if (-not $uri.IsAbsoluteUri -or $uri.Scheme -ne 'https') {
+            throw 'INVALID_ENDPOINT: endpoint must be an absolute HTTPS URL.'
+          }
+          if ($uri.AbsolutePath -ne '/' -and $uri.AbsolutePath -ne '') {
+            Write-Host 'NOTE: endpoint contains a path; probing the exact configured URL.'
+          }
+
+          Write-Host 'OK: both GitHub secrets are present (values are not displayed).'
+          Write-Host "Probing configured Worker origin: $($uri.GetLeftPart([UriPartial]::Authority))"
+
+          try {
+            $response = Invoke-WebRequest -Uri $uri.AbsoluteUri -Method Get -TimeoutSec 25 -MaximumRedirection 5 -SkipHttpErrorCheck
+            $status = [int]$response.StatusCode
+          } catch {
+            throw "WORKER_UNREACHABLE: HTTPS request failed: $($_.Exception.GetType().Name)"
+          }
+
+          Write-Host "Worker HTTP status: $status"
+          if ($status -ge 500) {
+            throw "WORKER_ERROR: Worker responded with HTTP $status."
+          }
+
+          if ($status -in @(401, 403)) {
+            Write-Host 'REACHABLE: Worker is responding and appears to require authentication.'
+            Write-Host 'AUTH_NOT_VERIFIED: the deployed Worker password cannot be compared from GitHub Actions without its documented auth request contract.'
+          } elseif ($status -in @(404, 405)) {
+            Write-Host 'REACHABLE: Worker host is responding; root route does not support this probe.'
+            Write-Host 'AUTH_NOT_VERIFIED: endpoint route and password handshake need the Worker API contract.'
+          } else {
+            Write-Host 'REACHABLE: Worker returned a non-server-error HTTP response.'
+            Write-Host 'AUTH_NOT_VERIFIED: this probe confirms secret presence and network reachability, not that the password matches the deployed Worker secret.'
+          }
